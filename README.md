@@ -1,2 +1,2 @@
 # redsunsetindex
-www.666old666.cn A static web page built using MDUI framework.
+小白拿来练手的作品
