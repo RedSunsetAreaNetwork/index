@@ -13,7 +13,7 @@
     transform: translate(19%, -50%);
 }
 #box2 {
-    width: 85%;
+    width: auto%;
     height: auto;
     margin: auto;
    /* border: 1px solid red;*/
@@ -21,4 +21,12 @@
     text-align: center
     overflow: hidden; /*防止内容超出容器或者产生自动换行*/
 }
-
+#box3 {
+    width: 95%;
+    height: auto;
+    margin: auto;
+   /* border: 1px solid red;*/
+ /*设置line-height与父级元素的height相等*/
+    text-align: center
+    overflow: hidden; /*防止内容超出容器或者产生自动换行*/
+}
