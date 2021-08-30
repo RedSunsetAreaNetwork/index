@@ -10,6 +10,6 @@ if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
     document.getElementById("setdarkmodeclass2").classList.add("mdui-color-grey-900");
     document.getElementById("left-drawer").classList.remove("mdui-color-white");
     document.getElementById("setdarkmodesetting").classList.remove("setdarkmodesetting");
-    document.getElementById("indexPic").style.background = "url('./pic/indexpic3d')";
+    // document.getElementById("indexPic").style.background = "url('./pic/indexpic3d')";
 
 }
