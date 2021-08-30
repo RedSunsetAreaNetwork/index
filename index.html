@@ -22,10 +22,9 @@
         var $m = mdui.$;
     </script>
     <!--判断浏览器黑暗主题是否开启-->
-    <!-- <script type="text/javascript" defer src="./js/darkauto.js"></script> -->
+    <script type="text/javascript" defer src="./js/darkauto.js"></script>
     <!--替换内容JS,替换目标：服务-->
     <!-- <script type="text/javascript" defer src="./js/switchserve.js"></script> -->
-    <link href="./css/aboutcss.css" rel="stylesheet">
     <!-- <style type="text/css">
         body {
             background: url(./pic/background.webp) no-repeat center center;
@@ -194,7 +193,7 @@
                         document.getElementById("setdarkmodeclass2").classList.add("mdui-color-grey-900");
                         document.getElementById("left-drawer").classList.remove("mdui-color-white");
                         document.getElementById("setdarkmodesetting").classList.remove("setdarkmodesetting");
-                        document.getElementById("indexPic").style.background = "url('./pic/indexpic3dark.jpg')";
+                        // document.getElementById("indexPic").style.background = "url('./pic/indexpic03dark.webp')";
 
                     } else {
                         //js删除指定id的class
@@ -205,7 +204,7 @@
                         document.getElementById("setdarkmodeclass2").classList.add("mdui-color-grey-100");
                         document.getElementById("left-drawer").classList.add("mdui-color-white");
                         document.getElementById("setdarkmodesetting").classList.add("setdarkmodesetting");
-                        document.getElementById("indexPic").style.background = "url('./pic/indexpic03.webp')";
+                        // document.getElementById("indexPic").style.background = "url('./pic/indexpic03.webp')";
 
                     }
                 });
@@ -218,66 +217,30 @@
         <!--应用栏1-->
         <div id="tab1">
             <div class="mdui-container">
-                <div class="mdui-container-fluid" id="indexPic" style="background-image:url('./pic/indexpic03.webp');
-;position: absolute;
-top: 0;
+                <div class="mdui-container-fluid" id="indexPic" style="
+position: absolute;
+top: 38px;
 left: 0;
 width: 100%;
-height: 70%;
+height: 95%;
 background-position: center center;
 background-size: cover;
-background-repeat: no-repeat;
-margin-top: 20px !important;">
-                    <div class="mdui-typo-display-2 mdui-center mdui-text-center mdui-text-color-white-text"
+background-repeat: no-repeat;">
+                    <!-- <div class="mdui-typo-display-2 mdui-center mdui-text-center mdui-text-color-white-text"
                         style=" margin-top: 240px">摸鱼</div>
                     <div class="mdui-row">
 
-                    </div>
-                </div>
-
-
-                <div class="mdui-card" style=" margin-top: 500px;border-radius: 10px !important;">
-                    <div class="mdui-row">
-                        <div class="mdui-col-md-4">
-                            <ul class="mdui-list">
-                                <li class="mdui-list-item mdui-ripple">
-                                    <div class="mdui-list-item-avatar mdui-color-red"><i
-                                            class="mdui-icon material-icons">directions_boat</i></div>
-                                    <div class="mdui-list-item-content">
-                                        <div class="mdui-list-item-title">摸鱼</div>
-                                        <div class="mdui-list-item-text mdui-list-item-one-line">只会摸鱼</div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="mdui-col-md-4">
-                            <ul class="mdui-list">
-                                <li class="mdui-list-item mdui-ripple">
-                                    <div class="mdui-list-item-avatar  mdui-color-pink"><i
-                                            class="mdui-icon material-icons">restaurant</i></div>
-                                    <div class="mdui-list-item-content">
-                                        <div class="mdui-list-item-title">搞事</div>
-                                        <div class="mdui-list-item-text mdui-list-item-one-line">不干好事</div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="mdui-col-md-4">
-                            <ul class="mdui-list">
-                                <li class="mdui-list-item mdui-ripple">
-                                    <div class="mdui-list-item-avatar mdui-color-purple"><i
-                                            class="mdui-icon material-icons">directions_run</i></div>
-                                    <div class="mdui-list-item-content">
-                                        <div class="mdui-list-item-title">跑路</div>
-                                        <div class="mdui-list-item-text mdui-list-item-one-line">经常弃坑</div>
-                                    </div>
-                                </li>
-                            </ul>
+                    </div> -->
+                    <div class="mdui-row" id="backG">
+                        <div class="" style="margin-top: 240px;">
+                            <div class="mdui-typo-display-3 mdui-text-center">不止是鸽子</div>
+                            <div class="mdui-typo-display-1 mdui-m-t-2 mdui-text-center">更是废物</div>
+                            <div style="margin-top: 180px;" class="mdui-text-center"><i class="mdui-typo-display-3 mdui-icon material-icons">keyboard_arrow_down</i></div>
+                            
                         </div>
                     </div>
                 </div>
-
-                <div class="mdui-row" style="margin-top: 120px;" id="backG">
+                <!-- <div class="mdui-row" style="margin-top: 120px;" id="backG">
                     <div class="mdui-col-xs-6 mdui-col-md-8 mdui-hidden-xs-down" style="margin-top: 180px;">
                         <div class="mdui-typo-display-3 mdui-text-center">不止是鸽子</div>
                         <div class="mdui-typo-display-1 mdui-m-t-2 mdui-text-center">更是废物</div>
@@ -292,9 +255,9 @@ margin-top: 20px !important;">
 
                     </div>
                     <img class="mdui-col-xs-6 mdui-img-fluid mdui-hidden-sm-up" src="./pic/phone.png" />
-                </div>
+                </div> -->
 
-                <div class="mdui-row" style="margin-top: 120px;">
+                <div class="mdui-row" style="margin-top: 880px;">
                     <div class="mdui-typo-display-2 mdui-m-l-4 mdui-hidden-xs-down">我们运营的站点</div>
                     <div class="mdui-typo-display-1-opacity mdui-m-l-4 mdui-m-t-2 mdui-hidden-xs-down">Fucking this shit
                     </div>
@@ -574,7 +537,7 @@ margin-top: 20px !important;">
                         <div class="mdui-typo-headline-opacity mdui-m-l-4 mdui-m-t-2 mdui-hidden-sm-up">I'm fucking
                             coming</div>
                         <div class="mdui-m-t-4"></div>
-                      <!---  <div class="mdui-col-md-4">
+                        <div class="mdui-col-md-4">
                             <ul class="mdui-list">
                                 <div class="mdui-card" id="link_1" style="border-radius: 10px !important;">
                                     <div class="mdui-card-media">
@@ -603,7 +566,7 @@ margin-top: 20px !important;">
                                     </script>
                                 </div>
                             </ul>
-                        </div>   --->
+                        </div>
                         <div class="mdui-col-md-4">
                             <ul class="mdui-list">
                                 <div class="mdui-card" id="link_2" style="border-radius: 10px !important;">
@@ -919,7 +882,7 @@ margin-top: 20px !important;">
                                 </div>
                             </ul>
                         </div>
-                      <!----  <div class="mdui-col-md-4">
+                        <div class="mdui-col-md-4">
                             <ul class="mdui-list">
                                 <div class="mdui-card" id="link_12" style="border-radius: 10px !important;">
                                     <div class="mdui-card-media">
@@ -946,7 +909,7 @@ margin-top: 20px !important;">
                                     </script>
                                 </div>
                             </ul>
-                        </div>   -->
+                        </div>
                     </div>
                     <!-- 第五行 -->
                     <div class="mdui-row">
