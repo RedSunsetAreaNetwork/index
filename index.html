@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="./css/mtu.min.css">
   <!-- 引入组件库 -->
   <script src="./js/mtu.min.js"></script>
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
   <link rel="stylesheet" href="./css/mdui.min.css">
   <link rel="stylesheet" href="./css/myui.css">
   <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js"></script>
@@ -189,21 +190,13 @@
     <!--应用栏1-->
     <div id="tab1">
       <div class="mdui-container">
-        <div class="mdui-container-fluid" id="indexPic" style="
-position: absolute;
-top: 38px;
-left: 0;
-width: 100%;
-height:100%;
-background-position: center center;
-background-size: cover;
-background-repeat: no-repeat;">
+        <div class="mdui-container-fluid" id="indexPic" >
           <!-- <div class="mdui-typo-display-2 mdui-center mdui-text-center mdui-text-color-white-text"
                         style=" margin-top: 240px">摸鱼</div>
                     <div class="mdui-row">
 
                     </div> -->
-          <div class="mdui-row">
+                    <div class="mdui-row">
             <div class="" style="margin-top: 240px;">
               <div class="mdui-typo-display-2 mdui-text-center">不止是鸽子</div>
               <div class="mdui-typo-display-1 mdui-m-t-2 mdui-text-center">更是废物</div>
@@ -218,6 +211,8 @@ background-repeat: no-repeat;">
             </div>
           </div>
         </div>
+
+
         <!-- <div class="mdui-row" style="margin-top: 120px;" id="backG">
                     <div class="mdui-col-xs-6 mdui-col-md-8 mdui-hidden-xs-down" style="margin-top: 180px;">
                         <div class="mdui-typo-display-3 mdui-text-center">不止是鸽子</div>
@@ -234,7 +229,7 @@ background-repeat: no-repeat;">
                     </div>
                     <img class="mdui-col-xs-6 mdui-img-fluid mdui-hidden-sm-up" src="./pic/phone.png" />
                 </div> -->
-        <div class="mdui-row" style="margin-top: 720px;">
+        <div class="mdui-row" style="margin-top: 240px;">
           <div class="mdui-typo-display-2 mdui-m-l-4 mdui-hidden-xs-down">我们运营的站点</div>
           <div class="mdui-typo-display-1-opacity mdui-m-l-4 mdui-m-t-2 mdui-hidden-xs-down">随时跑路
           </div>
@@ -411,7 +406,7 @@ background-repeat: no-repeat;">
           <div class="mdui-dialog-title">支付</div>
           <div class="mdui-dialog-content">
             <div class="mdui-row">
-              <img class="mdui-img-fluid mdui-col-xs-5" src="./pic/donate_qr.jpg" />
+              <amp-img class="mdui-img-fluid mdui-col-xs-5" src="./pic/donate_qr.jpg"   width="9" height="16" layout="responsive"></amp-img>
               <div class="mdui-typo mdui-col-xs-7">
                 <h1 class="mdui-text-color-theme-accent">小老弟，来都来了，还不快PY一波？</h1>
                 <ul>
@@ -486,7 +481,8 @@ background-repeat: no-repeat;">
                 <div class="mdui-card" id="link_1" style="border-radius: 10px !important;">
                   <div class="mdui-card-media">
                     <li class="mdui-list-item mdui-ripple">
-                      <div class="mdui-list-item-avatar mdui-color-red"><img class="mdui-img-fluid mdui-center" style="max-width: 200px;max-height: 200px;" src="./pic/yl1.webp">
+                      <div class="mdui-list-item-avatar mdui-color-red"><amp-img src="./pic/yl1.webp" width="1" height="1" layout="responsive">
+                      </amp-img>
                       </div>
                       <div class="mdui-list-item-content">
                         <div class="mdui-list-item-title">Grassblock's Blog</div>
@@ -511,7 +507,7 @@ background-repeat: no-repeat;">
                 <div class="mdui-card" id="link_2" style="border-radius: 10px !important;">
                   <div class="mdui-card-media">
                     <li class="mdui-list-item mdui-ripple">
-                      <div class="mdui-list-item-avatar mdui-color-red"> <img class="mdui-img-fluid mdui-center" style="max-width: 200px;max-height: 200px;" src="./pic/logo-cat.png"></div>
+                      <div class="mdui-list-item-avatar mdui-color-red"><amp-img src="./pic/logo-cat.png" width="1" height="1" layout="responsive"></amp-img></div>
                       <div class="mdui-list-item-content">
                         <div class="mdui-list-item-title">猫耳赛高</div>
                         <div class="mdui-list-item-text mdui-list-item-one-line">
@@ -535,7 +531,7 @@ background-repeat: no-repeat;">
                 <div class="mdui-card" id="link_3" style="border-radius: 10px !important;">
                   <div class="mdui-card-media">
                     <li class="mdui-list-item mdui-ripple">
-                      <div class="mdui-list-item-avatar mdui-color-red"><img class="mdui-img-fluid mdui-center" style="max-width: 200px;max-height: 200px;" src="./pic/yl2.webp">
+                      <div class="mdui-list-item-avatar mdui-color-red"><amp-img src="./pic/yl2.webp" width="1" height="1" layout="responsive"></amp-img>
                       </div>
                       <div class="mdui-list-item-content">
                         <div class="mdui-list-item-title">XenWayne's Blog</div>
@@ -562,7 +558,7 @@ background-repeat: no-repeat;">
                 <div class="mdui-card" id="link_4" style="border-radius: 10px !important;">
                   <div class="mdui-card-media">
                     <li class="mdui-list-item mdui-ripple">
-                      <div class="mdui-list-item-avatar mdui-color-red"> <img class="mdui-img-fluid mdui-center" style="max-width: 200px;max-height: 200px;" src="#"></div>
+                      <div class="mdui-list-item-avatar mdui-color-red"> <amp-img src="#" width="1" height="1" layout="responsive"></amp-img></div>
                       <div class="mdui-list-item-content">
                         <div class="mdui-list-item-title">ROYWANG</div>
                         <div class="mdui-list-item-text mdui-list-item-one-line">
@@ -586,7 +582,7 @@ background-repeat: no-repeat;">
                 <div class="mdui-card" id="link_5" style="border-radius: 10px !important;">
                   <div class="mdui-card-media">
                     <li class="mdui-list-item mdui-ripple">
-                      <div class="mdui-list-item-avatar mdui-color-red"><img class="mdui-img-fluid mdui-center" style="max-width: 200px;max-height: 200px;" src="./pic/yl3.webp"></div>
+                      <div class="mdui-list-item-avatar mdui-color-red"><amp-img src="./pic/yl3.webp" width="1" height="1" layout="responsive"></amp-img></div>
                       <div class="mdui-list-item-content">
                         <div class="mdui-list-item-title">LYM'S BLOG</div>
                         <div class="mdui-list-item-text mdui-list-item-one-line">
@@ -609,7 +605,7 @@ background-repeat: no-repeat;">
                 <div class="mdui-card" id="link_6" style="border-radius: 10px !important;">
                   <div class="mdui-card-media">
                     <li class="mdui-list-item mdui-ripple">
-                      <div class="mdui-list-item-avatar mdui-color-red"><img class="mdui-img-fluid mdui-center" style="max-width: 200px;max-height: 200px;" src="https://blog.im.ci/wp-content/uploads/2020/07/IMG_20191231_052259-scaled-e1596127234331.jpg">
+                      <div class="mdui-list-item-avatar mdui-color-red"><amp-img src="https://blog.im.ci/wp-content/uploads/2020/07/IMG_20191231_052259-scaled-e1596127234331.jpg" width="1" height="1" layout="responsive"></amp-img>
                       </div>
                       <div class="mdui-list-item-content">
                         <div class="mdui-list-item-title">Rain's Blog</div>
@@ -636,7 +632,7 @@ background-repeat: no-repeat;">
                 <div class="mdui-card" id="link_7" style="border-radius: 10px !important;">
                   <div class="mdui-card-media">
                     <li class="mdui-list-item mdui-ripple">
-                      <div class="mdui-list-item-avatar mdui-color-red"> <img class="mdui-img-fluid mdui-center" style="max-width: 200px;max-height: 200px;" src="#">
+                      <div class="mdui-list-item-avatar mdui-color-red"> <amp-img src="#" width="1" height="1" layout="responsive"></amp-img>
                       </div>
                       <div class="mdui-list-item-content">
                         <div class="mdui-list-item-title">南逸网络工作室</div>
@@ -661,7 +657,7 @@ background-repeat: no-repeat;">
                 <div class="mdui-card" id="link_8" style="border-radius: 10px !important;">
                   <div class="mdui-card-media">
                     <li class="mdui-list-item mdui-ripple">
-                      <div class="mdui-list-item-avatar mdui-color-red"> <img class="mdui-img-fluid mdui-center" style="max-width: 200px;max-height: 200px;" src="./pic/yl4.webp">
+                      <div class="mdui-list-item-avatar mdui-color-red"><amp-img src="./pic/yl4.webp" width="1" height="1" layout="responsive"></amp-img>
                       </div>
                       <div class="mdui-list-item-content">
                         <div class="mdui-list-item-title">乱谈府</div>
@@ -685,7 +681,7 @@ background-repeat: no-repeat;">
                 <div class="mdui-card" id="link_9" style="border-radius: 10px !important;">
                   <div class="mdui-card-media">
                     <li class="mdui-list-item mdui-ripple">
-                      <div class="mdui-list-item-avatar"> <img class="mdui-img-fluid mdui-center" style="max-width: 200px;max-height: 200px;" src="./pic/yl5.webp">
+                      <div class="mdui-list-item-avatar"> <amp-img src="./pic/yl5.webp" width="1" height="1" layout="responsive"></amp-img>
                       </div>
                       <div class="mdui-list-item-content">
                         <div class="mdui-list-item-title">西安咸阳国际机场</div>
@@ -713,7 +709,7 @@ background-repeat: no-repeat;">
                 <div class="mdui-card" id="link_10" style="border-radius: 10px !important;">
                   <div class="mdui-card-media">
                     <li class="mdui-list-item mdui-ripple">
-                      <div class="mdui-list-item-avatar"> <img class="mdui-img-fluid mdui-center" style="max-width: 200px;max-height: 200px;" src="./pic/yl6.webp">
+                      <div class="mdui-list-item-avatar"> <amp-img src="./pic/yl6.webp" width="1" height="1" layout="responsive"></amp-img>
                       </div>
                       <div class="mdui-list-item-content">
                         <div class="mdui-list-item-title">暮れ残る合同会社</div>
@@ -738,7 +734,7 @@ background-repeat: no-repeat;">
                 <div class="mdui-card" style="border-radius: 10px !important;">
                   <div class="mdui-card-media">
                     <li class="mdui-list-item mdui-ripple">
-                      <div class="mdui-list-item-avatar mdui-color-white"> <img class="mdui-img-fluid mdui-center" style="max-width: 200px;max-height: 200px;" src="https://box.othing.xyz/themes/icons/icon.svg">
+                      <div class="mdui-list-item-avatar mdui-color-white"> <amp-img src="https://box.othing.xyz/themes/icons/icon.svg" width="1" height="1" layout="responsive"></amp-img> 
                       </div>
                       <div class="mdui-list-item-content" id="link_11">
                         <div class="mdui-list-item-title">独立博客&播客全订阅计划</div>
@@ -763,7 +759,7 @@ background-repeat: no-repeat;">
                 <div class="mdui-card" id="link_12" style="border-radius: 10px !important;">
                   <div class="mdui-card-media">
                     <li class="mdui-list-item mdui-ripple">
-                      <div class="mdui-list-item-avatar"> <img class="mdui-img-fluid mdui-center" style="max-width: 200px;max-height: 200px;" src="https://www.luminous.top/wp-content/uploads/2021/07/favicon.ico">
+                      <div class="mdui-list-item-avatar"><amp-img src="https://www.luminous.top/wp-content/uploads/2021/07/favicon.ico" width="1" height="1" layout="responsive"></amp-img> 
                       </div>
                       <div class="mdui-list-item-content">
                         <div class="mdui-list-item-title">Luminous</div>
@@ -790,7 +786,7 @@ background-repeat: no-repeat;">
                 <div class="mdui-card" id="link_13" style="border-radius: 10px !important;">
                   <div class="mdui-card-media">
                     <li class="mdui-list-item mdui-ripple">
-                      <div class="mdui-list-item-avatar"> <img class="mdui-img-fluid mdui-center" style="max-width: 200px;max-height: 200px;" src="./pic/yl7.webp">
+                      <div class="mdui-list-item-avatar"> <amp-img src="./pic/yl7.webp" width="1" height="1" layout="responsive"></amp-img>
                       </div>
                       <div class="mdui-list-item-content">
                         <div class="mdui-list-item-title">Roof</div>
@@ -815,7 +811,7 @@ background-repeat: no-repeat;">
                 <div class="mdui-card" style="border-radius: 10px !important;">
                   <div class="mdui-card-media">
                     <li class="mdui-list-item mdui-ripple">
-                      <div class="mdui-list-item-avatar mdui-color-white"> <img class="mdui-img-fluid mdui-center" style="max-width: 200px;max-height: 200px;" src="./pic/yl8.webp">
+                      <div class="mdui-list-item-avatar mdui-color-white"> <amp-img src="./pic/yl8.webp" width="1" height="1" layout="responsive"></amp-img>
                       </div>
                       <div class="mdui-list-item-content" id="link_14">
                         <div class="mdui-list-item-title">郭桓桓的小 blog</div>
@@ -839,7 +835,7 @@ background-repeat: no-repeat;">
                 <div class="mdui-card" id="link_15" style="border-radius: 10px !important;">
                   <div class="mdui-card-media">
                     <li class="mdui-list-item mdui-ripple">
-                      <div class="mdui-list-item-avatar"> <img class="mdui-img-fluid mdui-center" style="max-width: 200px;max-height: 200px;" src="./pic/yl9.webp">
+                      <div class="mdui-list-item-avatar"> <amp-img src="./pic/yl9.webp" width="1" height="1" layout="responsive"></amp-img>
                       </div>
                       <div class="mdui-list-item-content">
                         <div class="mdui-list-item-title">吃土的小智
@@ -1014,7 +1010,7 @@ background-repeat: no-repeat;">
                     </svg>
                   </button>
                 </a>
-                <img class="mdui-card-header-avatar" src="./pic/about_user01.webp" />
+                <amp-img class="mdui-card-header-avatar" src="./pic/about_user01.webp" layout="responsive" height="1" width="1"></amp-img>
                 <div class="mdui-card-header-title">Xinzhi Wang</div>
                 <div class="mdui-card-header-subtitle">老鸽子人</div>
               </div>
@@ -1100,7 +1096,7 @@ background-repeat: no-repeat;">
                     </svg>
                   </button>
                 </a>
-                <img class="mdui-card-header-avatar" src="./pic/about_user02.webp" />
+                <amp-img class="mdui-card-header-avatar" src="./pic/about_user02.webp" layout="responsive" height="1" width="1"></amp-img>
                 <div class="mdui-card-header-title">AmaTsume Akira</div>
                 <div class="mdui-card-header-subtitle">拖延症患者</div>
               </div>
@@ -1186,7 +1182,7 @@ background-repeat: no-repeat;">
                     </svg>
                   </button>
                 </a>
-                <img class="mdui-card-header-avatar" src="./pic/about_user03.webp" />
+                <amp-img class="mdui-card-header-avatar" src="./pic/about_user03.webp" layout="responsive" height="1" width="1"></amp-img>
                 <div class="mdui-card-header-title">海绵boyboy</div>
                 <div class="mdui-card-header-subtitle">理科大佬</div>
               </div>
@@ -1271,7 +1267,7 @@ background-repeat: no-repeat;">
                     </svg>
                   </button>
                 </a>
-                <img class="mdui-card-header-avatar" src="./pic/about_user04.webp" />
+                <amp-img class="mdui-card-header-avatar" src="./pic/about_user04.webp" layout="responsive" height="1" width="1"></amp-img>
                 <div class="mdui-card-header-title">Quackdoctor</div>
                 <div class="mdui-card-header-subtitle">臭弟弟约小妹妹</div>
               </div>
