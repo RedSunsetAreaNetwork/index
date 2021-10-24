@@ -19,13 +19,19 @@
   <link rel="stylesheet" href="./css/myui.css">
   <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js"></script>
   <script src="./js/mdui.min.js"></script>
-  <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="f474d4ef-5f20-44d0-a1f5-f38ec3bb6457";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+  <script
+    type="text/javascript">window.$crisp = []; window.CRISP_WEBSITE_ID = "f474d4ef-5f20-44d0-a1f5-f38ec3bb6457"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();</script>
   <!-- <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.min.css"> -->
-  <link href="https://fonts.loli.net/css?family=ZCOOL+KuaiLe" rel="stylesheet">
+  <!-- <link href="https://fonts.loli.net/css?family=Noto+Sans+SC" rel="stylesheet"> -->
   <style type="text/css">
     body {
-      font-family: 'ZCOOL KuaiLe', cursive;}
+      background-image: url();
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
   </style>
+
   <!--引入MDUI 内置的 JavaScript 工具库-->
   <script>
     var $m = mdui.$;
@@ -57,10 +63,10 @@
 
     gtag('config', 'UA-175582657-1');
   </script>
- 
+
 </head>
 
-<body id="setdarkmodeclass" class="mdui-theme-primary-indigo mdui-theme-accent-indigo">
+<body id="setdarkmodeclass" class="mdui-theme-primary-pink mdui-theme-accent-pink">
   <audio id="bgMusic">
     <source src="https://music.163.com/song/media/outer/url?id=1350128941" type="audio/mp3">
   </audio>
@@ -134,15 +140,6 @@
       <!-- <img src="https://ylypan.oss-cn-chengdu.aliyuncs.com/20200510%2F2%2F2_wMgKabnb_1.png?Expires=1594810005" /> -->
       <!-- 卡片中可以包含一个或多个菜单按钮 -->
     </div>
-    <ul class="mdui-list" mdui-collapse="{accordion: true}">
-      <a href="ss://YWVzLTI1Ni1nY206cnNzaW5zLm5ldA@140.238.54.161:6800/">
-        <li class="mdui-list-item mdui-ripple">
-          <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-purple">send</i>
-          <div class="mdui-list-item-content">Shadowsocks代理</div>
-        </li>
-      </a>
-      <div class="mdui-divider"></div>
-    </ul>
     <ul class="mdui-list" id="settings">
       <li class="mdui-list-item mdui-ripple"> <i class="mdui-list-item-icon mdui-icon material-icons">brightness_4</i>
         <div class="mdui-list-item-content setdark">夜间模式</div>
@@ -207,9 +204,9 @@
                   onclick="window.location.href = 'https://blog.rssins.net/';">
                   <i class="mdui-icon mdui-icon-left material-icons">assignment</i>
                   博客</button>
+                  &nbsp;&nbsp;
 
-
-                <button class="mdui-btn mdui-ripple mdui-m-t-4"
+                <button class="mdui-color-purple mdui-btn mdui-ripple mdui-m-t-4"
                   onclick="window.location.href = 'https://t.me/bocc_group';">
                   <i class="mdui-icon mdui-icon-left material-icons">send</i>
                   群组</button>
@@ -217,31 +214,15 @@
 
             </div>
           </div>
-<div class="mdui-text-center" style="margin-top: calc(20vh);"><i class="mdui-icon material-icons">expand_more</i>下面还有内容哦</div>
+
         </div>
-
-
-        <!-- <div class="mdui-row" style="margin-top: 120px;" id="backG">
-                    <div class="mdui-col-xs-6 mdui-col-md-8 mdui-hidden-xs-down" style="margin-top: 180px;">
-                        <div class="mdui-typo-display-3 mdui-text-center">不止是鸽子</div>
-                        <div class="mdui-typo-display-1 mdui-m-t-2 mdui-text-center">更是废物</div>
-                    </div>
-                    <div class="mdui-col-sm-6 mdui-col-md-4 mdui-col-xs-12 mdui-hidden-xs-down">
-                        <img class="mdui-img-fluid" src="./pic/phone.png" />
-                    </div>
-                    <div class="mdui-col-xs-6 mdui-hidden-sm-up" style="margin-top:25vmin">
-                        <div class="mdui-typo-display-1 mdui-text-center">不止是鸽子</div>
-                        <br>
-                        <div class="mdui-typo-headline mdui-text-center">更是废物</div>
-
-                    </div>
-                    <img class="mdui-col-xs-6 mdui-img-fluid mdui-hidden-sm-up" src="./pic/phone.png" />
-                </div> -->
-        <div class="mdui-row" style="margin-top: calc(95vh);">
-          <div class="mdui-typo-display-2 mdui-m-l-4 mdui-hidden-xs-down">我们运营的站点</div>
+        <div class="mdui-text-center" style="margin-top: calc(95vh);"><i
+            class="mdui-icon material-icons">expand_more</i>下面还有内容哦</div>
+        <div class="mdui-row" style="margin-top: calc(5vh);">
+          <div class="mdui-typo-display-2 mdui-m-l-4 mdui-hidden-xs-down">我们运营的站点 <i class="mdui-typo-display-2 mdui-text-color-theme-accent mdui-icon material-icons">arrow_forward</i></div>
           <div class="mdui-typo-display-1-opacity mdui-m-l-4 mdui-m-t-2 mdui-hidden-xs-down">随时跑路
           </div>
-          <div class="mdui-typo-display-1 mdui-m-l-4 mdui-hidden-sm-up">我们运营的站点</div>
+          <div class="mdui-typo-display-1 mdui-m-l-4 mdui-hidden-sm-up">我们运营的站点 <i class="mdui-typo-display-1 mdui-text-color-theme-accent mdui-icon material-icons">arrow_forward</i></div>
           <div class="mdui-typo-headline-opacity mdui-m-l-4 mdui-m-t-2 mdui-hidden-sm-up">随时跑路
           </div>
           <div class="mdui-m-t-4"></div>
@@ -370,16 +351,16 @@
             <div class="mdui-card mdui-typo">
               <div class="mdui-card-primary">
                 <li class="mdui-list-item mdui-ripple">
-                  <div class="mdui-list-item-avatar mdui-color-purple"><i
-                      class="mdui-icon material-icons">remove_shopping_cart</i></div>
+                  <div class="mdui-list-item-avatar mdui-color-purple"><i class="mdui-icon material-icons">comment</i>
+                  </div>
                   <div class="mdui-list-item-content">
-                    <div class="mdui-list-item-title">屑站</div>
-                    <div class="mdui-list-item-text mdui-list-item-one-line">过于屑了</div>
+                    <div class="mdui-list-item-title">余晖俱乐部</div>
+                    <div class="mdui-list-item-text mdui-list-item-one-line">余晖无垠的论坛！</div>
                   </div>
                 </li>
               </div>
               <div class="mdui-card-actions mdui-color-purple">
-                <div class="mdui-btn mdui-text-color-white-disabled">xie</div>
+                <div class="mdui-btn mdui-text-color-white-disabled">club</div>
                 <button class="mdui-btn mdui-btn-icon mdui-float-right"><i
                     class="mdui-icon material-icons">arrow_forward</i></button>
               </div>
@@ -498,9 +479,9 @@
         </div>
         <div class="mdui-m-t-4">
           <div class="mdui-row">
-            <div class="mdui-typo-display-2 mdui-m-l-4 mdui-m-t-4 mdui-hidden-xs-down">友情链接</div>
+            <div class="mdui-typo-display-2 mdui-m-l-4 mdui-m-t-4 mdui-hidden-xs-down">友情链接 <i class="mdui-typo-display-1 mdui-text-color-theme-accent mdui-icon material-icons">arrow_forward</i></div>
             <div class="mdui-typo-display-1-opacity mdui-m-l-4 mdui-m-t-2 mdui-hidden-xs-down">我的朋友们</div>
-            <div class="mdui-typo-display-1 mdui-m-l-4 mdui-hidden-sm-up">友情链接</div>
+            <div class="mdui-typo-display-1 mdui-m-l-4 mdui-hidden-sm-up">友情链接 <i class="mdui-typo-display-2 mdui-text-color-theme-accent mdui-icon material-icons">arrow_forward</i></div>
             <div class="mdui-typo-headline-opacity mdui-m-l-4 mdui-m-t-2 mdui-hidden-sm-up">我的朋友们</div>
             <div class="mdui-m-t-4"></div>
             <div class="mdui-col-md-4">
@@ -538,7 +519,8 @@
                   <div class="mdui-card-media">
                     <li class="mdui-list-item mdui-ripple">
                       <div class="mdui-list-item-avatar">
-                        <img src="https://gitee.com/jsun969/assets/raw/master/avatar.png" width="1" height="1" layout="responsive"></img>
+                        <img src="https://gitee.com/jsun969/assets/raw/master/avatar.png" width="1" height="1"
+                          layout="responsive"></img>
                       </div>
                       <div class="mdui-list-item-content">
                         <div class="mdui-list-item-title">荆棘小栈</div>
@@ -738,7 +720,7 @@
                           已跑路的机场
                         </div>
                       </div>
-                      
+
                     </li>
                   </div>
                   <script>
@@ -815,8 +797,8 @@
                   <div class="mdui-card-media">
                     <li class="mdui-list-item mdui-ripple">
                       <div class="mdui-list-item-avatar">
-                        <img src="https://www.luminous.top/wp-content/uploads/2021/07/favicon.ico" width="1"
-                          height="1" layout="responsive"></img>
+                        <img src="https://www.luminous.top/wp-content/uploads/2021/07/favicon.ico" width="1" height="1"
+                          layout="responsive"></img>
                       </div>
                       <div class="mdui-list-item-content">
                         <div class="mdui-list-item-title">Luminous</div>
@@ -931,6 +913,8 @@
       <div class="mdui-container">
         <div class="mdui-row">
           <div class="mdui-card">
+            <div class="mdui-card-media mdui-img-fluid">
+              <img src="./pic/bg5.jpg"/></div>
             <div class="mdui-card-primary">
               <div class="mdui-card-primary-title">关于我们</div>
               <div class="mdui-card-primary-subtitle">一个由一群高中生鸽子组成的团队</div>
@@ -1537,8 +1521,7 @@
               </div>
               <br>
               <div class="mdui-video-container">
-                <iframe src="//player.bilibili.com/player.html?aid=88286833&bvid=BV1A7411L7jd&cid=150813510&page=1"
-                  scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
               </div>
             </div>
             <div class="mdui-card-actions">
@@ -1555,29 +1538,27 @@
   <!--底部-->
   <br>
   <footer class="foot mdui-text-center">
-    <div class="mdui-dialog has-text-white" id="cddwxw">
-      <div class="mdui-dialog-title">版权</div>
-      <div class="mdui-dialog-content">
-        <i class="fab fa-creative-commons"></i><i class="fab fa-creative-commons-nc-jp"></i><i
-          class="fab fa-creative-commons-by"></i>
-        <br>采用<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">知识共享署名 4.0
-          国际许可协议</a>进行许可。
-      </div>
-      <div class="mdui-dialog-actions">
-        <button class="mdui-btn mdui-ripple" mdui-dialog-close>关闭</button>
-        <button class="mdui-btn mdui-ripple"
-          onclick="window.location.href = 'https://blog.666old666.cn/privacy-policy';">更多</button>
-      </div>
-    </div>
     <div id="setdarkmodeclass2" class="mdui-container-fluid mdui-color-grey-100">
       <br><br>
       <div class="mdui-container">
-        <div class="mdui-text-left" style="color:#787878">Copyright;©&nbsp;
-          2016-2021&nbsp;&nbsp;by<strong>&nbsp;Redsunsets Institute </strong>All rights reserved.</div><br>
-        <div class="mdui-text-left"><a style="color:#464646;text-decoration: none"
-            href="https://icp.gov.moe/?keyword=202038250">萌站联盟 NO.202038250</a> &nbsp;
-          <a class="has-text-white" style="color:#464646" mdui-dialog="{target: '#cddwxw'}">版权声明</a><a
-            style="color:#464646" mdui-dialog="{target: '#Dialog_links'}"> &nbsp; &nbsp;友链申请</a>
+        <div class=" mdui-row">
+          <div class="mdui-col-sm-6">
+            <div class="mdui-text-left" style="color:#787878">Copyright;©&nbsp;
+              2016-2021&nbsp;&nbsp;by<strong>&nbsp;Redsunsets Institute </strong>All rights reserved.</div><br>
+            <div class="mdui-text-left"><a style="color:#464646;text-decoration: none"
+                href="https://icp.gov.moe/?keyword=202038250">萌站联盟 NO.202038250</a> &nbsp;
+              <a class="has-text-white" style="color:#464646;text-decoration:none;" href="https://blog.rssins.net/privacy-policy">用户协议</a><a
+                style="color:#464646" mdui-dialog="{target: '#Dialog_links'}"> &nbsp; &nbsp;友链申请</a>
+            </div>
+          </div>
+
+          <div class="mdui-col-sm-6 mdui-text-right" style="color:#787878">
+           
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+              <img alt="知识共享许可协议" style="border-width:0" src="./pic/cc.png" />
+            </a>
+           <br> 署名-非商业性使用-相同方式共享 4.0 国际许可协议
+          </div>
         </div>
         <br>
       </div>
