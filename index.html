@@ -75,12 +75,12 @@
     var i18n = domI18n({
       selector: '[data-translatable]',
       separator: ' // ',
-      languages: ['zh', 'zh_TW', 'en_US', 'ja'],
-      defaultLanguage: 'zh'
+      languages: ['zh-CN', 'zh-TW', 'en-US', 'ja'],
+      defaultLanguage: 'zh-CN'
     });
   </script>
 </head>
-  </script>
+</script>
 
 <body id="setdarkmodeclass" class="mdui-theme-primary-pink mdui-theme-accent-pink">
   <audio id="bgMusic">
@@ -124,13 +124,13 @@
       <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-menu="{target: '#langSet'}" id="J_lang_switch"><i class="mdui-icon material-icons">translate</i>
       </a>
       <ul class="mdui-menu" id="langSet">
-        <li class="mdui-menu-item" onclick="i18n.changeLanguage('zh_CN');">
+        <li class="mdui-menu-item" onclick="i18n.changeLanguage('zh-CN');">
           <a class="mdui-ripple">简体中文</a>
         </li>
-        <li class="mdui-menu-item" onclick="i18n.changeLanguage('zh_TW');">
+        <li class="mdui-menu-item" onclick="i18n.changeLanguage('zh-TW');">
           <a class="mdui-ripple">繁體中文</a>
         </li>
-        <li class="mdui-menu-item" onclick="i18n.changeLanguage('en_US');">
+        <li class="mdui-menu-item" onclick="i18n.changeLanguage('en-US');">
           <a class="mdui-ripple">English(US)</a>
         </li>
         <li class="mdui-menu-item" onclick="i18n.changeLanguage('ja');">
@@ -218,15 +218,13 @@
             <div class="" style="margin-top: calc(30vh);">
               <div class="mdui-typo-display-2 mdui-text-center" data-translatable>不止是鸽子 /la/ 不止是鴿子 /la/ Do Nothig /la/ 日语演示</div>
               <div class="mdui-typo-display-1 mdui-m-t-2 mdui-text-center" data-translatable>更是废物 /la/ 一群廢物 /la/ How litter we are. /la/ 日语</div>
-              <div class="mdui-center" style="width: 200px">
-                <button class="mdui-btn mdui-color-theme-accent mdui-ripple mdui-m-t-4" onclick="window.location.href = 'https://blog.rssins.net/';">
-                  <i class="mdui-icon mdui-icon-left material-icons">assignment</i> <span data-translatable>
-                    博客 /la/ 部落格 /la/ blog /la/ 日语</span></button>
-                &nbsp;&nbsp;
-                <button class="mdui-color-purple mdui-btn mdui-ripple mdui-m-t-4" onclick="window.location.href = 'https://t.me/joinchat/UdIV_3-dl-S11rfn';">
-                  <i class="mdui-icon mdui-icon-left material-icons">send</i>
-                  <span data-translatable>群组 /la/ 群組 /la/ TG Group /la/ 日语</button>
-              </div>
+              <button class="mdui-btn mdui-color-theme-accent mdui-ripple mdui-m-t-4 mdui-center" onclick="window.location.href = 'https://blog.rssins.net/';">
+                <i class="mdui-icon mdui-icon-left material-icons">assignment</i> <span data-translatable>
+                  博客 /la/ 部落格 /la/ blog /la/ 日语</span></button>
+              &nbsp;
+              <button class="mdui-color-purple mdui-btn mdui-ripple mdui-center" onclick="window.location.href = 'https://t.me/joinchat/UdIV_3-dl-S11rfn';">
+                <i class="mdui-icon mdui-icon-left material-icons">send</i>
+                <span data-translatable>群组 /la/ 群組 /la/ TG Group /la/ 日语</button>
             </div>
           </div>
         </div>
@@ -291,7 +289,7 @@
                   </div>
                   <div class="mdui-list-item-content">
                     <div class="mdui-list-item-title">晴空备忘录</div>
-                    <div class="mdui-list-item-text mdui-list-item-one-line">记录您的任何想法，现内测中</div>
+                    <div class="mdui-list-item-text mdui-list-item-one-line" data-translatable>记录您的任何想法，现内测中 /la/ 記錄您的任何想法，現內測中 /la/ Record any of your thoughts, now in closed beta. /la/ 日语</div>
                   </div>
                 </li>
               </div>
@@ -314,7 +312,7 @@
                   </div>
                   <div class="mdui-list-item-content">
                     <div class="mdui-list-item-title">夕阳红养老云</div>
-                    <div class="mdui-list-item-text mdui-list-item-one-line">小型自用网盘，暂不对外开放</div>
+                    <div class="mdui-list-item-text mdui-list-item-one-line" data-translatable>小型自用网盘，暂不对外开放 /la/ 雲端硬盤，暂不對外開放 /la/ Drive, we are not open to the public /la/ 日语</div>
                   </div>
                 </li>
               </div>
@@ -359,7 +357,7 @@
                   </div>
                   <div class="mdui-list-item-content">
                     <div class="mdui-list-item-title">余晖俱乐部</div>
-                    <div class="mdui-list-item-text mdui-list-item-one-line">余晖无垠的论坛！</div>
+                    <div class="mdui-list-item-text mdui-list-item-one-line" data-translatable>余晖无垠的论坛！ /la/ 我們的線上論壇 /la/ Our online forum /la/ 日语</div>
                   </div>
                 </li>
               </div>
@@ -386,23 +384,12 @@
                 <div class="mdui-list-item-text mdui-list-item-one-line" data-translatable>没钱啥都干不了 /la/ 我們需要更多的資金以搞事情 /la/ More funds more we do. /la/ 日語</div>
               </div>
             </li>
-            <span style="position: absolute;
-                        width: 120px;
-                        height: 120px;
-                        top: -32px;
-                        right: -37px;
-                        opacity: .05;
-                        pointer-events: none;"><svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="128" height="128">
-                <path d="M512 106.7a405.3 405.3 0 110 810.6 405.3 405.3 0 010-810.6zm0 85.3a320 320 0 100 640 320 320 0 000-640zm42.7 277.3V704h-85.4V469.3h85.4zM512 298.7a47 47 0 110 93.8 47 47 0 010-93.8z">
-                </path>
-              </svg>
-            </span>
           </div>
           <!-- 卡片的内容 -->
           <div class="mdui-card-content" data-translatable>不管怎样，对我个人而言，没钱不仅仅是一个重大的事件，还可能会改变我的人生。 /la/ 不管怎樣，對我個人而言，沒錢不僅僅是一個重大的事件，還可能會改變我的人生。 /la/ In any case, for me personally, lack of money is not just a major event, it may also change my life. /la/ いずれにせよ、私個人としては、お金の不足は大きな出来事であるだけでなく、私の人生を変えるかもしれません。</div>
           <!-- 卡片的按钮 -->
           <div class="mdui-card-actions">
-            <button class="mdui-btn mdui-ripple mdui-color-theme-accent" mdui-dialog="{target: '#Dialog_donate'}" data-translatable>在线支付  /la/ 在線支付 /la/ Pay online /la/ 日語</button>
+            <button class="mdui-btn mdui-ripple mdui-color-theme-accent" mdui-dialog="{target: '#Dialog_donate'}" data-translatable>在线支付 /la/ 在線支付 /la/ Pay online /la/ 日語</button>
             <button class="mdui-btn mdui-ripple" mdui-dialog="{target: '#Dialog_donationInfo'}" data-translatable>捐赠公示 /la/ 捐贈公示 /la/ Donor /la/ 日語</button>
             <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">expand_more</i></button>
           </div>
@@ -435,7 +422,7 @@
                 </li>
                 <li>
                   TG<a href="https://t.me/Hoshino_Yumemi">@Hoshino_Yumemi</a>
-                  <code>114514</code> HKD
+                  <code>114514</code> JPY
                 </li>
               </ol>
             </div>
@@ -459,7 +446,7 @@
                   申请方式：将标题为<code>[友链申请]</code>的邮件，内容附上您的站点信息<strong>发送至</strong><code>olddriverwang@gmail.com</code>，并在您的站点可见处添加本站的链接。
                 </li>
                 <li>
- 您现在可以给我们提供您网站的简繁中文、日语以及英文信息了。
+                  您现在可以给我们提供您网站的简繁中文、日语以及英文信息了。
                 </li>
                 <li>
                   本站信息：<ul>
@@ -1393,12 +1380,6 @@
               <a class="has-text-white" style="color:#464646;text-decoration:none;" href="https://blog.rssins.net/privacy-policy">用户协议</a><a style="color:#464646" mdui-dialog="{target: '#Dialog_links'}"> &nbsp; &nbsp;友链申请</a>
             </div>
           </div>
-          <div class="mdui-col-sm-6 mdui-text-right" style="color:#787878">
-            <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
-              <img alt="知识共享许可协议" style="border-width:0" src="./pic/cc.png" />
-            </a>
-            <br> 署名-非商业性使用-相同方式共享 4.0 国际许可协议
-          </div>
         </div>
         <br>
       </div>
@@ -1409,8 +1390,8 @@
   var i18n = domI18n({
     selector: '[data-translatable]',
     separator: ' /la/ ',
-    languages: ['zh', 'zh_TW', 'en_US', 'ja'],
-    defaultLanguage: 'zh'
+    languages: ['zh-CN', 'zh-TW', 'en-US', 'ja'],
+    defaultLanguage: 'zh-CN'
   });
 </script>
 
