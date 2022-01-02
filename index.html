@@ -254,141 +254,46 @@
           <div class="mdui-typo-headline-opacity mdui-m-l-4 mdui-m-t-2 mdui-hidden-sm-up" data-translatable>随时跑路 屑一次 隨時跑路 屑一次 You should be patient. 屑一次 いつでも破産
           </div>
           <div class="mdui-m-t-4"></div>
-          <div class="mdui-col-md-4 mdui-m-t-2 mdui-col-sm-6" id="in_L01">
-            <div class="mdui-card mdui-typo">
-              <div class="mdui-card-primary">
+        <!-- 服务链接组块 -->
+        <div id="web">
+          <webs icons='insert_chart' color="mdui-color-indigo" name="Redsunsets Hub" info="BLOG" about="余晖无垠科技博客，时常发布一些干货 屑一次 我們的博客 屑一次 Our blog with our socialism technology 屑一次 私たちのブログはしばしば実践的な知識を公開しています。" link="https://blog.rssins.net/"></webs>
+          <webs icons='lightbulb_outline' color="mdui-color-pink" name="Redsunset Lab" info="Lab" about="余晖无垠实验室，公共API与项目 屑一次 提供免費API與產品 屑一次 Provide free API and more. 屑一次 使用するAPIを提供する" link="">https://lab.rssins.net/</webs>
+          <webs icons='receipt' color="mdui-color-teal" name="晴空备忘录" info="Orss" about="记录您的任何想法，现内测中 屑一次 記錄您的任何想法，現內測中 屑一次 Record any of your thoughts, now in closed beta. 屑一次 気まぐれなアイデアを書き留めてください。現在はクローズドベータ版です。" link="https://www.orss.cf/"></webs>
+          <webs icons='cloud_queue' color="mdui-color-deep-orange" name="夕阳红养老云" info="pan" about="小型自用网盘，暂不对外开放 屑一次 雲端硬盤，暂不對外開放 屑一次 Drive, we are not open to the public 屑一次 内部クラウドストレージは一般に公開されていません。" link="https://pan.rssins.net/"></webs>
+          <webs icons='remove_from_queue' color="mdui-color-deep-purple" name="余晖无垠资源共享" info="share" about="这里有些好康的" link="https://share.rssins.net/"></webs>
+          <webs icons='comment' color="mdui-color-purple" name="余晖俱乐部" info="club" about="余晖无垠的论坛！ 屑一次 我們的線上論壇 屑一次 Our online forum 屑一次 当社のWebフォーラム。" link="https://club.rssins.net/"></webs>
+
+      
+      <script>
+          // 服务链接应用
+          const app = Vue.createApp({})
+          
+          // 定义组件
+          app.component('webs', {
+              props: ['icons','color','name','link','info','about'],
+            template: `          
+              <div class="mdui-col-md-4 mdui-m-t-2 mdui-col-sm-6">
+                <a  v-bind:href="link" style="color:#666666;text-decoration:none;">
+                <div class="mdui-card mdui-typo">
+                <div class="mdui-card-primary">
                 <li class="mdui-list-item mdui-ripple">
-                  <div class="mdui-list-item-avatar mdui-color-indigo"><i class="mdui-icon material-icons">insert_chart</i></div>
-                  <div class="mdui-list-item-content">
-                    <div class="mdui-list-item-title">Redsunsets Hub</div>
-                    <div class="mdui-list-item-text mdui-list-item-one-line" data-translatable>余晖无垠科技博客，时常发布一些干货 屑一次 我們的博客 屑一次 Our blog with our socialism technology 屑一次 私たちのブログはしばしば実践的な知識を公開しています。</div>
-                  </div>
+                <div class="mdui-list-item-avatar" :class="color"><i class="mdui-icon material-icons">{{ icons }}</i></div>
+                <div class="mdui-list-item-content">
+                  <div class="mdui-list-item-title">{{ name }}</div>
+                  <div class="mdui-list-item-text mdui-list-item-one-line" data-translatable>{{ about }}</div>
+                </div>
                 </li>
-              </div>
-              <div class="mdui-card-actions mdui-color-indigo">
-                <div class="mdui-btn mdui-text-color-white-disabled">Blog</div>
-                <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
-              </div>
+                </div>
+                <div class="mdui-card-actions" :class="color">
+                <div class="mdui-btn mdui-text-color-white-disabled">{{ info }}</div>
+              <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
+            </a>
             </div>
-            <script>
-              document.getElementById('in_L01').addEventListener('click', function() {
-                window.location.href = "https://blog.rssins.net/";
-              });
-            </script>
-          </div>
-          <div class="mdui-col-md-4 mdui-m-t-2 mdui-col-sm-6" id="in_L02">
-            <div class="mdui-card mdui-typo">
-              <div class="mdui-card-primary">
-                <li class="mdui-list-item mdui-ripple">
-                  <div class="mdui-list-item-avatar mdui-color-pink"><i class="mdui-icon material-icons">lightbulb_outline</i></div>
-                  <div class="mdui-list-item-content">
-                    <div class="mdui-list-item-title">Redsunset Lab</div>
-                    <div class="mdui-list-item-text mdui-list-item-one-line" data-translatable>余晖无垠实验室，公共API与项目 屑一次 提供免費API與產品 屑一次 Provide free API and more. 屑一次 使用するAPIを提供する</div>
-                  </div>
-                </li>
-              </div>
-              <div class="mdui-card-actions mdui-color-pink">
-                <div class="mdui-btn mdui-text-color-white-disabled">Lab</div>
-                <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
-              </div>
-            </div>
-            <script>
-              document.getElementById('in_L02').addEventListener('click', function() {
-                window.location.href = "https://lab.rssins.net/";
-              });
-            </script>
-          </div>
-          <div class="mdui-col-md-4 mdui-m-t-2 mdui-col-sm-6" id="in_L03">
-            <div class="mdui-card mdui-typo">
-              <div class="mdui-card-primary">
-                <li class="mdui-list-item mdui-ripple">
-                  <div class="mdui-list-item-avatar mdui-color-teal"><i class="mdui-icon material-icons">receipt</i>
-                  </div>
-                  <div class="mdui-list-item-content">
-                    <div class="mdui-list-item-title">晴空备忘录</div>
-                    <div class="mdui-list-item-text mdui-list-item-one-line" data-translatable>记录您的任何想法，现内测中 屑一次 記錄您的任何想法，現內測中 屑一次 Record any of your thoughts, now in closed beta. 屑一次 気まぐれなアイデアを書き留めてください。現在はクローズドベータ版です。</div>
-                  </div>
-                </li>
-              </div>
-              <div class="mdui-card-actions mdui-color-teal">
-                <div class="mdui-btn mdui-text-color-white-disabled">Orss</div>
-                <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
-              </div>
-            </div>
-            <script>
-              document.getElementById('in_L03').addEventListener('click', function() {
-                window.location.href = "https://www.orss.cf/";
-              });
-            </script>
-          </div>
-          <div class="mdui-col-md-4 mdui-m-t-2 mdui-col-sm-6" id="in_L04">
-            <div class="mdui-card mdui-typo">
-              <div class="mdui-card-primary">
-                <li class="mdui-list-item mdui-ripple">
-                  <div class="mdui-list-item-avatar mdui-color-deep-orange"><i class="mdui-icon material-icons mdui-text-color-white">cloud_queue</i>
-                  </div>
-                  <div class="mdui-list-item-content">
-                    <div class="mdui-list-item-title">夕阳红养老云</div>
-                    <div class="mdui-list-item-text mdui-list-item-one-line" data-translatable>小型自用网盘，暂不对外开放 屑一次 雲端硬盤，暂不對外開放 屑一次 Drive, we are not open to the public 屑一次 内部クラウドストレージは一般に公開されていません。</div>
-                  </div>
-                </li>
-              </div>
-              <div class="mdui-card-actions mdui-color-deep-orange">
-                <div class="mdui-btn mdui-text-color-white-disabled">pan</div>
-                <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons mdui-text-color-white">arrow_forward</i></button>
-              </div>
-            </div>
-            <script>
-              document.getElementById('in_L04').addEventListener('click', function() {
-                window.location.href = "https://pan.rssins.net/";
-              });
-            </script>
-          </div>
-          <div class="mdui-col-md-4 mdui-m-t-2 mdui-col-sm-6" id="in_L05">
-            <div class="mdui-card mdui-typo">
-              <div class="mdui-card-primary">
-                <li class="mdui-list-item mdui-ripple">
-                  <div class="mdui-list-item-avatar mdui-color-deep-purple"><i class="mdui-icon material-icons">remove_from_queue</i></div>
-                  <div class="mdui-list-item-content">
-                    <div class="mdui-list-item-title">余晖无垠资源共享</div>
-                    <div class="mdui-list-item-text mdui-list-item-one-line">这里有些好康的</div>
-                  </div>
-                </li>
-              </div>
-              <div class="mdui-card-actions mdui-color-deep-purple">
-                <div class="mdui-btn mdui-text-color-white-disabled">share</div>
-                <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
-              </div>
-            </div>
-            <script>
-              document.getElementById('in_L05').addEventListener('click', function() {
-                window.location.href = "https://share.rssins.net/";
-              });
-            </script>
-          </div>
-          <div class="mdui-col-md-4 mdui-m-t-2 mdui-col-sm-6" id="in_L06">
-            <div class="mdui-card mdui-typo">
-              <div class="mdui-card-primary">
-                <li class="mdui-list-item mdui-ripple">
-                  <div class="mdui-list-item-avatar mdui-color-purple"><i class="mdui-icon material-icons">comment</i>
-                  </div>
-                  <div class="mdui-list-item-content">
-                    <div class="mdui-list-item-title">余晖俱乐部</div>
-                    <div class="mdui-list-item-text mdui-list-item-one-line" data-translatable>余晖无垠的论坛！ 屑一次 我們的線上論壇 屑一次 Our online forum 屑一次 当社のWebフォーラム。</div>
-                  </div>
-                </li>
-              </div>
-              <div class="mdui-card-actions mdui-color-purple">
-                <div class="mdui-btn mdui-text-color-white-disabled">club</div>
-                <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
-              </div>
-            </div>
-            <script>
-              document.getElementById('in_L06').addEventListener('click', function() {
-                window.location.href = "https://club.rssins.net/";
-              });
-            </script>
-          </div>
+          </div>`
+          })
+          app.mount('#web')
+          </script>
+      </div>
         </div>
         <!-- 捐赠 -->
         <div class="mdui-card mdui-m-t-4" style="opacity: 0.9;">
