@@ -461,15 +461,6 @@
               <div class="mdui-card-primary-title" data-translatable>关于我们 屑一次 關於我們 屑一次 About Us 屑一次 私たちについて</div>
               <div class="mdui-card-primary-subtitle" data-translatable>一个由一群高中生鸽子组成的团队 屑一次 一個由一群高中生鴿子組成的團隊 屑一次 A team composed of a group of high school students. 屑一次 このチームは高校生のグループで構成されています</div>
             </div>
-            <div class="mdui-card-media mdui-hidden-md-up">
-              <!-- <img
-                                src="https://cdn.jsdelivr.net/gh/RSSYLY/redsunsetpic/pic/blog/2021/20210219162815.webp" />
-                        </div>
-                        <div class="mdui-card-media mdui-hidden-sm-down">
-                            <img
-                                src="https://cdn.jsdelivr.net/gh/RSSYLY/redsunsetpic/pic/blog/2021/20210219162809.webp" /> -->
-            </div>
-            <br>
             <!--简介-->
             <div class="mdui-card-content mdui-typo">
               <div class="mdui-chip">
@@ -499,46 +490,13 @@
               </div>
               <br>
               <m-timeline class="mdui-m-t-1">
-                <m-timeline-item>
-                  <div slot="title" class="mdui-text-color-theme-text">成立</div>
-                  <div slot="icon"><i class="mdui-icon material-icons mdui-text-color-pink">done_all</i>
-                  </div>
-                  <m-card class="mdui-card">
-                    [数据删除] <br />2016年[数据删除]
-                  </m-card>
-                </m-timeline-item>
-                <m-timeline-item>
-                  <div slot="icon"><i class="mdui-icon material-icons mdui-text-color-purple">directions_walk</i>
-                  </div>
-                  <div slot="title" class="mdui-text-color-theme-text">事件</div>
-                  <m-card class="mdui-card mdui-typo">
-                    MC还原西安项目 <br />于 <code>2020-02-12</code>
-                  </m-card>
-                </m-timeline-item>
-                <m-timeline-item>
-                  <div slot="icon"><i class="mdui-icon material-icons mdui-text-color-indigo">language</i>
-                  </div>
-                  <div slot="title" class="mdui-text-color-theme-text">事件</div>
-                  <m-card class="mdui-card mdui-typo">
-                    第一个网站 <br />于 <code>2020-02-28</code>
-                  </m-card>
-                </m-timeline-item>
-                <m-timeline-item>
-                  <div slot="icon"><i class="mdui-icon material-icons mdui-text-color-orange-900">cloud_upload</i>
-                  </div>
-                  <div slot="title" class="mdui-text-color-theme-text">事件</div>
-                  <m-card class="mdui-card mdui-typo">
-                    夕阳红养老云 <br />于 <code>2020-03-01</code>
-                  </m-card>
-                </m-timeline-item>
-                <m-timeline-item>
-                  <div slot="icon"><i class="mdui-icon material-icons mdui-text-color-light-green">rate_review</i>
-                  </div>
-                  <div slot="title" class="mdui-text-color-theme-text">事件</div>
-                  <m-card class="mdui-card mdui-typo">
-                    Redsunsets Hub <br />于 <code>2020-05-16</code>
-                  </m-card>
-                </m-timeline-item>
+                <div id="lc">
+                <lcs 事件='成立' 图标='done_all' 图标颜色='mdui-text-color-pink' 项目='[数据删除]' 时间='2016'></lcs>
+                <lcs 事件='事件' 图标='directions_walk' 图标颜色='mdui-text-color-purple' 项目='MC还原西安项目' 时间='2020-02-12'></lcs>
+                <lcs 事件='事件' 图标='language' 图标颜色='mdui-text-color-indigo' 项目='第一个网站' 时间='2020-02-28'></lcs>
+                <lcs 事件='事件' 图标='cloud_upload' 图标颜色='mdui-text-color-orange-900' 项目='夕阳红养老云' 时间='2020-03-01'></lcs>
+                <lcs 事件='事件' 图标='rate_review' 图标颜色='mdui-text-color-light-green' 项目='Redsunsets Hub' 时间='2020-05-16'></lcs>
+              </div>
               </m-timeline>
             </div>
             <div class="mdui-card-actions">
@@ -559,14 +517,6 @@
             <div class="mdui-card-primary">
               <div class="mdui-card-primary-title">成员</div>
               <div class="mdui-card-primary-subtitle">付出了我们的心血</div>
-            </div>
-            <div class="mdui-card-media mdui-hidden-md-up">
-              <!-- <img
-                                src="https://cdn.jsdelivr.net/gh/RSSYLY/redsunsetpic/pic/blog/2021/20210219162815.webp" />
-                        </div>
-                        <div class="mdui-card-media mdui-hidden-sm-down">
-                            <img
-                                src="https://cdn.jsdelivr.net/gh/RSSYLY/redsunsetpic/pic/blog/2021/20210219162809.webp" /> -->
             </div>
             <div id="men">
               <mens 
@@ -620,30 +570,9 @@
         <div class=" mdui-row">
           <div class="mdui-col-sm-6">
             <div class="mdui-text-left" style="color:#787878">Copyright;©&nbsp;
-              2016<a  mdui-dialog="{target: '#li'}" data-translatable>-</a>2022&nbsp;&nbsp;by<strong>&nbsp;Redsunsets Institute </strong>All rights reserved.</div><br>
+              2016-2022&nbsp;&nbsp;by<strong>&nbsp;Redsunsets Institute </strong>All rights reserved.</div><br>
             <div class="mdui-text-left"><a style="color:#464646;text-decoration: none" href="https://icp.gov.moe/?keyword=202038250">萌站联盟 NO.202038250</a> &nbsp;
               <a class="has-text-white" style="color:#464646;text-decoration:none;" href="https://blog.rssins.net/privacy-policy" data-translatable>用户协议 屑一次 隱私政策 屑一次 Privacy Policy 屑一次 ユーザー規約</a> &nbsp; &nbsp;<a style="color:#464646" mdui-dialog="{target: '#Dialog_links'}" data-translatable>友链申请 屑一次 申請友鏈 屑一次 Apply Links 屑一次 リンク申請</a>
-              <div class="mdui-dialog" id="li">
-                <div class="mdui-dialog-title">少年よ神话になれ!</div>
-                <div class="mdui-dialog-content">
-                  <div class="mdui-typo">
-
-                      <li>
-                        clash_for_windows: https://github.com/Fndroid/clash_for_windows_pkg/releases
-                      </li>
-                      <li>
-                        telegram: https://telegram.org/
-                      </li>
-                      <li>
-                        clash_for_android: https://github.com/Kr328/ClashForAndroid/releases/tag/v2.4.14
-                      </li>
-                      <li>
-                        加速连接: https://1drv.ms/u/s!AvQNCOLVt9flgU0vJUuK_pjsLli8?e=OssCOP
-                      </li>
-
-                  </div>
-                </div>
-              </div>
               </div>
             </div>
           </div>
