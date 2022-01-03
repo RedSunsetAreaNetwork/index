@@ -1,4 +1,5 @@
 
+
 const app = Vue.createApp({})
           
           // 网站服务
@@ -24,7 +25,7 @@ const app = Vue.createApp({})
             </div>
           </div>`
           })
-app.mount('#web')
+
           
 const app2 = Vue.createApp({})
           
@@ -56,7 +57,7 @@ const app2 = Vue.createApp({})
                         </ul>
                       </div>`
           })
-app2.mount('#link')
+
 
 
 // 成员介绍应用
@@ -115,4 +116,26 @@ app3.component('mens', {
     </div>
   </div>`
 })
-app3.mount('#men')
+
+const app4 = Vue.createApp({})
+          
+          // 历程组件
+          app4.component('lcs', {
+              props: ['事件','图标','图标颜色','项目','时间',],
+            template: `          
+            <m-timeline-item>
+            <div slot="title" class="mdui-text-color-theme-text">{{ 事件 }}</div>
+            <div slot="icon"><i class="mdui-icon material-icons" v-bind:class="图标颜色">{{ 图标 }}</i>
+            </div>
+            <m-card class="mdui-card">
+              {{ 项目 }} <br />于 <code>{{ 时间 }}</code>
+            </m-card>
+          </m-timeline-item>`
+          })
+
+
+          
+app.mount('#web') //我们的服务组件
+app2.mount('#link') //友情链接组件
+app3.mount('#men') //成员介绍组件
+app4.mount('#lc') //历程组件
