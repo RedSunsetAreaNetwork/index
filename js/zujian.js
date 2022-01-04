@@ -1,15 +1,15 @@
 const app = Vue.createApp({})
-          
-          // 网站服务
-          app.component('webs', {
-              props: ['icons','color','name','link','info','about'],
-            template: `          
+
+// 网站服务
+app.component('webs', {
+  props: ['icons', 'color', 'name', 'link', 'info', 'about'],
+  template: `          
               <div class="mdui-col-md-4 mdui-m-t-2 mdui-col-sm-6">
                 <a  v-bind:href="link" style="color:#666666;text-decoration:none;">
                 <div class="mdui-card mdui-typo">
                 <div class="mdui-card-primary">
                 <li class="mdui-list-item mdui-ripple">
-                <div class="mdui-list-item-avatar" :class="color"><i class="mdui-icon material-icons">{{ icons }}</i></div>
+                <div class="mdui-list-item-avatar" :class="color"><i class="mdui-icon material-icons mdui-text-color-white">{{ icons }}</i></div>
                 <div class="mdui-list-item-content">
                   <div class="mdui-list-item-title">{{ name }}</div>
                   <div class="mdui-list-item-text mdui-list-item-one-line" data-translatable>{{ about }}</div>
@@ -18,43 +18,45 @@ const app = Vue.createApp({})
                 </div>
                 <div class="mdui-card-actions" :class="color">
                 <div class="mdui-btn mdui-text-color-white-disabled">{{ info }}</div>
-              <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
+              <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons mdui-text-color-white">arrow_forward</i></button>
             </a>
             </div>
           </div>`
-          })
+})
 
-          
+
 const app2 = Vue.createApp({})
-          
-          // 友情链接
-          app2.component('links', {
-              props: ['img','name','about','link',],
-            template: `
-                      <div class="mdui-col-md-4">
-                        <ul class="mdui-list">
-                          <a  v-bind:href="link">
-                          <div class="mdui-card" style="border-radius: 10px !important;">
-                            <div class="mdui-card-media">
-                              <li class="mdui-list-item mdui-ripple">
-                                <div class="mdui-list-item-avatar">
-                                  <img v-bind:src="img" width="1" height="1" layout="responsive"></img>
-                                </div>
-                                <div class="mdui-list-item-content">
-                                  <div class="mdui-list-item-title">{{ name }}</div>
-                                  <div class="mdui-list-item-text mdui-list-item-one-line">
-                                    {{ about }}
-                                  </div>
-                                </div>
-                                <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
-                              </li>
+
+// 友情链接
+app2.component('links', {
+  props: ['img', 'name', 'about', 'link', 'target'],
+  template: `
+  <div class="mdui-col-md-4">
+    <ul class="mdui-list">
+        <a v-bind:href="link">
+            <div class="mdui-card" style="border-radius: 10px !important;">
+                <div class="mdui-card-media">
+                    <li class="mdui-list-item mdui-ripple">
+                        <div class="mdui-list-item-avatar">
+                            <img v-bind:src="img" width="1" height="1" layout="responsive"></img>
+                        </div>
+                        <div class="mdui-list-item-content">
+                            <div class="mdui-list-item-title">{{ name }}</div>
+                            <div class="mdui-list-item-text mdui-list-item-one-line">
+                                {{ about }}
                             </div>
-      
-                          </div>
-                      </a>
-                        </ul>
-                      </div>`
-          })
+                        </div>
+                        <span v-html="target"></span>
+                        <button class="mdui-btn mdui-btn-icon mdui-float-right"><i
+                                class="mdui-icon material-icons">arrow_forward</i></button>
+                    </li>
+                </div>
+            </div>
+        </a>
+    </ul>
+</div>
+`
+})
 
 
 
@@ -63,7 +65,7 @@ const app3 = Vue.createApp({})
 
 // 定义组件
 app3.component('mens', {
-    props: ['头像','昵称','签名','一句话','简介1','简介2','简介3','能力1','能力2','能力3','程度1','程度2','程度3',],
+  props: ['头像', '昵称', '签名', '一句话', '简介1', '简介2', '简介3', '能力1', '能力2', '能力3', '程度1', '程度2', '程度3',],
   template: `
   <div class="mdui-card-content">
     <div class="mdui-card-header">
@@ -116,11 +118,11 @@ app3.component('mens', {
 })
 
 const app4 = Vue.createApp({})
-          
-          // 历程组件
-          app4.component('lcs', {
-              props: ['事件','图标','图标颜色','项目','时间',],
-            template: `          
+
+// 历程组件
+app4.component('lcs', {
+  props: ['事件', '图标', '图标颜色', '项目', '时间',],
+  template: `          
             <m-timeline-item>
             <div slot="title" class="mdui-text-color-theme-text">{{ 事件 }}</div>
             <div slot="icon"><i class="mdui-icon material-icons" v-bind:class="图标颜色">{{ 图标 }}</i>
@@ -129,10 +131,10 @@ const app4 = Vue.createApp({})
               {{ 项目 }} <br />于 <code>{{ 时间 }}</code>
             </m-card>
           </m-timeline-item>`
-          })
+})
 
 
-          
+
 app.mount('#web') //我们的服务组件
 app2.mount('#link') //友情链接组件
 app3.mount('#men') //成员介绍组件

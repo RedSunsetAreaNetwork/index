@@ -1,3 +1,4 @@
+//多语言插件
 (function (root, factory) {
 
     'use strict';

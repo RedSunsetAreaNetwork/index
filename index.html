@@ -12,16 +12,19 @@
   <!-- 框架 -->
   <script src="https://unpkg.com/vue@next"></script>
   <script type="module" src="./js/zujian.js"></script>
-  <!-- 引入样式 -->
+  <!-- 引入MTU组件 -->
   <link rel="stylesheet" href="./css/mtu.min.css">
-  <!-- 引入组件库 -->
+  <!-- 引入MTU组件库 -->
   <script src="./js/mtu.min.js"></script>
-  <!-- <script async src="https://cdn.ampproject.org/v0.js"></script> -->
+  <!-- 引入MDUI -->
   <link rel="stylesheet" href="./css/mdui.min.css">
-  <link rel="stylesheet" href="./css/myui.css">
-  <script src="./js/jquery.min.js"></script>
-  <script src="./js/dom-i18n.js"></script>
+  <link rel="stylesheet" href="./css/myui.css">  
   <script src="./js/mdui.min.js"></script>
+  <!-- 引入Jquery -->
+  <script src="./js/jquery.min.js"></script>
+  <!-- 引入多语言 -->
+  <script src="./js/dom-i18n.js"></script>
+  <!-- 引入客服系统 -->
   <script type="text/javascript">
     window.$crisp = [];
     window.CRISP_WEBSITE_ID = "f474d4ef-5f20-44d0-a1f5-f38ec3bb6457";
@@ -392,7 +395,7 @@
         <div id="link">
           <links name='Grassblock’s Blog' img="./pic/yl1.webp" 
                  about="这里住着一只乐于分享知识和生活的大绒布球～" 
-                 link="https://blog.imgb.space/"></links>
+                 link="https://blog.imgb.space/" target='<i class="mdui-icon material-icons mdui-text-color-orange">favorite_border</i>'></links>
           <links name='荆棘小栈' img="https://gitee.com/jsun969/assets/raw/master/avatar.png" 
                  about="好看的皮囊千篇一律，有趣的灵魂万里挑一" 
                  link="https://jsun969.cn"></links>
@@ -416,7 +419,7 @@
                  link="https://laffitto.xyz"></links>
           <links name='西安咸阳国际机场' img="./pic/yl5.webp" 
                  about="已跑路的机场" 
-                 link=""></links>
+                 link="#" target='<i class="mdui-icon material-icons mdui-text-color-red">error_outline</i>'></links>
           <links name='暮れ残る合同会社' img="./pic/yl6.webp" 
                  about="私たちは新興インターネット企業であり" 
                  link="https://www.rste.club/"></links>
@@ -442,7 +445,7 @@
           
           <!-- 标准格式 <links name='' img="" 
                         about="" 
-                        link=""></links> -->
+                        link="" target=''></links> -->
       </div>
         </div>
         </div>
