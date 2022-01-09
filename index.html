@@ -10,9 +10,6 @@
   <meta name="description" content="不止是摸鱼中的干货，这里是余晖无垠团队官方网站，向您展示我们所有的服务与内容。">
   <meta name="keywords" content="余晖无垠,redsunsets,团队,余晖,rss" />
   <link rel="shortcut icon" href="./icons/logo.png">
-  <!-- 框架组件 -->
-  <script src="https://unpkg.com/vue@next"></script>
-  <script type="module" src="./js/zujian.js"></script>
   <!-- 引入MTU组件 -->
   <link rel="stylesheet" href="./css/mtu.min.css">
   <!-- 引入MTU组件库 -->
@@ -25,6 +22,18 @@
   <script src="./js/jquery.min.js"></script>
   <!-- 引入多语言 -->
   <script src="./js/dom-i18n.js"></script>
+  <script>
+    var i18n = domI18n({
+      selector: '[data-translatable]',
+      separator: ' 屑一次 ',
+      languages: ['zh-CN', 'zh-TW', 'en-US', 'ja'],
+      defaultLanguage: 'zh-CN'
+    });
+  </script>  
+  <!-- VUE框架组件 -->
+  <script src="https://unpkg.com/vue@next"></script>
+  <!-- 组件JS，最后再加载防止与多语言冲突 -->
+  <script type="module" src="./js/zujian.js" async></script>
   <!-- 引入客服系统 -->
   <script type="text/javascript">
     window.$crisp = [];
@@ -77,14 +86,6 @@
     gtag('js', new Date());
 
     gtag('config', 'UA-175582657-1');
-  </script>
-  <script>
-    var i18n = domI18n({
-      selector: '[data-translatable]',
-      separator: ' // ',
-      languages: ['zh-CN', 'zh-TW', 'en-US', 'ja'],
-      defaultLanguage: 'zh-CN'
-    });
   </script>
 </head>
 </script>
@@ -264,8 +265,7 @@
         <div class="mdui-text-center" style="margin-top: calc(90vh);"><i
             class="mdui-icon material-icons">expand_more</i><span data-translatable>下面还有内容哦 屑一次 下滑以查看更多 屑一次 Learn more 屑一次 滑り降りてください</span></div>
         <div class="mdui-row" style="margin-top: calc(5vh);">
-          <div class="mdui-typo-display-2 mdui-m-l-4 mdui-hidden-xs-down"><span data-translatable>我们运营的站点 屑一次 我們的站點 屑一次 Our Service 屑一次 当社のウェブサイト</span> <i
-              class="mdui-typo-display-2 mdui-text-color-theme-accent mdui-icon material-icons">arrow_forward</i></div>
+          <div class="mdui-typo-display-2 mdui-m-l-4 mdui-hidden-xs-down"><span data-translatable>我们运营的站点 屑一次 我們的站點 屑一次 Our Service 屑一次 当社のウェブサイト</span> <i class="mdui-typo-display-2 mdui-text-color-theme-accent mdui-icon material-icons">arrow_forward</i></div>
           <div class="mdui-typo-display-1-opacity mdui-m-l-4 mdui-m-t-2 mdui-hidden-xs-down" data-translatable>随时跑路 屑一次 隨時跑路 屑一次 You should be patient. 屑一次 いつでも破産
           </div>
           <div class="mdui-typo-display-1 mdui-m-l-4 mdui-hidden-sm-up"><span data-translatable>我们运营的站点 屑一次 我們的站點 屑一次 Our Service 屑一次 当社のウェブサイト</span> <i
@@ -573,9 +573,11 @@
           </div>
           <div class="mdui-col-sm-6">
             <div class="mdui-hidden-sm-up">
-              <br><br>
+              <br><br> <img style="max-width:180px;margin-top:-60px" class="mdui-center mdui-img-rounded mdui-img-fluid" src="./pic/logo.png"/>
             </div>
-            <img style="max-width:180px;margin-top:-60px" class="mdui-center mdui-img-rounded mdui-img-fluid" src="./pic/logo.png"/>
+            <div class="mdui-hidden-xs-down">
+            <img style="max-width:180px;margin-top:-60px" class="mdui-float-right mdui-img-rounded mdui-img-fluid" src="./pic/logo.png"/>
+            </div>
           </div>
         </div>
       </div>
@@ -585,6 +587,7 @@
   </footer>
 </body>
 <!-- 多语言 -->
+<script src="./js/dom-i18n.js"></script>
 <script>
   var i18n = domI18n({
     selector: '[data-translatable]',
