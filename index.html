@@ -1,44 +1,28 @@
 <!doctype html>
 <html lang="zh-Hans">
-<!-- 测试版本5-->
+<!-- 测试版本4-->
 
 <head>
-  <meta charset="utf-8" name="viewport"
-    content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-  <title>余晖无垠 • Redsunsets
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+  <title>余晖无垠 Redsunsets
   </title>
   <meta name="description" content="不止是摸鱼中的干货，这里是余晖无垠团队官方网站，向您展示我们所有的服务与内容。">
   <meta name="keywords" content="余晖无垠,redsunsets,团队,余晖,rss" />
   <link rel="shortcut icon" href="./icons/logo.png">
-  <!-- 引入MTU组件 -->
+  <!-- 引入样式 -->
   <link rel="stylesheet" href="./css/mtu.min.css">
-  <!-- 引入MTU组件库 -->
+  <!-- 引入组件库 -->
   <script src="./js/mtu.min.js"></script>
-  <!-- 引入MDUI -->
+  <!-- <script async src="https://cdn.ampproject.org/v0.js"></script> -->
   <link rel="stylesheet" href="./css/mdui.min.css">
   <link rel="stylesheet" href="./css/myui.css">
-  <script src="./js/mdui.min.js"></script>
-  <!-- 引入Jquery -->
   <script src="./js/jquery.min.js"></script>
-  <!-- 引入多语言 -->
   <script src="./js/dom-i18n.js"></script>
-  <script>
-    var i18n = domI18n({
-      selector: '[data-translatable]',
-      separator: ' 屑一次 ',
-      languages: ['zh-CN', 'zh-TW', 'en-US', 'ja'],
-      defaultLanguage: 'zh-CN'
-    });
-  </script>  
-  <!-- VUE框架组件 -->
-  <script src="https://unpkg.com/vue@next"></script>
-  <!-- 组件JS，最后再加载防止与多语言冲突 -->
-  <script type="module" src="./js/zujian.js" async></script>
-  <!-- 引入客服系统 -->
+  <script src="./js/mdui.min.js"></script>
   <script type="text/javascript">
     window.$crisp = [];
     window.CRISP_WEBSITE_ID = "f474d4ef-5f20-44d0-a1f5-f38ec3bb6457";
-    (function () {
+    (function() {
       d = document;
       s = d.createElement("script");
       s.src = "https://client.crisp.chat/l.js";
@@ -87,6 +71,14 @@
 
     gtag('config', 'UA-175582657-1');
   </script>
+  <script>
+    var i18n = domI18n({
+      selector: '[data-translatable]',
+      separator: ' // ',
+      languages: ['zh-CN', 'zh-TW', 'en-US', 'ja'],
+      defaultLanguage: 'zh-CN'
+    });
+  </script>
 </head>
 </script>
 
@@ -100,8 +92,7 @@
       <!-- <a href="javascript:;" class="mdui-btn mdui-btn-icon mdui-text-color-white-text"
                 mdui-drawer="{target: '#left-drawer',overlay:true,swipe:true}">
                 <i class="mdui-icon material-icons">menu</i></a> -->
-      <a href="javascript:;" class="mdui-btn mdui-btn-icon"
-        mdui-drawer="{target: '#left-drawer',overlay:true,swipe:true}">
+      <a href="javascript:;" class="mdui-btn mdui-btn-icon"  mdui-drawer="{target: '#left-drawer',overlay:true,swipe:true}">
         <i class="mdui-icon material-icons">menu</i></a>
       <a href="./index.html" class="mdui-typo-headline mdui-hidden-sm-down" data-translatable>余晖无垠 屑一次 余暉無垠 屑一次 Redsunsets 屑一次 暮れ残る</a>
       <!-- <a href="javascript:;" class="mdui-typo-title mdui-hidden-sm-down" data-lang="string_lang2">主站</a> -->
@@ -109,13 +100,11 @@
       <div class="mdui-tab mdui-hidden-sm-down" mdui-tab>
         <a href="#tab1" class="mdui-ripple mdui-ripple-white" data-translatable>门户 屑一次 門戶 屑一次 Home 屑一次 ポータル</a>
         <a href="#tab2" class="mdui-ripple mdui-ripple-white" data-translatable>信息 屑一次 訊息 屑一次 Info 屑一次 情報</a>
-        <a href="#tab3" class="mdui-ripple mdui-ripple-white" data-translatable>成员 屑一次 成員 屑一次 Members 屑一次 グループメンバー</a>
+      <a href="#tab3" class="mdui-hidden mdui-ripple mdui-ripple-white" data-translatable>成员 屑一次 成員 屑一次 Members 屑一次 グループメンバー</a>
       </div>
       <div class="mdui-toolbar-spacer"></div>
-      <a href="javascript:;" class="mdui-btn mdui-btn-icon setdark"><i
-          class="mdui-icon material-icons">brightness_7</i></a>
-      <a href="javascript:;" class="mdui-btn mdui-btn-icon musicSt" id="musicBox" onclick="nmsl()"><i
-          class="mdui-icon material-icons">music_note</i>
+      <a href="javascript:;" class="mdui-btn mdui-btn-icon setdark"><i class="mdui-icon material-icons">brightness_7</i></a>
+      <a href="javascript:;" class="mdui-btn mdui-btn-icon musicSt" id="musicBox" onclick="nmsl()"><i class="mdui-icon material-icons">music_note</i>
         <script>
           function nmsl() {
             if ($('a').is('.musicSt')) {
@@ -132,8 +121,7 @@
           };
         </script>
       </a>
-      <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-menu="{target: '#langSet'}" id="J_lang_switch"><i
-          class="mdui-icon material-icons">translate</i>
+      <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-menu="{target: '#langSet'}" id="J_lang_switch"><i class="mdui-icon material-icons">translate</i>
       </a>
       <ul class="mdui-menu" id="langSet">
         <li class="mdui-menu-item" onclick="i18n.changeLanguage('zh-CN');">
@@ -157,26 +145,22 @@
     <div class="mdui-tab mdui-color-white mdui-hidden-md-up" mdui-tab>
       <a href="#tab1" class="mdui-ripple mdui-ripple-white" data-translatable>门户 屑一次 門戶 屑一次 Home 屑一次 ポータル</a>
       <a href="#tab2" class="mdui-ripple mdui-ripple-white" data-translatable>信息 屑一次 訊息 屑一次 Info 屑一次 情報</a>
-      <a href="#tab3" class="mdui-ripple mdui-ripple-white" data-translatable>成员 屑一次 成員 屑一次 Members 屑一次 グループメンバー</a>
+      <a href="#tab3" class="mdui-hidden mdui-ripple mdui-ripple-white" data-translatable>成员 屑一次 成員 屑一次 Members 屑一次 グループメンバー</a>
     </div>
   </div>
-  <div class="mdui-drawer mdui-color-white mdui-drawer-close" id="left-drawer" mdui-drawer="{swipe: ture}"
-    mdui-drawer="{overlay: ture}">
+  <div class="mdui-drawer mdui-color-white mdui-drawer-close" id="left-drawer" mdui-drawer="{swipe: ture}" mdui-drawer="{overlay: ture}">
     <div class="mdui-card-media">
       <!-- <img src="https://ylypan.oss-cn-chengdu.aliyuncs.com/20200510%2F2%2F2_wMgKabnb_1.png?Expires=1594810005" /> -->
       <!-- 卡片中可以包含一个或多个菜单按钮 -->
     </div>
     <ul class="mdui-list">
-      <li class="mdui-list-item mdui-ripple" onclick="window.location.href = 'https://status.rssins.net/';"> <i
-          class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-purple">cloud_circle</i>
+      <li class="mdui-list-item mdui-ripple" onclick="window.location.href = 'https://status.rssins.net/';"> <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-purple">cloud_circle</i>
         <div class="mdui-list-item-content" data-translatable>服务器状态 屑一次 伺服器状态 屑一次 Service Position 屑一次 サーバーの状態</div>
       </li>
-      <li class="mdui-list-item mdui-ripple" onclick="window.location.href = 'https://t.me/bocc_group';"> <i
-          class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-deep-purple">comment</i>
+      <li class="mdui-list-item mdui-ripple" onclick="window.location.href = 'https://t.me/bocc_group';"> <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-deep-purple">comment</i>
         <div class="mdui-list-item-content" data-translatable>联系我们 屑一次 联络我们 屑一次 Ask Our Support 屑一次 連絡先情報</div>
       </li>
-      <li class="mdui-list-item mdui-ripple setdark"> <i
-          class="mdui-list-item-icon mdui-icon material-icons">brightness_4</i>
+      <li class="mdui-list-item mdui-ripple setdark"> <i class="mdui-list-item-icon mdui-icon material-icons">brightness_4</i>
         <div class="mdui-list-item-content" data-translatable>夜间模式 屑一次 暗色模式 屑一次 Dark Mode 屑一次 暗いモード</div>
       </li>
       <!--主题切换-->
@@ -184,7 +168,7 @@
       <!--上面这个储存黑暗模式开关状态，默认存在时为关闭，开启时class被删除,关闭时class被重新添加-->
       <script>
         // 绑定按钮点击事件
-        $('.setdark').on('click', function () {
+        $('.setdark').on('click', function() {
 
           if ($('div').is('.setdarkmodesetting')) //判断上面的class是否存在
           {
@@ -221,20 +205,20 @@
     <!--应用栏1-->
     <div id="tab1">
       <!-- 动画 -->
-      <div class="area">
+      <div class="area" >
         <ul class="circles">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
         </ul>
-      </div>
+      </div >
       <div class="mdui-container">
         <div class="mdui-container-fluid" id="indexPic" style="
         position: absolute;
@@ -247,23 +231,19 @@
         background-repeat: no-repeat;">
           <div class="mdui-row" id="backG">
             <div class="" style="margin-top: calc(30vh);">
-              <div class="mdui-typo-display-2 mdui-text-center" data-translatable>不止是鸽子 屑一次 不止是鴿子 屑一次 Hey There 屑一次 ハト以上
-              </div>
-              <div class="mdui-typo-display-1 mdui-m-t-2 mdui-text-center" data-translatable>更是废物 屑一次 一群廢物 屑一次 WTF. 屑一次 まだ無駄</div>
-              <button class="mdui-btn mdui-color-theme-accent mdui-ripple mdui-m-t-4 mdui-center"
-                onclick="window.location.href = 'https://blog.rssins.net/';">
+              <div class="mdui-typo-display-2 mdui-text-center" data-translatable>不止是鸽子 屑一次 不止是鴿子 屑一次 Do Nothing 屑一次 ハト以上</div>
+              <div class="mdui-typo-display-1 mdui-m-t-2 mdui-text-center" data-translatable>更是废物 屑一次 一群廢物 屑一次 How litter we are. 屑一次 まだ無駄</div>
+              <button class="mdui-btn mdui-color-theme-accent mdui-ripple mdui-m-t-4 mdui-center" onclick="window.location.href = 'https://blog.rssins.net/';">
                 <i class="mdui-icon mdui-icon-left material-icons">assignment</i> <span data-translatable>
                   博客 屑一次 部落格 屑一次 Blog 屑一次 ブログ</span></button>
               &nbsp;
-              <button class="mdui-color-purple mdui-btn mdui-ripple mdui-center"
-                onclick="window.location.href = 'https://t.me/bocc_group';">
+              <button class="mdui-color-purple mdui-btn mdui-ripple mdui-center" onclick="window.location.href = 'https://t.me/bocc_group';">
                 <i class="mdui-icon mdui-icon-left material-icons">send</i>
                 <span data-translatable>群组 屑一次 群組 屑一次 TG Group 屑一次 コミュニティ</button>
             </div>
           </div>
         </div>
-        <div class="mdui-text-center" style="margin-top: calc(90vh);"><i
-            class="mdui-icon material-icons">expand_more</i><span data-translatable>下面还有内容哦 屑一次 下滑以查看更多 屑一次 Learn more 屑一次 滑り降りてください</span></div>
+        <div class="mdui-text-center" style="margin-top: calc(90vh);"><i class="mdui-icon material-icons">expand_more</i><span data-translatable>下面还有内容哦 屑一次 下滑以查看更多 屑一次 Learn more 屑一次 滑り降りてください</span></div>
         <div class="mdui-row" style="margin-top: calc(5vh);">
           <div class="mdui-typo-display-2 mdui-m-l-4 mdui-hidden-xs-down"><span data-translatable>我们运营的站点 屑一次 我們的站點 屑一次 Our Service 屑一次 当社のウェブサイト</span> <i class="mdui-typo-display-2 mdui-text-color-theme-accent mdui-icon material-icons">arrow_forward</i></div>
           <div class="mdui-typo-display-1-opacity mdui-m-l-4 mdui-m-t-2 mdui-hidden-xs-down" data-translatable>随时跑路 屑一次 隨時跑路 屑一次 You should be patient. 屑一次 いつでも破産
@@ -272,30 +252,140 @@
           <div class="mdui-typo-headline-opacity mdui-m-l-4 mdui-m-t-2 mdui-hidden-sm-up" data-translatable>随时跑路 屑一次 隨時跑路 屑一次 You should be patient. 屑一次 いつでも破産
           </div>
           <div class="mdui-m-t-4"></div>
-          <!-- 服务链接组块 -->
-          <div id="web">
-            <webs icons='insert_chart' color="mdui-color-indigo" name="Redsunsets Hub" info="BLOG"
-              about="余晖无垠科技博客，时常发布一些干货 屑一次 我們的博客 屑一次 Our blog with our socialism technology 屑一次 私たちのブログはしばしば実践的な知識を公開しています。"
-              link="https://blog.rssins.net/">
-            </webs>
-            <webs icons='lightbulb_outline' color="mdui-color-pink" name="Redsunset Lab" info="Lab"
-              about="余晖无垠实验室，公共API与项目 屑一次 提供免費API與產品 屑一次 Provide free API and more. 屑一次 使用するAPIを提供する"
-              link="https://lab.rssins.net/">
-            </webs>
-            <webs icons='receipt' color="mdui-color-teal" name="晴空备忘录" info="Orss"
-              about="记录您的任何想法，现内测中 屑一次 記錄您的任何想法，現內測中 屑一次 Record any of your thoughts, now in closed beta. 屑一次 気まぐれなアイデアを書き留めてください。現在はクローズドベータ版です。"
-              link="https://www.orss.cf/">
-            </webs>
-            <webs icons='cloud_queue' color="mdui-color-deep-orange" name="夕阳红养老云" info="pan"
-              about="小型自用网盘，暂不对外开放 屑一次 雲端硬盤，暂不對外開放 屑一次 Drive, we are not open to the public 屑一次 内部クラウドストレージは一般に公開されていません。"
-              link="https://pan.rssins.net/">
-            </webs>
-            <webs icons='remove_from_queue' color="mdui-color-deep-purple" name="余晖无垠资源共享" info="share" about="这里有些好康的"
-              link="https://share.rssins.net/">
-            </webs>
-            <webs icons='comment' color="mdui-color-purple" name="余晖俱乐部" info="club"
-              about="余晖无垠的论坛！ 屑一次 我們的線上論壇 屑一次 Our online forum 屑一次 当社のWebフォーラム。" link="https://club.rssins.net/">
-            </webs>
+          <div class="mdui-col-md-4 mdui-m-t-2 mdui-col-sm-6" id="in_L01">
+            <div class="mdui-card mdui-typo">
+              <div class="mdui-card-primary">
+                <li class="mdui-list-item mdui-ripple">
+                  <div class="mdui-list-item-avatar mdui-color-indigo"><i class="mdui-icon material-icons">insert_chart</i></div>
+                  <div class="mdui-list-item-content">
+                    <div class="mdui-list-item-title">Redsunsets Hub</div>
+                    <div class="mdui-list-item-text mdui-list-item-one-line" data-translatable>余晖无垠科技博客，时常发布一些干货 屑一次 我們的博客 屑一次 Our blog with our socialism technology 屑一次 私たちのブログはしばしば実践的な知識を公開しています。</div>
+                  </div>
+                </li>
+              </div>
+              <div class="mdui-card-actions mdui-color-indigo">
+                <div class="mdui-btn mdui-text-color-white-disabled">Blog</div>
+                <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
+              </div>
+            </div>
+            <script>
+              document.getElementById('in_L01').addEventListener('click', function() {
+                window.location.href = "https://blog.rssins.net/";
+              });
+            </script>
+          </div>
+          <div class="mdui-col-md-4 mdui-m-t-2 mdui-col-sm-6" id="in_L02">
+            <div class="mdui-card mdui-typo">
+              <div class="mdui-card-primary">
+                <li class="mdui-list-item mdui-ripple">
+                  <div class="mdui-list-item-avatar mdui-color-pink"><i class="mdui-icon material-icons">lightbulb_outline</i></div>
+                  <div class="mdui-list-item-content">
+                    <div class="mdui-list-item-title">Redsunset Lab</div>
+                    <div class="mdui-list-item-text mdui-list-item-one-line" data-translatable>余晖无垠实验室，公共API与项目 屑一次 提供免費API與產品 屑一次 Provide free API and more. 屑一次 使用するAPIを提供する</div>
+                  </div>
+                </li>
+              </div>
+              <div class="mdui-card-actions mdui-color-pink">
+                <div class="mdui-btn mdui-text-color-white-disabled">Lab</div>
+                <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
+              </div>
+            </div>
+            <script>
+              document.getElementById('in_L02').addEventListener('click', function() {
+                window.location.href = "https://lab.rssins.net/";
+              });
+            </script>
+          </div>
+          <div class="mdui-col-md-4 mdui-m-t-2 mdui-col-sm-6" id="in_L03">
+            <div class="mdui-card mdui-typo">
+              <div class="mdui-card-primary">
+                <li class="mdui-list-item mdui-ripple">
+                  <div class="mdui-list-item-avatar mdui-color-teal"><i class="mdui-icon material-icons">receipt</i>
+                  </div>
+                  <div class="mdui-list-item-content">
+                    <div class="mdui-list-item-title">晴空备忘录</div>
+                    <div class="mdui-list-item-text mdui-list-item-one-line" data-translatable>记录您的任何想法，现内测中 屑一次 記錄您的任何想法，現內測中 屑一次 Record any of your thoughts, now in closed beta. 屑一次 気まぐれなアイデアを書き留めてください。現在はクローズドベータ版です。</div>
+                  </div>
+                </li>
+              </div>
+              <div class="mdui-card-actions mdui-color-teal">
+                <div class="mdui-btn mdui-text-color-white-disabled">Orss</div>
+                <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
+              </div>
+            </div>
+            <script>
+              document.getElementById('in_L03').addEventListener('click', function() {
+                window.location.href = "https://www.orss.cf/";
+              });
+            </script>
+          </div>
+          <div class="mdui-col-md-4 mdui-m-t-2 mdui-col-sm-6" id="in_L04">
+            <div class="mdui-card mdui-typo">
+              <div class="mdui-card-primary">
+                <li class="mdui-list-item mdui-ripple">
+                  <div class="mdui-list-item-avatar mdui-color-deep-orange"><i class="mdui-icon material-icons mdui-text-color-white">cloud_queue</i>
+                  </div>
+                  <div class="mdui-list-item-content">
+                    <div class="mdui-list-item-title">夕阳红养老云</div>
+                    <div class="mdui-list-item-text mdui-list-item-one-line" data-translatable>小型自用网盘，暂不对外开放 屑一次 雲端硬盤，暂不對外開放 屑一次 Drive, we are not open to the public 屑一次 内部クラウドストレージは一般に公開されていません。</div>
+                  </div>
+                </li>
+              </div>
+              <div class="mdui-card-actions mdui-color-deep-orange">
+                <div class="mdui-btn mdui-text-color-white-disabled">pan</div>
+                <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons mdui-text-color-white">arrow_forward</i></button>
+              </div>
+            </div>
+            <script>
+              document.getElementById('in_L04').addEventListener('click', function() {
+                window.location.href = "https://pan.rssins.net/";
+              });
+            </script>
+          </div>
+          <div class="mdui-col-md-4 mdui-m-t-2 mdui-col-sm-6" id="in_L05">
+            <div class="mdui-card mdui-typo">
+              <div class="mdui-card-primary">
+                <li class="mdui-list-item mdui-ripple">
+                  <div class="mdui-list-item-avatar mdui-color-deep-purple"><i class="mdui-icon material-icons">remove_from_queue</i></div>
+                  <div class="mdui-list-item-content">
+                    <div class="mdui-list-item-title">余晖无垠资源共享</div>
+                    <div class="mdui-list-item-text mdui-list-item-one-line">这里有些好康的</div>
+                  </div>
+                </li>
+              </div>
+              <div class="mdui-card-actions mdui-color-deep-purple">
+                <div class="mdui-btn mdui-text-color-white-disabled">share</div>
+                <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
+              </div>
+            </div>
+            <script>
+              document.getElementById('in_L05').addEventListener('click', function() {
+                window.location.href = "https://share.rssins.net/";
+              });
+            </script>
+          </div>
+          <div class="mdui-col-md-4 mdui-m-t-2 mdui-col-sm-6" id="in_L06">
+            <div class="mdui-card mdui-typo">
+              <div class="mdui-card-primary">
+                <li class="mdui-list-item mdui-ripple">
+                  <div class="mdui-list-item-avatar mdui-color-purple"><i class="mdui-icon material-icons">comment</i>
+                  </div>
+                  <div class="mdui-list-item-content">
+                    <div class="mdui-list-item-title">余晖俱乐部</div>
+                    <div class="mdui-list-item-text mdui-list-item-one-line" data-translatable>余晖无垠的论坛！ 屑一次 我們的線上論壇 屑一次 Our online forum 屑一次 当社のWebフォーラム。</div>
+                  </div>
+                </li>
+              </div>
+              <div class="mdui-card-actions mdui-color-purple">
+                <div class="mdui-btn mdui-text-color-white-disabled">club</div>
+                <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
+              </div>
+            </div>
+            <script>
+              document.getElementById('in_L06').addEventListener('click', function() {
+                window.location.href = "https://club.rssins.net/";
+              });
+            </script>
           </div>
         </div>
         <!-- 捐赠 -->
@@ -311,22 +401,19 @@
             </li>
           </div>
           <!-- 卡片的内容 -->
-          <div class="mdui-card-content" data-translatable>不管怎样，对我个人而言，没钱不仅仅是一个重大的事件，还可能会改变我的人生。 屑一次  不管怎樣，對我個人而言，沒錢不僅僅是一個重大的事件，還可能會改變我的人生。 屑一次 In any case, for me personally, lack of money is not just a major event, it may also change my life. 屑一次 いずれにせよ、私個人としては、お金の不足は大きな出来事であるだけでなく、私の人生を変えるかもしれません。</div>
+          <div class="mdui-card-content" data-translatable>不管怎样，对我个人而言，没钱不仅仅是一个重大的事件，还可能会改变我的人生。 屑一次 不管怎樣，對我個人而言，沒錢不僅僅是一個重大的事件，還可能會改變我的人生。 屑一次 In any case, for me personally, lack of money is not just a major event, it may also change my life. 屑一次 いずれにせよ、私個人としては、お金の不足は大きな出来事であるだけでなく、私の人生を変えるかもしれません。</div>
           <!-- 卡片的按钮 -->
           <div class="mdui-card-actions">
-            <button class="mdui-btn mdui-ripple mdui-color-theme-accent" mdui-dialog="{target: '#Dialog_donate'}"
-              data-translatable>在线支付 屑一次 在線支付 屑一次 Pay online 屑一次 オンライン支払い</button>
+            <button class="mdui-btn mdui-ripple mdui-color-theme-accent" mdui-dialog="{target: '#Dialog_donate'}" data-translatable>在线支付 屑一次 在線支付 屑一次 Pay online 屑一次 オンライン支払い</button>
             <button class="mdui-btn mdui-ripple" mdui-dialog="{target: '#Dialog_donationInfo'}" data-translatable>捐赠公示 屑一次 捐贈公示 屑一次 Donor 屑一次 寄付発表</button>
-            <button class="mdui-btn mdui-btn-icon mdui-float-right"><i
-                class="mdui-icon material-icons">expand_more</i></button>
+            <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">expand_more</i></button>
           </div>
         </div>
         <div class="mdui-dialog" id="Dialog_donate">
           <div class="mdui-dialog-title" data-translatable>支付 屑一次 捐贈 屑一次 Donation 屑一次 支払うには</div>
           <div class="mdui-dialog-content">
             <div class="mdui-row">
-              <img class="mdui-img-fluid mdui-col-xs-5" src="./pic/donate_qr.jpg" width="9" height="16"
-                layout="responsive"></img>
+              <img class="mdui-img-fluid mdui-col-xs-5" src="./pic/donate_qr.jpg" width="9" height="16" layout="responsive"></img>
               <div class="mdui-typo mdui-col-xs-7">
                 <h1 class="mdui-text-color-theme-accent">小老弟，来都来了，还不快PY一波？</h1>
                 <ul>
@@ -395,46 +482,436 @@
         </div>
         <div class="mdui-m-t-4">
           <div class="mdui-row">
-            <div class="mdui-typo-display-2 mdui-m-l-4 mdui-m-t-4 mdui-hidden-xs-down"><span data-translatable>友情链接 屑一次 友情鏈接 屑一次 Links 屑一次 友情リンク</span> <i class="mdui-typo-display-2 mdui-text-color-theme-accent mdui-icon material-icons">arrow_forward</i></div>
+            <div class="mdui-typo-display-2 mdui-m-l-4 mdui-m-t-4 mdui-hidden-xs-down"><span data-translatable>友情链接 屑一次 友情鏈接 屑一次 Links 屑一次 友情リンク</span> <i class="mdui-typo-display-1 mdui-text-color-theme-accent mdui-icon material-icons">arrow_forward</i></div>
             <div class="mdui-typo-display-1-opacity mdui-m-l-4 mdui-m-t-2 mdui-hidden-xs-down" data-translatable>我的朋友们 屑一次 我的朋友們 屑一次 My friends 屑一次 私の友達</div>
-            <div class="mdui-typo-display-1 mdui-m-l-4 mdui-hidden-sm-up"><span data-translatable>友情链接 屑一次 友情鏈接 屑一次 Links 屑一次 友情リンク</span> <i class="mdui-typo-display-1 mdui-text-color-theme-accent mdui-icon material-icons">arrow_forward</i></div>
+            <div class="mdui-typo-display-1 mdui-m-l-4 mdui-hidden-sm-up"><span data-translatable>友情链接 屑一次 友情鏈接 屑一次 Links 屑一次 友情リンク</span> <i class="mdui-typo-display-2 mdui-text-color-theme-accent mdui-icon material-icons">arrow_forward</i></div>
             <div class="mdui-typo-headline-opacity mdui-m-l-4 mdui-m-t-2 mdui-hidden-sm-up" data-translatable>我的朋友们 屑一次 我的朋友們 屑一次 My friends 屑一次 私の友達</div>
             <div class="mdui-m-t-4"></div>
-            <!-- 友情链接组块 -->
-            <div id="link">
-              <links name='Grassblock’s Blog' img="./pic/yl1.webp" about="这里住着一只乐于分享知识和生活的大绒布球～"
-                link="https://blog.imgb.space/"
-                target='<i class="mdui-icon material-icons mdui-text-color-orange">favorite_border</i>'></links>
-              <links name='荆棘小栈' img="https://gitee.com/jsun969/assets/raw/master/avatar.png"
-                about="好看的皮囊千篇一律，有趣的灵魂万里挑一" link="https://jsun969.cn"></links>
-              <links name='XenWayne’s Blog' img="./pic/yl2.webp" about="鸽子的自我修养" link="https://xenwayne.top/"></links>
-              <links name='ROYWANG' img="https://blog.ras.its.he.cn/wp-content/2021/11/cropped-logo-180x180.jpg"
-                about="知善恶，懂因果。但行好事，莫问前程。" link="https://roywang.cn/"></links>
-              <links name='LYM’S BLOG' img="./pic/yl3.webp" about="一个萌新的小站" link="https://loli.by/"></links>
-              <links name='Rain’s Blog'
-                img="https://blog.im.ci/wp-content/uploads/2020/07/IMG_20191231_052259-scaled-e1596127234331.jpg"
-                about="Rain的随笔小记" link="https://blog.im.ci/"></links>
-              <links name='星痕图床' img="./pic/yl07.jpg" about="他说不给他添加友链就扬了余晖无垠" link="https://imgtu.pro/"></links>
-              <links name='乱谈府' img="./pic/yl4.webp" about="也扯淡，也思考，也学习，也生活" link="https://laffitto.xyz"></links>
-              <links name='西安咸阳国际机场' img="./pic/yl5.webp" about="已跑路的机场" link="#"
-                target='<i class="mdui-icon material-icons mdui-text-color-red">error_outline</i>'></links>
-              <links name='暮れ残る合同会社' img="./pic/yl6.webp" about="私たちは新興インターネット企業であり" link="https://www.rste.club/">
-              </links>
-              <links name='独立博客&播客全订阅计划' img="https://box.othing.xyz/themes/icons/icon.svg" about="订阅全部中文博客&播客！"
-                link="https://box.othing.xyz"></links>
-              <links name='Luminous' img="https://www.luminous.top/wp-content/uploads/2021/07/favicon.ico"
-                about="一个普通的联盟" link="https://luminous.top/"></links>
-              <links name='Roof' img="./pic/yl7.webp" about="不能止步于顶部" link="https://www.rendsunsetsr.ml/"></links>
-              <links name='郭桓桓的小 blog' img="./pic/yl8.webp" about="台灣小喵的雜物間，紀錄一些 coding 和折騰日常～"
-                link="https://blog.nekohuan.cyou/"></links>
-              <links name='吃土的小智' img="./pic/yl9.webp" about="我家还蛮大的.jpg" link="https://chitudexiaozhi.com"></links>
-              <links name='测试站' img="#" about="测试站" link="#"></links>
-
-              <!-- 标准格式 <links name='' img="" 
-                        about="" 
-                        link="" target=''></links> -->
+            <div class="mdui-col-md-4">
+              <ul class="mdui-list">
+                <div class="mdui-card" id="link_1" style="border-radius: 10px !important;">
+                  <div class="mdui-card-media">
+                    <li class="mdui-list-item mdui-ripple">
+                      <div class="mdui-list-item-avatar mdui-color-red">
+                        <img src="./pic/yl1.webp" width="1" height="1" layout="responsive">
+                        </img>
+                      </div>
+                      <div class="mdui-list-item-content">
+                        <div class="mdui-list-item-title">Grassblock's Blog</div>
+                        <div class="mdui-list-item-text mdui-list-item-one-line">
+                          这里住着一只乐于分享知识和生活的大绒布球～
+                        </div>
+                      </div>
+                      <i class="mdui-icon material-icons mdui-text-color-orange" mdui-tooltip="{content: 'PY'}">favorite_border</i>
+                      <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
+                    </li>
+                  </div>
+                  <script>
+                    document.getElementById('link_1').addEventListener('click', function() {
+                      window.location.href = "https://blog.imgb.space/";
+                    });
+                  </script>
+                </div>
+              </ul>
+            </div>
+            <div class="mdui-col-md-4">
+              <ul class="mdui-list">
+                <div class="mdui-card" id="link_2" style="border-radius: 10px !important;">
+                  <div class="mdui-card-media">
+                    <li class="mdui-list-item mdui-ripple">
+                      <div class="mdui-list-item-avatar">
+                        <img src="https://gitee.com/jsun969/assets/raw/master/avatar.png" width="1" height="1" layout="responsive"></img>
+                      </div>
+                      <div class="mdui-list-item-content">
+                        <div class="mdui-list-item-title">荆棘小栈</div>
+                        <div class="mdui-list-item-text mdui-list-item-one-line">
+                          好看的皮囊千篇一律，有趣的灵魂万里挑一
+                        </div>
+                      </div>
+                      <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
+                    </li>
+                  </div>
+                  <script>
+                    document.getElementById('link_2').addEventListener('click', function() {
+                      window.location.href = "https://jsun969.cn";
+                    });
+                  </script>
+                </div>
+              </ul>
+            </div>
+            <div class="mdui-col-md-4">
+              <ul class="mdui-list">
+                <div class="mdui-card" id="link_3" style="border-radius: 10px !important;">
+                  <div class="mdui-card-media">
+                    <li class="mdui-list-item mdui-ripple">
+                      <div class="mdui-list-item-avatar">
+                        <img src="./pic/yl2.webp" width="1" height="1" layout="responsive"></img>
+                      </div>
+                      <div class="mdui-list-item-content">
+                        <div class="mdui-list-item-title">XenWayne's Blog</div>
+                        <div class="mdui-list-item-text mdui-list-item-one-line">
+                          鸽子的自我修养
+                        </div>
+                      </div>
+                      <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
+                    </li>
+                  </div>
+                  <script>
+                    document.getElementById('link_3').addEventListener('click', function() {
+                      window.location.href = "https://xenwayne.top/";
+                    });
+                  </script>
+                </div>
+              </ul>
             </div>
           </div>
+          <!-- 第二列 -->
+          <div class="mdui-row">
+            <div class="mdui-col-md-4">
+              <ul class="mdui-list">
+                <div class="mdui-card" id="link_4" style="border-radius: 10px !important;">
+                  <div class="mdui-card-media">
+                    <li class="mdui-list-item mdui-ripple">
+                      <div class="mdui-list-item-avatar">
+                        <img src="#" width="1" height="1" layout="responsive"></img>
+                      </div>
+                      <div class="mdui-list-item-content">
+                        <div class="mdui-list-item-title">ROYWANG</div>
+                        <div class="mdui-list-item-text mdui-list-item-one-line">
+                          知善恶，懂因果。但行好事，莫问前程。
+                        </div>
+                      </div>
+                      <i class="mdui-icon material-icons mdui-text-color-red-a700" mdui-tooltip="{content: '图片炸了'}">error_outline</i>
+                      <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
+                    </li>
+                  </div>
+                  <script>
+                    document.getElementById('link_4').addEventListener('click', function() {
+                      window.location.href = "https://roywang.cn/";
+                    });
+                  </script>
+                </div>
+              </ul>
+            </div>
+            <div class="mdui-col-md-4">
+              <ul class="mdui-list">
+                <div class="mdui-card" id="link_5" style="border-radius: 10px !important;">
+                  <div class="mdui-card-media">
+                    <li class="mdui-list-item mdui-ripple">
+                      <div class="mdui-list-item-avatar mdui-color-red">
+                        <img src="./pic/yl3.webp" width="1" height="1" layout="responsive"></img>
+                      </div>
+                      <div class="mdui-list-item-content">
+                        <div class="mdui-list-item-title">LYM'S BLOG</div>
+                        <div class="mdui-list-item-text mdui-list-item-one-line">
+                          一个萌新的小站
+                        </div>
+                      </div>
+                      <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
+                    </li>
+                  </div>
+                  <script>
+                    document.getElementById('link_5').addEventListener('click', function() {
+                      window.location.href = "https://loli.by/";
+                    });
+                  </script>
+                </div>
+              </ul>
+            </div>
+            <div class="mdui-col-md-4">
+              <ul class="mdui-list">
+                <div class="mdui-card" id="link_6" style="border-radius: 10px !important;">
+                  <div class="mdui-card-media">
+                    <li class="mdui-list-item mdui-ripple">
+                      <div class="mdui-list-item-avatar mdui-color-red">
+                        <img src="https://blog.im.ci/wp-content/uploads/2020/07/IMG_20191231_052259-scaled-e1596127234331.jpg" width="1" height="1" layout="responsive"></img>
+                      </div>
+                      <div class="mdui-list-item-content">
+                        <div class="mdui-list-item-title">Rain's Blog</div>
+                        <div class="mdui-list-item-text mdui-list-item-one-line">
+                          Rain的随笔小记
+                        </div>
+                      </div>
+                      <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
+                    </li>
+                  </div>
+                  <script>
+                    document.getElementById('link_6').addEventListener('click', function() {
+                      window.location.href = "https://blog.im.ci/";
+                    });
+                  </script>
+                </div>
+              </ul>
+            </div>
+          </div>
+          <!-- 第三行 -->
+          <div class="mdui-row">
+            <div class="mdui-col-md-4">
+              <ul class="mdui-list">
+                <div class="mdui-card" id="link_7" style="border-radius: 10px !important;">
+                  <div class="mdui-card-media">
+                    <li class="mdui-list-item mdui-ripple">
+                      <div class="mdui-list-item-avatar">
+                        <img src="./pic/yl07.jpg" width="1" height="1" layout="responsive"></img>
+                      </div>
+                      <div class="mdui-list-item-content">
+                        <div class="mdui-list-item-title">星痕图床</div>
+                        <div class="mdui-list-item-text mdui-list-item-one-line">
+                          他说不给他添加友链就扬了余晖无垠
+                        </div>
+                      </div>
+                      <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
+                    </li>
+                  </div>
+                  <script>
+                    document.getElementById('link_7').addEventListener('click', function() {
+                      window.location.href = "https://imgtu.pro/";
+                    });
+                  </script>
+                </div>
+              </ul>
+            </div>
+            <div class="mdui-col-md-4">
+              <ul class="mdui-list">
+                <div class="mdui-card" id="link_8" style="border-radius: 10px !important;">
+                  <div class="mdui-card-media">
+                    <li class="mdui-list-item mdui-ripple">
+                      <div class="mdui-list-item-avatar mdui-color-red">
+                        <img src="./pic/yl4.webp" width="1" height="1" layout="responsive"></img>
+                      </div>
+                      <div class="mdui-list-item-content">
+                        <div class="mdui-list-item-title">乱谈府</div>
+                        <div class="mdui-list-item-text mdui-list-item-one-line">
+                          也扯淡，也思考，也学习，也生活
+                        </div>
+                      </div>
+                      <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
+                    </li>
+                  </div>
+                  <script>
+                    document.getElementById('link_8').addEventListener('click', function() {
+                      window.location.href = "https://laffitto.xyz";
+                    });
+                  </script>
+                </div>
+              </ul>
+            </div>
+            <div class="mdui-col-md-4">
+              <ul class="mdui-list">
+                <div class="mdui-card" id="link_9" style="border-radius: 10px !important;">
+                  <div class="mdui-card-media">
+                    <li class="mdui-list-item mdui-ripple">
+                      <div class="mdui-list-item-avatar">
+                        <img src="./pic/yl5.webp" width="1" height="1" layout="responsive"></img>
+                      </div>
+                      <div class="mdui-list-item-content">
+                        <div class="mdui-list-item-title">西安咸阳国际机场</div>
+                        <div class="mdui-list-item-text mdui-list-item-one-line">
+                          已跑路的机场
+                        </div>
+                      </div>
+                    </li>
+                  </div>
+                  <script>
+                    document.getElementById('link_fuck').addEventListener('click', function() {
+                      window.location.href = "";
+                    });
+                  </script>
+                </div>
+              </ul>
+            </div>
+          </div>
+          <!-- 第四行 -->
+          <div class="mdui-row">
+            <div class="mdui-col-md-4">
+              <ul class="mdui-list">
+                <div class="mdui-card" id="link_10" style="border-radius: 10px !important;">
+                  <div class="mdui-card-media">
+                    <li class="mdui-list-item mdui-ripple">
+                      <div class="mdui-list-item-avatar">
+                        <img src="./pic/yl6.webp" width="1" height="1" layout="responsive"></img>
+                      </div>
+                      <div class="mdui-list-item-content">
+                        <div class="mdui-list-item-title">暮れ残る合同会社</div>
+                        <div class="mdui-list-item-text mdui-list-item-one-line">
+                          私たちは新興インターネット企業であり
+                        </div>
+                      </div>
+                      <i class="mdui-icon material-icons mdui-text-color-green" mdui-tooltip="{content: '合作网站'}">check_circle</i>
+                      <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
+                    </li>
+                  </div>
+                  <script>
+                    document.getElementById('link_10').addEventListener('click', function() {
+                      window.location.href = "https://www.rste.club/";
+                    });
+                  </script>
+                </div>
+              </ul>
+            </div>
+            <div class="mdui-col-md-4">
+              <ul class="mdui-list">
+                <div class="mdui-card" style="border-radius: 10px !important;">
+                  <div class="mdui-card-media">
+                    <li class="mdui-list-item mdui-ripple">
+                      <div class="mdui-list-item-avatar mdui-color-white">
+                        <img src="https://box.othing.xyz/themes/icons/icon.svg" width="1" height="1" layout="responsive"></img>
+                      </div>
+                      <div class="mdui-list-item-content" id="link_11">
+                        <div class="mdui-list-item-title">独立博客&播客全订阅计划</div>
+                        <div class="mdui-list-item-text mdui-list-item-one-line">
+                          订阅全部中文博客&播客！
+                        </div>
+                      </div>
+                      <i class="mdui-icon material-icons mdui-text-color-indigo" onclick="window.location.href = 'https://t.me/blogrsslist';">info_outline</i>
+                      <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
+                    </li>
+                  </div>
+                  <script>
+                    document.getElementById('link_11').addEventListener('click', function() {
+                      window.location.href = "https://box.othing.xyz";
+                    });
+                  </script>
+                </div>
+              </ul>
+            </div>
+            <div class="mdui-col-md-4">
+              <ul class="mdui-list">
+                <div class="mdui-card" id="link_12" style="border-radius: 10px !important;">
+                  <div class="mdui-card-media">
+                    <li class="mdui-list-item mdui-ripple">
+                      <div class="mdui-list-item-avatar">
+                        <img src="https://www.luminous.top/wp-content/uploads/2021/07/favicon.ico" width="1" height="1" layout="responsive"></img>
+                      </div>
+                      <div class="mdui-list-item-content">
+                        <div class="mdui-list-item-title">Luminous</div>
+                        <div class="mdui-list-item-text mdui-list-item-one-line">
+                          一个普通的联盟
+                        </div>
+                      </div>
+                      <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
+                    </li>
+                  </div>
+                  <script>
+                    document.getElementById('link_12').addEventListener('click', function() {
+                      window.location.href = "https://luminous.top/";
+                    });
+                  </script>
+                </div>
+              </ul>
+            </div>
+          </div>
+          <!-- 第五行 -->
+          <div class="mdui-row">
+            <div class="mdui-col-md-4">
+              <ul class="mdui-list">
+                <div class="mdui-card" id="link_13" style="border-radius: 10px !important;">
+                  <div class="mdui-card-media">
+                    <li class="mdui-list-item mdui-ripple">
+                      <div class="mdui-list-item-avatar">
+                        <img src="./pic/yl7.webp" width="1" height="1" layout="responsive"></img>
+                      </div>
+                      <div class="mdui-list-item-content">
+                        <div class="mdui-list-item-title">Roof</div>
+                        <div class="mdui-list-item-text mdui-list-item-one-line">
+                          不能止步于顶部
+                        </div>
+                      </div>
+                      <i class="mdui-icon material-icons mdui-text-color-green" mdui-tooltip="{content: '合作网站'}">check_circle</i>
+                      <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
+                    </li>
+                  </div>
+                  <script>
+                    document.getElementById('link_13').addEventListener('click', function() {
+                      window.location.href = "https://www.rendsunsetsr.ml/";
+                    });
+                  </script>
+                </div>
+              </ul>
+            </div>
+            <div class="mdui-col-md-4">
+              <ul class="mdui-list">
+                <div class="mdui-card" style="border-radius: 10px !important;">
+                  <div class="mdui-card-media">
+                    <li class="mdui-list-item mdui-ripple">
+                      <div class="mdui-list-item-avatar mdui-color-white">
+                        <img src="./pic/yl8.webp" width="1" height="1" layout="responsive"></img>
+                      </div>
+                      <div class="mdui-list-item-content" id="link_14">
+                        <div class="mdui-list-item-title">郭桓桓的小 blog</div>
+                        <div class="mdui-list-item-text mdui-list-item-one-line">
+                          台灣小喵的雜物間，紀錄一些 coding 和折騰日常～
+                        </div>
+                      </div>
+                      <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
+                    </li>
+                  </div>
+                  <script>
+                    document.getElementById('link_14').addEventListener('click', function() {
+                      window.location.href = "https://blog.nekohuan.cyou/";
+                    });
+                  </script>
+                </div>
+              </ul>
+            </div>
+            <div class="mdui-col-md-4">
+              <ul class="mdui-list">
+                <div class="mdui-card" id="link_15" style="border-radius: 10px !important;">
+                  <div class="mdui-card-media">
+                    <li class="mdui-list-item mdui-ripple">
+                      <div class="mdui-list-item-avatar">
+                        <img src="./pic/yl9.webp" width="1" height="1" layout="responsive"></img>
+                      </div>
+                      <div class="mdui-list-item-content">
+                        <div class="mdui-list-item-title">吃土的小智
+                        </div>
+                        <div class="mdui-list-item-text mdui-list-item-one-line">
+                          我家还蛮大的.jpg
+                        </div>
+                      </div>
+                      <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
+                    </li>
+                  </div>
+                  <script>
+                    document.getElementById('link_15').addEventListener('click', function() {
+                      window.location.href = "https://chitudexiaozhi.com";
+                    });
+                  </script>
+                </div>
+              </ul>
+            </div>
+          </div>
+          <!-- 第六行 -->
+          <div class="mdui-row">
+            <div class="mdui-col-md-4">
+              <ul class="mdui-list">
+                <div class="mdui-card" id="link_16" style="border-radius: 10px !important;">
+                  <div class="mdui-card-media">
+                    <li class="mdui-list-item mdui-ripple">
+                      <div class="mdui-list-item-avatar">
+                        <img src="./pic/y20.webp" width="1" height="1" layout="responsive"></img>
+                      </div>
+                      <div class="mdui-list-item-content">
+                        <div class="mdui-list-item-title">测试站
+                        </div>
+                        <div class="mdui-list-item-text mdui-list-item-one-line">
+                          测试站
+                        </div>
+                      </div>
+                      <button class="mdui-btn mdui-btn-icon mdui-float-right"><i
+                          class="mdui-icon material-icons">arrow_forward</i></button>
+                    </li>
+                  </div>
+                  <script>
+                    document.getElementById('link_16').addEventListener('click', function () {
+                      window.location.href = "https://itforweb666.github.io/";
+                    });
+                  </script>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
         </div>
       </div>
     </div>
@@ -446,25 +923,29 @@
         <div class="mdui-row">
           <div class="mdui-card">
             <div class="mdui-card-media mdui-img-fluid">
-              <img src="./pic/bg5.jpg" />
-            </div>
+              <img src="./pic/bg5.jpg" /></div>
             <div class="mdui-card-primary">
               <div class="mdui-card-primary-title" data-translatable>关于我们 屑一次 關於我們 屑一次 About Us 屑一次 私たちについて</div>
-              <div class="mdui-card-primary-subtitle" data-translatable>一个由一群高中生鸽子组成的团队 屑一次 一個由一群高中生鴿子組成的團隊 屑一次 A team
-                composed of a group of high school students. 屑一次 このチームは高校生のグループで構成されています</div>
+              <div class="mdui-card-primary-subtitle" data-translatable>一个由一群高中生鸽子组成的团队 屑一次 一個由一群高中生鴿子組成的團隊 屑一次 A team composed of a group of high school students. 屑一次 このチームは高校生のグループで構成されています</div>
             </div>
+            <div class="mdui-card-media mdui-hidden-md-up">
+              <!-- <img
+                                src="https://cdn.jsdelivr.net/gh/RSSYLY/redsunsetpic/pic/blog/2021/20210219162815.webp" />
+                        </div>
+                        <div class="mdui-card-media mdui-hidden-sm-down">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/RSSYLY/redsunsetpic/pic/blog/2021/20210219162809.webp" /> -->
+            </div>
+            <br>
             <!--简介-->
             <div class="mdui-card-content mdui-typo">
               <div class="mdui-chip">
-                <span class="mdui-chip-icon mdui-color-theme-accent"><i
-                    class="mdui-icon material-icons">info_outline</i></span>
-                <span class="mdui-chip-title" data-translatable>简介 屑一次 簡介 屑一次 Introduction 屑一次 イントロ</span>
+                <span class="mdui-chip-icon mdui-color-theme-accent"><i class="mdui-icon material-icons">info_outline</i></span>
+                <span class="mdui-chip-title" data-translatable>简介 屑一次 簡介 屑一次 Introduction  屑一次 イントロ</span>
               </div>
               <br>
               <blockquote>
-                <p data-translatable>一群喜欢摸鱼的高中生，整的活比较杂，有会C++的有会单片机的，不过共同点是全是老色批。 屑一次 一群喜歡摸魚的高中生，整的活比較雜，有會C++的有會單片機的，不過共同點是全是老色批。 屑一次 A group of high school students who do unusual things,some who know C++ and some who know how to use microcontrollers, but they are Laosepi (A word for
-                  describing the people focusing only on the sexy side of something,just used to steer at himself ) in
-                  common. 屑一次 先延ばしのある高校生のグループは、C ++を知っている人もいれば、MCUを知っている人もいますが、すべてポルノが好きです。</p>
+                <p data-translatable>一群喜欢摸鱼的高中生，整的活比较杂，有会C++的有会单片机的，不过共同点是全是老色批。 屑一次 一群喜歡摸魚的高中生，整的活比較雜，有會C++的有會單片機的，不過共同點是全是老色批。 屑一次  A group of high school students who do unusual things, some who know C++ and some who know how to use microcontrollers, but they are Laosepi (A word for describing the people focusing only on the sexy side of something,just used to steer at himself ) in common. 屑一次 先延ばしのある高校生のグループは、C ++を知っている人もいれば、MCUを知っている人もいますが、すべてポルノが好きです。</p>
                 <footer data-translatable>某成员 屑一次 🐔 屑一次 A sexful man 屑一次 匿名メンバー</footer>
               </blockquote><br>
               <ul>
@@ -480,27 +961,56 @@
             <!--历程-->
             <div class="mdui-card-content">
               <div class="mdui-chip">
-                <span class="mdui-chip-icon mdui-color-theme-accent"><i
-                    class="mdui-icon material-icons">history</i></span>
+                <span class="mdui-chip-icon mdui-color-theme-accent"><i class="mdui-icon material-icons">history</i></span>
                 <span class="mdui-chip-title">历程</span>
               </div>
               <br>
               <m-timeline class="mdui-m-t-1">
-                <div id="lc">
-                  <lcs 事件='成立' 图标='done_all' 图标颜色='mdui-text-color-pink' 项目='[数据删除]' 时间='2016'></lcs>
-                  <lcs 事件='事件' 图标='directions_walk' 图标颜色='mdui-text-color-purple' 项目='MC还原西安项目' 时间='2020-02-12'></lcs>
-                  <lcs 事件='事件' 图标='language' 图标颜色='mdui-text-color-indigo' 项目='第一个网站' 时间='2020-02-28'></lcs>
-                  <lcs 事件='事件' 图标='cloud_upload' 图标颜色='mdui-text-color-orange-900' 项目='夕阳红养老云' 时间='2020-03-01'></lcs>
-                  <lcs 事件='事件' 图标='rate_review' 图标颜色='mdui-text-color-light-green' 项目='Redsunsets Hub' 时间='2020-05-16'>
-                  </lcs>
-                  <lcs 事件='事件' 图标='language' 图标颜色='mdui-text-color-indigo' 项目='2022' 时间='2022-01-01'></lcs>
-                </div>
+                <m-timeline-item>
+                  <div slot="title" class="mdui-text-color-theme-text">成立</div>
+                  <div slot="icon"><i class="mdui-icon material-icons mdui-text-color-pink">done_all</i>
+                  </div>
+                  <m-card class="mdui-card">
+                    [数据删除] <br />2016年[数据删除]
+                  </m-card>
+                </m-timeline-item>
+                <m-timeline-item>
+                  <div slot="icon"><i class="mdui-icon material-icons mdui-text-color-purple">directions_walk</i>
+                  </div>
+                  <div slot="title" class="mdui-text-color-theme-text">事件</div>
+                  <m-card class="mdui-card mdui-typo">
+                    MC还原西安项目 <br />于 <code>2020-02-12</code>
+                  </m-card>
+                </m-timeline-item>
+                <m-timeline-item>
+                  <div slot="icon"><i class="mdui-icon material-icons mdui-text-color-indigo">language</i>
+                  </div>
+                  <div slot="title" class="mdui-text-color-theme-text">事件</div>
+                  <m-card class="mdui-card mdui-typo">
+                    第一个网站 <br />于 <code>2020-02-28</code>
+                  </m-card>
+                </m-timeline-item>
+                <m-timeline-item>
+                  <div slot="icon"><i class="mdui-icon material-icons mdui-text-color-orange-900">cloud_upload</i>
+                  </div>
+                  <div slot="title" class="mdui-text-color-theme-text">事件</div>
+                  <m-card class="mdui-card mdui-typo">
+                    夕阳红养老云 <br />于 <code>2020-03-01</code>
+                  </m-card>
+                </m-timeline-item>
+                <m-timeline-item>
+                  <div slot="icon"><i class="mdui-icon material-icons mdui-text-color-light-green">rate_review</i>
+                  </div>
+                  <div slot="title" class="mdui-text-color-theme-text">事件</div>
+                  <m-card class="mdui-card mdui-typo">
+                    Redsunsets Hub <br />于 <code>2020-05-16</code>
+                  </m-card>
+                </m-timeline-item>
               </m-timeline>
             </div>
             <div class="mdui-card-actions">
               <button class="mdui-btn mdui-ripple"></button>
-              <button class="mdui-btn mdui-btn-icon mdui-float-right"><i
-                  class="mdui-icon material-icons">expand_more</i></button>
+              <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">expand_more</i></button>
             </div>
           </div>
         </div>
@@ -517,28 +1027,358 @@
               <div class="mdui-card-primary-title">成员</div>
               <div class="mdui-card-primary-subtitle">付出了我们的心血</div>
             </div>
-            <div id="men">
-              <mens 昵称='Xinzhi Wang' 头像="./pic/about_user01.webp" 签名="老鸽子人" 一句话="啊啊啊啊啊啊啊我要机娘，还有我想上一本" 简介1='老色批一个'
-                简介2='干啥啥不行，搞事第一名' 简介3='学习的间隙学习前端中' 能力1='色胚' 程度1='width: 88%;' 能力2='记性' 程度2='width: 2%;' 能力3='前端'
-                程度3='width: 5%;'>
-              </mens>
-              <mens 昵称='AmaTsume Akira' 头像="./pic/about_user02.webp" 签名="拖延症患者" 一句话="我想看猫耳机娘女仆贴贴" 简介1='百合控(以无可救药)'
-                简介2='日语高考生' 简介3='严重拖延症患者' 能力1='日语' 程度1='width: 55%;' 能力2='前端' 程度2='width: 2%;' 能力3='拖延症'
-                程度3='width: 100%;'>
-              </mens>
-              <mens 昵称='Sponge Boyboy' 头像="./pic/about_user03.webp" 签名="理科大佬" 一句话="这他妈有啥难的" 简介1='理科大佬，曾参加过物理竞赛'
-                简介2='乐于刷机，刷了不少砖' 简介3='二手佬，转手（倒卖）无数' 能力1='捡二手' 程度1='width: 75%;' 能力2='理科思维' 程度2='width: 92%;' 能力3='屑'
-                程度3='width: 11.4514%;'>
-              </mens>
-              <mens 昵称='Quackdoctor' 头像="./pic/about_user04.webp" 签名="臭弟弟约小妹妹" 一句话="实际上我也不想出去" 简介1='军宅，军品收藏家'
-                简介2='单片机玩家，研究电气工程学' 简介3='经常出没于漫展' 能力1='色胚' 程度1='width: 88%;' 能力2='整活' 程度2='width: 22%;' 能力3='臭弟弟'
-                程度3='width: 67%;'>
-              </mens>
-              <div class="mdui-card-actions">
-                <button class="mdui-btn mdui-ripple">未完待续</button>
-                <button class="mdui-btn mdui-btn-icon mdui-float-right"><i
-                    class="mdui-icon material-icons">expand_more</i></button>
+            <div class="mdui-card-media mdui-hidden-md-up">
+              <!-- <img
+                                src="https://cdn.jsdelivr.net/gh/RSSYLY/redsunsetpic/pic/blog/2021/20210219162815.webp" />
+                        </div>
+                        <div class="mdui-card-media mdui-hidden-sm-down">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/RSSYLY/redsunsetpic/pic/blog/2021/20210219162809.webp" /> -->
+            </div>
+            <!--团队成员01-->
+            <div class="mdui-card-content">
+              <div class="mdui-card-header">
+                <!--哔哩哔哩-->
+                <a href="javascript:;"><button class="mdui-btn mdui-float-right mdui-btn-icon">
+                    <svg t="1613377966086" class="icon" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5018" data-darkreader-inline-fill="">
+                      <path d="M748.625228 438.362549c-4.127958-14.647594-15.180234-26.23251-29.694669-31.026268-9.054876-3.195839-18.642393-4.660598-28.363069-4.127959H335.962549c-7.190637-0.53264-14.248114-0.53264-21.438752 0-17.310793 3.062679-31.425748 15.846034-36.086346 32.890508-0.79896 5.725878-0.79896 11.584915 0 17.310793v215.985436c-1.06528 20.639792 11.851235 39.282185 31.558908 45.673862 6.258518 2.130559 12.916515 3.195839 19.574512 3.195838h371.116775c18.642393 0.6658 35.820026-9.986996 43.410143-26.898309 3.994798-9.587516 5.459558-19.840832 4.527439-30.094148V460.33394c1.06528-7.323797 1.06528-14.647594 0-21.971391z m-320.915475 155.264499c-9.454356 11.718075-23.968791 17.976593-38.882705 16.911314-14.913914-1.06528-28.363069-9.454356-35.953186-22.370872-4.793758-9.587516-6.791157-20.373472-5.992198-31.026268v-45.673862c3.195839-20.240312 19.441352-35.953186 39.681665-38.350065l2.796359 1.3316c11.451756-0.53264 22.637191 3.195839 31.558908 10.519636 9.853836 8.522237 15.712874 20.772952 15.979193 33.822626v45.673863c0.39948 10.386476-2.929519 20.772952-9.188036 29.162028z m239.687906-0.39948c-8.522237 12.383875-22.637191 19.840832-37.684265 19.840833s-29.162029-7.456957-37.684265-19.840833c-5.725878-9.720676-8.255917-21.172432-7.323797-32.357867v-45.673862c2.396879-20.906112 18.775553-37.551105 39.681664-40.214305l0.93212-0.399479c12.250715-0.93212 24.235111 3.195839 33.423147 11.185435 9.188036 8.122757 14.780754 19.441352 15.446554 31.692068v45.673862c0.79896 10.386476-1.597919 20.906112-6.791158 30.094148z" p-id="5019" fill="#d4237a" style="--darkreader-inline-fill:#aa1c62;" data-darkreader-inline-fill=""></path>
+                      <path d="M512 0C229.16827 0 0 229.16827 0 512S229.16827 1024 512 1024 1024 794.83173 1024 512 794.83173 0 512 0z m317.453316 722.792198c-5.992198 26.63199-22.504031 49.668661-45.673862 63.916775-15.712874 9.720676-33.955787 14.780754-52.46502 14.647594H312.126918c-13.715475 0.6658-27.564109 0-41.146424-2.263719-26.23251-6.125358-49.002861-22.637191-62.984655-45.673862-10.120156-15.712874-15.446554-33.822627-15.579714-52.46502V441.158908c-1.19844-12.650195-1.19844-25.30039 0-37.950586 8.522237-44.608583 45.940182-77.89857 91.347724-81.227568H343.552666c-9.587516-6.791157-17.843433-15.047074-26.49883-22.370871-10.386476-9.587516-15.846034-23.436151-14.647594-37.417945 1.06528-14.913914 9.454356-28.496229 22.370871-36.086346 12.250715-5.725878 26.49883-5.725878 38.749545 0 8.788557 4.527438 16.778153 10.386476 23.702471 17.310793l91.347724 79.895969h65.248375l91.347724-79.895969c6.924317-6.924317 15.047074-12.783355 23.702471-17.310793 13.182835-4.660598 27.697269-3.062679 39.548504 4.261118 11.851235 7.323797 19.574512 19.707672 21.172432 33.689467 0.53264 11.052276-3.062679 21.971391-9.986996 30.626788-6.391678 6.391678-13.049675 12.517035-20.107152 18.242913-3.994798 3.728479-8.255917 7.323797-12.783355 10.519636h57.125617c25.43355 0.79896 49.535501 11.584915 67.112614 30.094148 18.642393 17.443953 29.561508 41.545904 30.626788 67.112614V683.110533c0.79896 13.315995 0 26.63199-2.130559 39.681665z" p-id="5020" fill="#d4237a" style="--darkreader-inline-fill:#aa1c62;" data-darkreader-inline-fill=""></path>
+                    </svg>
+                  </button>
+                </a>
+                <!--微博-->
+                <a href="javascript:;"><button class="mdui-btn mdui-float-right mdui-btn-icon">
+                    <svg t="1613377251754" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6757" data-darkreader-inline-fill="">
+                      <path d="M411.270737 607.649684c-17.973895-7.504842-41.189053 0.229053-52.264421 17.542737-11.223579 17.394526-5.955368 38.103579 11.870316 46.201263 18.108632 8.232421 42.132211 0.417684 53.342316-17.421474C435.253895 635.944421 429.446737 615.370105 411.270737 607.649684zM455.545263 589.352421c-6.885053-2.721684-15.508211 0.579368-19.550316 7.329684-3.920842 6.790737-1.751579 14.524632 5.146947 17.367579 7.019789 2.883368 16.006737-0.458105 20.048842-7.370105C465.071158 599.740632 462.551579 591.912421 455.545263 589.352421zM427.52 469.315368c-115.968 11.439158-203.924211 82.216421-196.378947 158.073263 7.531789 75.910737 107.654737 128.161684 223.649684 116.749474 115.994947-11.439158 203.924211-82.216421 196.392421-158.140632C643.664842 510.140632 543.541895 457.889684 427.52 469.315368zM529.300211 648.299789c-23.673263 53.355789-91.769263 81.798737-149.530947 63.232-55.754105-17.933474-79.373474-72.811789-54.945684-122.246737 23.956211-48.464842 86.352842-75.870316 141.541053-61.561263C523.506526 542.437053 552.663579 596.143158 529.300211 648.299789zM512 0C229.241263 0 0 229.227789 0 512c0 282.758737 229.241263 512 512 512 282.772211 0 512-229.241263 512-512C1024 229.227789 794.772211 0 512 0zM455.531789 794.974316c-145.354105 0-293.941895-70.197895-293.941895-185.667368 0-60.362105 38.386526-130.182737 104.474947-196.069053 88.252632-87.929263 191.164632-127.986526 229.874526-89.397895 17.084632 17.003789 18.741895 46.457263 7.760842 81.623579-5.726316 17.690947 16.666947 7.895579 16.666947 7.936 71.343158-29.763368 133.564632-31.514947 156.321684 0.862316 12.139789 17.246316 10.954105 41.472-0.215579 69.510737-5.173895 12.921263 1.589895 14.928842 11.466105 17.879579 40.178526 12.422737 84.924632 42.455579 84.924632 95.380211C772.837053 684.638316 646.090105 794.974316 455.531789 794.974316zM718.672842 427.802947c4.715789-14.457263 1.765053-30.962526-9.202526-43.061895-10.954105-12.072421-27.136-16.666947-42.037895-13.527579l0-0.026947c-12.463158 2.694737-24.724211-5.268211-27.392-17.664-2.667789-12.463158 5.281684-24.697263 17.744842-27.338105 30.531368-6.467368 63.595789 2.937263 85.989053 27.715368 22.447158 24.764632 28.456421 58.489263 18.849684 88.064-3.907368 12.099368-16.936421 18.728421-29.062737 14.848-12.139789-3.920842-18.782316-16.922947-14.874947-28.995368L718.672842 427.816421zM853.261474 471.134316c-0.013474 0.013474-0.013474 0.080842-0.013474 0.107789-4.567579 14.026105-19.712 21.706105-33.778526 17.165474-14.133895-4.554105-21.854316-19.590737-17.300211-33.670737l0-0.013474c13.999158-43.169684 5.12-92.429474-27.567158-128.565895-32.714105-36.122947-80.949895-49.92-125.507368-40.488421-14.484211 3.085474-28.752842-6.130526-31.838316-20.574316-3.098947-14.403368 6.144-28.631579 20.641684-31.717053l0.026947 0c62.625684-13.271579 130.519579 6.117053 176.545684 56.966737C860.483368 341.113263 872.892632 410.381474 853.261474 471.134316z" p-id="6758" fill="#ed690f" style="--darkreader-inline-fill:#be540c;" data-darkreader-inline-fill=""></path>
+                    </svg>
+                  </button>
+                </a>
+                <!--酷安-->
+                <a href="javascript:;"><button class="mdui-btn mdui-float-right mdui-btn-icon">
+                    <svg t="1613378034401" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6373" data-darkreader-inline-fill="">
+                      <path d="M429.653 52.16c113.814-21.28 235.094 2.667 332.907 64.373 79.36 49.814 143.36 123.947 180.427 210.08C990.133 434.507 993.92 560.48 953.973 671.2c-33.706 94.88-99.52 177.76-183.68 232.8-77.44 51.2-170.56 78.293-263.36 76.587-100.8-0.587-200.8-35.627-280.373-97.28-85.067-65.28-146.453-160.534-170.24-265.12C32.693 517.867 44.107 410.08 87.36 316.64 149.493 179.787 281.44 77.547 429.653 52.16m-172.16 317.333c-65.76 44.267-93.12 135.574-62.56 208.694C215.04 629.6 260.96 669.92 314.56 683.2c61.547 14.827 128.747-1.92 177.813-41.547C563.36 585.76 602.56 502.347 650.24 427.893c22.187 40.587 45.653 80.534 67.787 121.174-23.36-16.32-45.867-33.707-68.8-50.507-17.547 12.16-35.84 23.253-52.48 36.747C661.867 584 727.627 631.84 792.8 680.48c13.227 11.413 37.44 10.24 46.347-6.027 5.866-10.88 5.226-24.96-1.334-35.413-53.92-95.573-107.466-191.36-161.173-287.093-9.173-18.507-38.24-20.267-49.333-2.774-37.974 58.774-69.334 121.76-110.667 178.347-26.987 36.587-59.307 72.213-102.56 89.173-36.107 13.867-79.2 14.827-113.387-4.906-35.306-19.68-59.2-59.04-58.133-99.68 0.107-40.214 24.267-78.667 59.52-97.44 34.667-19.2 77.28-17.28 113.813-4.694 39.467 13.654 69.707 43.68 102.294 68.48 17.226-12.053 35.84-22.506 51.786-36.053-24.906-22.4-52.213-42.88-79.253-62.933-66.72-47.414-164.213-59.2-233.227-9.974z" fill="#17B257" p-id="6374" style="--darkreader-inline-fill:#128e46;" data-darkreader-inline-fill=""></path>
+                      <path d="M257.493 369.493c69.014-49.226 166.507-37.44 233.227 9.974C517.76 399.52 545.067 420 569.973 442.4c-15.946 13.547-34.56 24-51.786 36.053-32.587-24.8-62.827-54.826-102.294-68.48-36.533-12.586-79.146-14.506-113.813 4.694-35.253 18.773-59.413 57.226-59.52 97.44-1.067 40.64 22.827 80 58.133 99.68 34.187 19.733 77.28 18.773 113.387 4.906 43.253-16.96 75.573-52.586 102.56-89.173 41.333-56.587 72.693-119.573 110.667-178.347 11.093-17.493 40.16-15.733 49.333 2.774 53.707 95.733 107.253 191.52 161.173 287.093 6.56 10.453 7.2 24.533 1.334 35.413-8.907 16.267-33.12 17.44-46.347 6.027-65.173-48.64-130.933-96.48-196.053-145.173 16.64-13.494 34.933-24.587 52.48-36.747 22.933 16.8 45.44 34.187 68.8 50.507-22.134-40.64-45.6-80.587-67.787-121.174-47.68 74.454-86.88 157.867-157.867 213.76-49.066 39.627-116.266 56.374-177.813 41.547-53.6-13.28-99.52-53.6-119.627-105.013-30.56-73.12-3.2-164.427 62.56-208.694z" fill="#FFFFFF" p-id="6375" style="--darkreader-inline-fill:#181a1b;" data-darkreader-inline-fill=""></path>
+                    </svg>
+                  </button>
+                </a>
+                <!--推特-->
+                <a href="javascript:;"><button class="mdui-btn mdui-float-right mdui-btn-icon">
+                    <svg t="1613378099386" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7016" data-darkreader-inline-fill="">
+                      <path d="M512.739532 1023.998464c-207.359689 0.511999-394.239409-124.415813-473.59929-315.903526-79.359881-191.487713-35.839946-411.647383 110.591835-558.079163 146.43178-146.43178 367.103449-190.463714 558.079162-110.591834 191.487713 79.359881 315.903526 266.239601 315.903527 473.599289 0 282.111577-228.351657 510.463234-510.975234 510.975234z m112.639831-738.814892l-15.871976 2.047997c-9.727985 2.047997-19.455971 5.119992-28.671957 8.703987-36.351945 15.871976-63.487905 48.127928-72.703891 86.52787-5.119992 19.96797-5.119992 40.959939 0 60.41591-19.455971 0-38.911942-2.559996-57.343914-7.679989-57.343914-12.799981-111.103833-38.911942-156.671765-76.287885-13.823979-10.751984-26.62396-23.551965-37.887943-37.375944-4.095994-4.095994-8.191988-8.703987-11.775983-13.82398-6.143991 10.751984-10.751984 22.015967-13.823979 33.279951-9.727985 41.471938 1.023998 84.991873 28.671957 117.247824 6.65599 8.191988 16.895975 13.31198 23.551965 20.479969-5.631992 1.023998-11.775982 0.511999-17.407974-1.535998-9.215986-1.535998-18.431972-4.095994-27.135959-7.679988l-13.82398-5.119993c-1.535998 45.055932 21.503968 87.551869 60.41591 110.591835 12.287982 9.215986 26.62396 14.847978 41.983937 16.895974-8.191988 7.167989-44.543933 4.095994-57.343914 2.559996 12.799981 38.911942 43.007935 69.119896 81.407878 82.431877 12.287982 4.607993 25.087962 6.65599 37.887943 6.65599-10.751984 9.215986-22.527966 16.383975-34.815948 22.527966-24.063964 13.31198-50.175925 22.527966-76.799885 28.159958-11.775982 2.559996-24.063964 2.047997-37.375944 4.095994-13.823979 1.023998-27.135959 0.511999-40.959938-1.535998l11.263983 6.65599c11.775982 7.167989 23.551965 13.31198 36.351945 18.431972 24.575963 10.239985 49.663926 18.431972 75.263887 24.575963 60.415909 12.799981 123.391815 10.751984 182.783726-6.14399 134.143799-41.983937 219.135671-140.28779 251.391623-285.183573 5.119992-27.135959 7.167989-55.295917 6.143991-82.943875l20.479969-16.895975c16.895975-14.335978 31.743952-31.231953 43.519935-50.175925-23.039965 10.239985-47.615929 16.895975-72.703891 19.96797 5.119992-2.559996 9.727985-6.143991 14.335979-10.239984 19.455971-15.871976 33.791949-36.863945 41.471937-60.41591l-15.871976 8.703987c-20.991969 11.263983-43.519935 18.431972-66.5599 22.015967-26.111961-27.647959-62.975906-42.495936-100.863849-40.447939v0.511999h-0.511999z" fill="#2FB0EC" p-id="7017" style="--darkreader-inline-fill:#107aac;" data-darkreader-inline-fill=""></path>
+                    </svg>
+                  </button>
+                </a>
+                <img class="mdui-card-header-avatar" src="./pic/about_user01.webp" layout="responsive" height="1" width="1"></img>
+                <div class="mdui-card-header-title">Xinzhi Wang</div>
+                <div class="mdui-card-header-subtitle">老鸽子人</div>
               </div>
+              <div class="mdui-row">
+                <div class="mdui-col-xs-12 mdui-col-sm-8">
+                  <div class="mdui-chip">
+                    <span class="mdui-chip-icon mdui-color-theme-accent"><i class="mdui-icon material-icons">info_outline</i></span>
+                    <span class="mdui-chip-title">简介</span>
+                  </div>
+                  <br>
+                  <div class="mdui-typo">
+                    <blockquote>
+                      <p>啊啊啊啊啊啊啊我要机娘，还有我想上一本</p>
+                      <footer>王新知</footer>
+                    </blockquote>
+                    <ul>
+                      <li>
+                        老色批一个
+                      </li>
+                      <li>
+                        干啥啥不行，搞事第一名
+                      </li>
+                      <li>
+                        学习的间隙学习前端中
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="mdui-col-xs-12 mdui-col-sm-4">
+                  <div class="mdui-chip">
+                    <span class="mdui-chip-icon mdui-color-theme-accent"><i class="mdui-icon material-icons">pie_chart</i></span>
+                    <span class="mdui-chip-title">能力</span>
+                  </div><br>
+                  色胚
+                  <div class="mdui-progress">
+                    <div class="mdui-progress-determinate mdui-color-red" style="width: 80%;">
+                    </div>
+                  </div>
+                  记性
+                  <div class="mdui-progress">
+                    <div class="mdui-progress-determinate mdui-color-orange-900" style="width: 2%;">
+                    </div>
+                  </div>
+                  前端
+                  <div class="mdui-progress">
+                    <div class="mdui-progress-determinate mdui-color-indigo" style="width: 5%;">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mdui-divider"></div>
+            <!-- 团队成员2 -->
+            <div class="mdui-card-content">
+              <div class="mdui-card-header">
+                <!--哔哩哔哩-->
+                <a href="javascript:;"><button class="mdui-btn mdui-float-right mdui-btn-icon">
+                    <svg t="1613377966086" class="icon" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5018" data-darkreader-inline-fill="">
+                      <path d="M748.625228 438.362549c-4.127958-14.647594-15.180234-26.23251-29.694669-31.026268-9.054876-3.195839-18.642393-4.660598-28.363069-4.127959H335.962549c-7.190637-0.53264-14.248114-0.53264-21.438752 0-17.310793 3.062679-31.425748 15.846034-36.086346 32.890508-0.79896 5.725878-0.79896 11.584915 0 17.310793v215.985436c-1.06528 20.639792 11.851235 39.282185 31.558908 45.673862 6.258518 2.130559 12.916515 3.195839 19.574512 3.195838h371.116775c18.642393 0.6658 35.820026-9.986996 43.410143-26.898309 3.994798-9.587516 5.459558-19.840832 4.527439-30.094148V460.33394c1.06528-7.323797 1.06528-14.647594 0-21.971391z m-320.915475 155.264499c-9.454356 11.718075-23.968791 17.976593-38.882705 16.911314-14.913914-1.06528-28.363069-9.454356-35.953186-22.370872-4.793758-9.587516-6.791157-20.373472-5.992198-31.026268v-45.673862c3.195839-20.240312 19.441352-35.953186 39.681665-38.350065l2.796359 1.3316c11.451756-0.53264 22.637191 3.195839 31.558908 10.519636 9.853836 8.522237 15.712874 20.772952 15.979193 33.822626v45.673863c0.39948 10.386476-2.929519 20.772952-9.188036 29.162028z m239.687906-0.39948c-8.522237 12.383875-22.637191 19.840832-37.684265 19.840833s-29.162029-7.456957-37.684265-19.840833c-5.725878-9.720676-8.255917-21.172432-7.323797-32.357867v-45.673862c2.396879-20.906112 18.775553-37.551105 39.681664-40.214305l0.93212-0.399479c12.250715-0.93212 24.235111 3.195839 33.423147 11.185435 9.188036 8.122757 14.780754 19.441352 15.446554 31.692068v45.673862c0.79896 10.386476-1.597919 20.906112-6.791158 30.094148z" p-id="5019" fill="#d4237a" style="--darkreader-inline-fill:#aa1c62;" data-darkreader-inline-fill=""></path>
+                      <path d="M512 0C229.16827 0 0 229.16827 0 512S229.16827 1024 512 1024 1024 794.83173 1024 512 794.83173 0 512 0z m317.453316 722.792198c-5.992198 26.63199-22.504031 49.668661-45.673862 63.916775-15.712874 9.720676-33.955787 14.780754-52.46502 14.647594H312.126918c-13.715475 0.6658-27.564109 0-41.146424-2.263719-26.23251-6.125358-49.002861-22.637191-62.984655-45.673862-10.120156-15.712874-15.446554-33.822627-15.579714-52.46502V441.158908c-1.19844-12.650195-1.19844-25.30039 0-37.950586 8.522237-44.608583 45.940182-77.89857 91.347724-81.227568H343.552666c-9.587516-6.791157-17.843433-15.047074-26.49883-22.370871-10.386476-9.587516-15.846034-23.436151-14.647594-37.417945 1.06528-14.913914 9.454356-28.496229 22.370871-36.086346 12.250715-5.725878 26.49883-5.725878 38.749545 0 8.788557 4.527438 16.778153 10.386476 23.702471 17.310793l91.347724 79.895969h65.248375l91.347724-79.895969c6.924317-6.924317 15.047074-12.783355 23.702471-17.310793 13.182835-4.660598 27.697269-3.062679 39.548504 4.261118 11.851235 7.323797 19.574512 19.707672 21.172432 33.689467 0.53264 11.052276-3.062679 21.971391-9.986996 30.626788-6.391678 6.391678-13.049675 12.517035-20.107152 18.242913-3.994798 3.728479-8.255917 7.323797-12.783355 10.519636h57.125617c25.43355 0.79896 49.535501 11.584915 67.112614 30.094148 18.642393 17.443953 29.561508 41.545904 30.626788 67.112614V683.110533c0.79896 13.315995 0 26.63199-2.130559 39.681665z" p-id="5020" fill="#d4237a" style="--darkreader-inline-fill:#aa1c62;" data-darkreader-inline-fill=""></path>
+                    </svg>
+                  </button>
+                </a>
+                <!--微博-->
+                <a href="javascript:;"><button class="mdui-btn mdui-float-right mdui-btn-icon">
+                    <svg t="1613377251754" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6757" data-darkreader-inline-fill="">
+                      <path d="M411.270737 607.649684c-17.973895-7.504842-41.189053 0.229053-52.264421 17.542737-11.223579 17.394526-5.955368 38.103579 11.870316 46.201263 18.108632 8.232421 42.132211 0.417684 53.342316-17.421474C435.253895 635.944421 429.446737 615.370105 411.270737 607.649684zM455.545263 589.352421c-6.885053-2.721684-15.508211 0.579368-19.550316 7.329684-3.920842 6.790737-1.751579 14.524632 5.146947 17.367579 7.019789 2.883368 16.006737-0.458105 20.048842-7.370105C465.071158 599.740632 462.551579 591.912421 455.545263 589.352421zM427.52 469.315368c-115.968 11.439158-203.924211 82.216421-196.378947 158.073263 7.531789 75.910737 107.654737 128.161684 223.649684 116.749474 115.994947-11.439158 203.924211-82.216421 196.392421-158.140632C643.664842 510.140632 543.541895 457.889684 427.52 469.315368zM529.300211 648.299789c-23.673263 53.355789-91.769263 81.798737-149.530947 63.232-55.754105-17.933474-79.373474-72.811789-54.945684-122.246737 23.956211-48.464842 86.352842-75.870316 141.541053-61.561263C523.506526 542.437053 552.663579 596.143158 529.300211 648.299789zM512 0C229.241263 0 0 229.227789 0 512c0 282.758737 229.241263 512 512 512 282.772211 0 512-229.241263 512-512C1024 229.227789 794.772211 0 512 0zM455.531789 794.974316c-145.354105 0-293.941895-70.197895-293.941895-185.667368 0-60.362105 38.386526-130.182737 104.474947-196.069053 88.252632-87.929263 191.164632-127.986526 229.874526-89.397895 17.084632 17.003789 18.741895 46.457263 7.760842 81.623579-5.726316 17.690947 16.666947 7.895579 16.666947 7.936 71.343158-29.763368 133.564632-31.514947 156.321684 0.862316 12.139789 17.246316 10.954105 41.472-0.215579 69.510737-5.173895 12.921263 1.589895 14.928842 11.466105 17.879579 40.178526 12.422737 84.924632 42.455579 84.924632 95.380211C772.837053 684.638316 646.090105 794.974316 455.531789 794.974316zM718.672842 427.802947c4.715789-14.457263 1.765053-30.962526-9.202526-43.061895-10.954105-12.072421-27.136-16.666947-42.037895-13.527579l0-0.026947c-12.463158 2.694737-24.724211-5.268211-27.392-17.664-2.667789-12.463158 5.281684-24.697263 17.744842-27.338105 30.531368-6.467368 63.595789 2.937263 85.989053 27.715368 22.447158 24.764632 28.456421 58.489263 18.849684 88.064-3.907368 12.099368-16.936421 18.728421-29.062737 14.848-12.139789-3.920842-18.782316-16.922947-14.874947-28.995368L718.672842 427.816421zM853.261474 471.134316c-0.013474 0.013474-0.013474 0.080842-0.013474 0.107789-4.567579 14.026105-19.712 21.706105-33.778526 17.165474-14.133895-4.554105-21.854316-19.590737-17.300211-33.670737l0-0.013474c13.999158-43.169684 5.12-92.429474-27.567158-128.565895-32.714105-36.122947-80.949895-49.92-125.507368-40.488421-14.484211 3.085474-28.752842-6.130526-31.838316-20.574316-3.098947-14.403368 6.144-28.631579 20.641684-31.717053l0.026947 0c62.625684-13.271579 130.519579 6.117053 176.545684 56.966737C860.483368 341.113263 872.892632 410.381474 853.261474 471.134316z" p-id="6758" fill="#ed690f" style="--darkreader-inline-fill:#be540c;" data-darkreader-inline-fill=""></path>
+                    </svg>
+                  </button>
+                </a>
+                <!--酷安-->
+                <a href="javascript:;"><button class="mdui-btn mdui-float-right mdui-btn-icon">
+                    <svg t="1613378034401" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6373" data-darkreader-inline-fill="">
+                      <path d="M429.653 52.16c113.814-21.28 235.094 2.667 332.907 64.373 79.36 49.814 143.36 123.947 180.427 210.08C990.133 434.507 993.92 560.48 953.973 671.2c-33.706 94.88-99.52 177.76-183.68 232.8-77.44 51.2-170.56 78.293-263.36 76.587-100.8-0.587-200.8-35.627-280.373-97.28-85.067-65.28-146.453-160.534-170.24-265.12C32.693 517.867 44.107 410.08 87.36 316.64 149.493 179.787 281.44 77.547 429.653 52.16m-172.16 317.333c-65.76 44.267-93.12 135.574-62.56 208.694C215.04 629.6 260.96 669.92 314.56 683.2c61.547 14.827 128.747-1.92 177.813-41.547C563.36 585.76 602.56 502.347 650.24 427.893c22.187 40.587 45.653 80.534 67.787 121.174-23.36-16.32-45.867-33.707-68.8-50.507-17.547 12.16-35.84 23.253-52.48 36.747C661.867 584 727.627 631.84 792.8 680.48c13.227 11.413 37.44 10.24 46.347-6.027 5.866-10.88 5.226-24.96-1.334-35.413-53.92-95.573-107.466-191.36-161.173-287.093-9.173-18.507-38.24-20.267-49.333-2.774-37.974 58.774-69.334 121.76-110.667 178.347-26.987 36.587-59.307 72.213-102.56 89.173-36.107 13.867-79.2 14.827-113.387-4.906-35.306-19.68-59.2-59.04-58.133-99.68 0.107-40.214 24.267-78.667 59.52-97.44 34.667-19.2 77.28-17.28 113.813-4.694 39.467 13.654 69.707 43.68 102.294 68.48 17.226-12.053 35.84-22.506 51.786-36.053-24.906-22.4-52.213-42.88-79.253-62.933-66.72-47.414-164.213-59.2-233.227-9.974z" fill="#17B257" p-id="6374" style="--darkreader-inline-fill:#128e46;" data-darkreader-inline-fill=""></path>
+                      <path d="M257.493 369.493c69.014-49.226 166.507-37.44 233.227 9.974C517.76 399.52 545.067 420 569.973 442.4c-15.946 13.547-34.56 24-51.786 36.053-32.587-24.8-62.827-54.826-102.294-68.48-36.533-12.586-79.146-14.506-113.813 4.694-35.253 18.773-59.413 57.226-59.52 97.44-1.067 40.64 22.827 80 58.133 99.68 34.187 19.733 77.28 18.773 113.387 4.906 43.253-16.96 75.573-52.586 102.56-89.173 41.333-56.587 72.693-119.573 110.667-178.347 11.093-17.493 40.16-15.733 49.333 2.774 53.707 95.733 107.253 191.52 161.173 287.093 6.56 10.453 7.2 24.533 1.334 35.413-8.907 16.267-33.12 17.44-46.347 6.027-65.173-48.64-130.933-96.48-196.053-145.173 16.64-13.494 34.933-24.587 52.48-36.747 22.933 16.8 45.44 34.187 68.8 50.507-22.134-40.64-45.6-80.587-67.787-121.174-47.68 74.454-86.88 157.867-157.867 213.76-49.066 39.627-116.266 56.374-177.813 41.547-53.6-13.28-99.52-53.6-119.627-105.013-30.56-73.12-3.2-164.427 62.56-208.694z" fill="#FFFFFF" p-id="6375" style="--darkreader-inline-fill:#181a1b;" data-darkreader-inline-fill=""></path>
+                    </svg>
+                  </button>
+                </a>
+                <!--推特-->
+                <a href="javascript:;"><button class="mdui-btn mdui-float-right mdui-btn-icon">
+                    <svg t="1613378099386" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7016" data-darkreader-inline-fill="">
+                      <path d="M512.739532 1023.998464c-207.359689 0.511999-394.239409-124.415813-473.59929-315.903526-79.359881-191.487713-35.839946-411.647383 110.591835-558.079163 146.43178-146.43178 367.103449-190.463714 558.079162-110.591834 191.487713 79.359881 315.903526 266.239601 315.903527 473.599289 0 282.111577-228.351657 510.463234-510.975234 510.975234z m112.639831-738.814892l-15.871976 2.047997c-9.727985 2.047997-19.455971 5.119992-28.671957 8.703987-36.351945 15.871976-63.487905 48.127928-72.703891 86.52787-5.119992 19.96797-5.119992 40.959939 0 60.41591-19.455971 0-38.911942-2.559996-57.343914-7.679989-57.343914-12.799981-111.103833-38.911942-156.671765-76.287885-13.823979-10.751984-26.62396-23.551965-37.887943-37.375944-4.095994-4.095994-8.191988-8.703987-11.775983-13.82398-6.143991 10.751984-10.751984 22.015967-13.823979 33.279951-9.727985 41.471938 1.023998 84.991873 28.671957 117.247824 6.65599 8.191988 16.895975 13.31198 23.551965 20.479969-5.631992 1.023998-11.775982 0.511999-17.407974-1.535998-9.215986-1.535998-18.431972-4.095994-27.135959-7.679988l-13.82398-5.119993c-1.535998 45.055932 21.503968 87.551869 60.41591 110.591835 12.287982 9.215986 26.62396 14.847978 41.983937 16.895974-8.191988 7.167989-44.543933 4.095994-57.343914 2.559996 12.799981 38.911942 43.007935 69.119896 81.407878 82.431877 12.287982 4.607993 25.087962 6.65599 37.887943 6.65599-10.751984 9.215986-22.527966 16.383975-34.815948 22.527966-24.063964 13.31198-50.175925 22.527966-76.799885 28.159958-11.775982 2.559996-24.063964 2.047997-37.375944 4.095994-13.823979 1.023998-27.135959 0.511999-40.959938-1.535998l11.263983 6.65599c11.775982 7.167989 23.551965 13.31198 36.351945 18.431972 24.575963 10.239985 49.663926 18.431972 75.263887 24.575963 60.415909 12.799981 123.391815 10.751984 182.783726-6.14399 134.143799-41.983937 219.135671-140.28779 251.391623-285.183573 5.119992-27.135959 7.167989-55.295917 6.143991-82.943875l20.479969-16.895975c16.895975-14.335978 31.743952-31.231953 43.519935-50.175925-23.039965 10.239985-47.615929 16.895975-72.703891 19.96797 5.119992-2.559996 9.727985-6.143991 14.335979-10.239984 19.455971-15.871976 33.791949-36.863945 41.471937-60.41591l-15.871976 8.703987c-20.991969 11.263983-43.519935 18.431972-66.5599 22.015967-26.111961-27.647959-62.975906-42.495936-100.863849-40.447939v0.511999h-0.511999z" fill="#2FB0EC" p-id="7017" style="--darkreader-inline-fill:#107aac;" data-darkreader-inline-fill=""></path>
+                    </svg>
+                  </button>
+                </a>
+                <img class="mdui-card-header-avatar" src="./pic/about_user02.webp" layout="responsive" height="1" width="1"></img>
+                <div class="mdui-card-header-title">AmaTsume Akira</div>
+                <div class="mdui-card-header-subtitle">拖延症患者</div>
+              </div>
+              <div class="mdui-row">
+                <div class="mdui-col-xs-12 mdui-col-sm-8">
+                  <div class="mdui-chip">
+                    <span class="mdui-chip-icon mdui-color-theme-accent"><i class="mdui-icon material-icons">info_outline</i></span>
+                    <span class="mdui-chip-title">简介</span>
+                  </div>
+                  <br>
+                  <div class="mdui-typo">
+                    <blockquote>
+                      <p>我想看猫耳机娘女仆贴贴</p>
+                      <footer>ATA</footer>
+                    </blockquote>
+                    <ul>
+                      <li>
+                        控百合
+                      </li>
+                      <li>
+                        学习日语中
+                      </li>
+                      <li>
+                        摸鱼
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="mdui-col-xs-12 mdui-col-sm-4">
+                  <div class="mdui-chip">
+                    <span class="mdui-chip-icon mdui-color-theme-accent"><i class="mdui-icon material-icons">pie_chart</i></span>
+                    <span class="mdui-chip-title">能力</span>
+                  </div><br>
+                  摸鱼
+                  <div class="mdui-progress">
+                    <div class="mdui-progress-determinate mdui-color-red" style="width: 50%;">
+                    </div>
+                  </div>
+                  奥里给
+                  <div class="mdui-progress">
+                    <div class="mdui-progress-determinate mdui-color-orange-900" style="width: 62%;">
+                    </div>
+                  </div>
+                  乖乖站好
+                  <div class="mdui-progress">
+                    <div class="mdui-progress-determinate mdui-color-indigo" style="width: 33%;">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mdui-divider"></div>
+            <!-- 团队成员3 -->
+            <div class="mdui-card-content">
+              <div class="mdui-card-header">
+                <!--哔哩哔哩-->
+                <a href="javascript:;"><button class="mdui-btn mdui-float-right mdui-btn-icon">
+                    <svg t="1613377966086" class="icon" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5018" data-darkreader-inline-fill="">
+                      <path d="M748.625228 438.362549c-4.127958-14.647594-15.180234-26.23251-29.694669-31.026268-9.054876-3.195839-18.642393-4.660598-28.363069-4.127959H335.962549c-7.190637-0.53264-14.248114-0.53264-21.438752 0-17.310793 3.062679-31.425748 15.846034-36.086346 32.890508-0.79896 5.725878-0.79896 11.584915 0 17.310793v215.985436c-1.06528 20.639792 11.851235 39.282185 31.558908 45.673862 6.258518 2.130559 12.916515 3.195839 19.574512 3.195838h371.116775c18.642393 0.6658 35.820026-9.986996 43.410143-26.898309 3.994798-9.587516 5.459558-19.840832 4.527439-30.094148V460.33394c1.06528-7.323797 1.06528-14.647594 0-21.971391z m-320.915475 155.264499c-9.454356 11.718075-23.968791 17.976593-38.882705 16.911314-14.913914-1.06528-28.363069-9.454356-35.953186-22.370872-4.793758-9.587516-6.791157-20.373472-5.992198-31.026268v-45.673862c3.195839-20.240312 19.441352-35.953186 39.681665-38.350065l2.796359 1.3316c11.451756-0.53264 22.637191 3.195839 31.558908 10.519636 9.853836 8.522237 15.712874 20.772952 15.979193 33.822626v45.673863c0.39948 10.386476-2.929519 20.772952-9.188036 29.162028z m239.687906-0.39948c-8.522237 12.383875-22.637191 19.840832-37.684265 19.840833s-29.162029-7.456957-37.684265-19.840833c-5.725878-9.720676-8.255917-21.172432-7.323797-32.357867v-45.673862c2.396879-20.906112 18.775553-37.551105 39.681664-40.214305l0.93212-0.399479c12.250715-0.93212 24.235111 3.195839 33.423147 11.185435 9.188036 8.122757 14.780754 19.441352 15.446554 31.692068v45.673862c0.79896 10.386476-1.597919 20.906112-6.791158 30.094148z" p-id="5019" fill="#d4237a" style="--darkreader-inline-fill:#aa1c62;" data-darkreader-inline-fill=""></path>
+                      <path d="M512 0C229.16827 0 0 229.16827 0 512S229.16827 1024 512 1024 1024 794.83173 1024 512 794.83173 0 512 0z m317.453316 722.792198c-5.992198 26.63199-22.504031 49.668661-45.673862 63.916775-15.712874 9.720676-33.955787 14.780754-52.46502 14.647594H312.126918c-13.715475 0.6658-27.564109 0-41.146424-2.263719-26.23251-6.125358-49.002861-22.637191-62.984655-45.673862-10.120156-15.712874-15.446554-33.822627-15.579714-52.46502V441.158908c-1.19844-12.650195-1.19844-25.30039 0-37.950586 8.522237-44.608583 45.940182-77.89857 91.347724-81.227568H343.552666c-9.587516-6.791157-17.843433-15.047074-26.49883-22.370871-10.386476-9.587516-15.846034-23.436151-14.647594-37.417945 1.06528-14.913914 9.454356-28.496229 22.370871-36.086346 12.250715-5.725878 26.49883-5.725878 38.749545 0 8.788557 4.527438 16.778153 10.386476 23.702471 17.310793l91.347724 79.895969h65.248375l91.347724-79.895969c6.924317-6.924317 15.047074-12.783355 23.702471-17.310793 13.182835-4.660598 27.697269-3.062679 39.548504 4.261118 11.851235 7.323797 19.574512 19.707672 21.172432 33.689467 0.53264 11.052276-3.062679 21.971391-9.986996 30.626788-6.391678 6.391678-13.049675 12.517035-20.107152 18.242913-3.994798 3.728479-8.255917 7.323797-12.783355 10.519636h57.125617c25.43355 0.79896 49.535501 11.584915 67.112614 30.094148 18.642393 17.443953 29.561508 41.545904 30.626788 67.112614V683.110533c0.79896 13.315995 0 26.63199-2.130559 39.681665z" p-id="5020" fill="#d4237a" style="--darkreader-inline-fill:#aa1c62;" data-darkreader-inline-fill=""></path>
+                    </svg>
+                  </button>
+                </a>
+                <!--微博-->
+                <a href="javascript:;"><button class="mdui-btn mdui-float-right mdui-btn-icon">
+                    <svg t="1613377251754" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6757" data-darkreader-inline-fill="">
+                      <path d="M411.270737 607.649684c-17.973895-7.504842-41.189053 0.229053-52.264421 17.542737-11.223579 17.394526-5.955368 38.103579 11.870316 46.201263 18.108632 8.232421 42.132211 0.417684 53.342316-17.421474C435.253895 635.944421 429.446737 615.370105 411.270737 607.649684zM455.545263 589.352421c-6.885053-2.721684-15.508211 0.579368-19.550316 7.329684-3.920842 6.790737-1.751579 14.524632 5.146947 17.367579 7.019789 2.883368 16.006737-0.458105 20.048842-7.370105C465.071158 599.740632 462.551579 591.912421 455.545263 589.352421zM427.52 469.315368c-115.968 11.439158-203.924211 82.216421-196.378947 158.073263 7.531789 75.910737 107.654737 128.161684 223.649684 116.749474 115.994947-11.439158 203.924211-82.216421 196.392421-158.140632C643.664842 510.140632 543.541895 457.889684 427.52 469.315368zM529.300211 648.299789c-23.673263 53.355789-91.769263 81.798737-149.530947 63.232-55.754105-17.933474-79.373474-72.811789-54.945684-122.246737 23.956211-48.464842 86.352842-75.870316 141.541053-61.561263C523.506526 542.437053 552.663579 596.143158 529.300211 648.299789zM512 0C229.241263 0 0 229.227789 0 512c0 282.758737 229.241263 512 512 512 282.772211 0 512-229.241263 512-512C1024 229.227789 794.772211 0 512 0zM455.531789 794.974316c-145.354105 0-293.941895-70.197895-293.941895-185.667368 0-60.362105 38.386526-130.182737 104.474947-196.069053 88.252632-87.929263 191.164632-127.986526 229.874526-89.397895 17.084632 17.003789 18.741895 46.457263 7.760842 81.623579-5.726316 17.690947 16.666947 7.895579 16.666947 7.936 71.343158-29.763368 133.564632-31.514947 156.321684 0.862316 12.139789 17.246316 10.954105 41.472-0.215579 69.510737-5.173895 12.921263 1.589895 14.928842 11.466105 17.879579 40.178526 12.422737 84.924632 42.455579 84.924632 95.380211C772.837053 684.638316 646.090105 794.974316 455.531789 794.974316zM718.672842 427.802947c4.715789-14.457263 1.765053-30.962526-9.202526-43.061895-10.954105-12.072421-27.136-16.666947-42.037895-13.527579l0-0.026947c-12.463158 2.694737-24.724211-5.268211-27.392-17.664-2.667789-12.463158 5.281684-24.697263 17.744842-27.338105 30.531368-6.467368 63.595789 2.937263 85.989053 27.715368 22.447158 24.764632 28.456421 58.489263 18.849684 88.064-3.907368 12.099368-16.936421 18.728421-29.062737 14.848-12.139789-3.920842-18.782316-16.922947-14.874947-28.995368L718.672842 427.816421zM853.261474 471.134316c-0.013474 0.013474-0.013474 0.080842-0.013474 0.107789-4.567579 14.026105-19.712 21.706105-33.778526 17.165474-14.133895-4.554105-21.854316-19.590737-17.300211-33.670737l0-0.013474c13.999158-43.169684 5.12-92.429474-27.567158-128.565895-32.714105-36.122947-80.949895-49.92-125.507368-40.488421-14.484211 3.085474-28.752842-6.130526-31.838316-20.574316-3.098947-14.403368 6.144-28.631579 20.641684-31.717053l0.026947 0c62.625684-13.271579 130.519579 6.117053 176.545684 56.966737C860.483368 341.113263 872.892632 410.381474 853.261474 471.134316z" p-id="6758" fill="#ed690f" style="--darkreader-inline-fill:#be540c;" data-darkreader-inline-fill=""></path>
+                    </svg>
+                  </button>
+                </a>
+                <!--酷安-->
+                <a href="javascript:;"><button class="mdui-btn mdui-float-right mdui-btn-icon">
+                    <svg t="1613378034401" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6373" data-darkreader-inline-fill="">
+                      <path d="M429.653 52.16c113.814-21.28 235.094 2.667 332.907 64.373 79.36 49.814 143.36 123.947 180.427 210.08C990.133 434.507 993.92 560.48 953.973 671.2c-33.706 94.88-99.52 177.76-183.68 232.8-77.44 51.2-170.56 78.293-263.36 76.587-100.8-0.587-200.8-35.627-280.373-97.28-85.067-65.28-146.453-160.534-170.24-265.12C32.693 517.867 44.107 410.08 87.36 316.64 149.493 179.787 281.44 77.547 429.653 52.16m-172.16 317.333c-65.76 44.267-93.12 135.574-62.56 208.694C215.04 629.6 260.96 669.92 314.56 683.2c61.547 14.827 128.747-1.92 177.813-41.547C563.36 585.76 602.56 502.347 650.24 427.893c22.187 40.587 45.653 80.534 67.787 121.174-23.36-16.32-45.867-33.707-68.8-50.507-17.547 12.16-35.84 23.253-52.48 36.747C661.867 584 727.627 631.84 792.8 680.48c13.227 11.413 37.44 10.24 46.347-6.027 5.866-10.88 5.226-24.96-1.334-35.413-53.92-95.573-107.466-191.36-161.173-287.093-9.173-18.507-38.24-20.267-49.333-2.774-37.974 58.774-69.334 121.76-110.667 178.347-26.987 36.587-59.307 72.213-102.56 89.173-36.107 13.867-79.2 14.827-113.387-4.906-35.306-19.68-59.2-59.04-58.133-99.68 0.107-40.214 24.267-78.667 59.52-97.44 34.667-19.2 77.28-17.28 113.813-4.694 39.467 13.654 69.707 43.68 102.294 68.48 17.226-12.053 35.84-22.506 51.786-36.053-24.906-22.4-52.213-42.88-79.253-62.933-66.72-47.414-164.213-59.2-233.227-9.974z" fill="#17B257" p-id="6374" style="--darkreader-inline-fill:#128e46;" data-darkreader-inline-fill=""></path>
+                      <path d="M257.493 369.493c69.014-49.226 166.507-37.44 233.227 9.974C517.76 399.52 545.067 420 569.973 442.4c-15.946 13.547-34.56 24-51.786 36.053-32.587-24.8-62.827-54.826-102.294-68.48-36.533-12.586-79.146-14.506-113.813 4.694-35.253 18.773-59.413 57.226-59.52 97.44-1.067 40.64 22.827 80 58.133 99.68 34.187 19.733 77.28 18.773 113.387 4.906 43.253-16.96 75.573-52.586 102.56-89.173 41.333-56.587 72.693-119.573 110.667-178.347 11.093-17.493 40.16-15.733 49.333 2.774 53.707 95.733 107.253 191.52 161.173 287.093 6.56 10.453 7.2 24.533 1.334 35.413-8.907 16.267-33.12 17.44-46.347 6.027-65.173-48.64-130.933-96.48-196.053-145.173 16.64-13.494 34.933-24.587 52.48-36.747 22.933 16.8 45.44 34.187 68.8 50.507-22.134-40.64-45.6-80.587-67.787-121.174-47.68 74.454-86.88 157.867-157.867 213.76-49.066 39.627-116.266 56.374-177.813 41.547-53.6-13.28-99.52-53.6-119.627-105.013-30.56-73.12-3.2-164.427 62.56-208.694z" fill="#FFFFFF" p-id="6375" style="--darkreader-inline-fill:#181a1b;" data-darkreader-inline-fill=""></path>
+                    </svg>
+                  </button>
+                </a>
+                <!--推特-->
+                <a href="javascript:;"><button class="mdui-btn mdui-float-right mdui-btn-icon">
+                    <svg t="1613378099386" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7016" data-darkreader-inline-fill="">
+                      <path d="M512.739532 1023.998464c-207.359689 0.511999-394.239409-124.415813-473.59929-315.903526-79.359881-191.487713-35.839946-411.647383 110.591835-558.079163 146.43178-146.43178 367.103449-190.463714 558.079162-110.591834 191.487713 79.359881 315.903526 266.239601 315.903527 473.599289 0 282.111577-228.351657 510.463234-510.975234 510.975234z m112.639831-738.814892l-15.871976 2.047997c-9.727985 2.047997-19.455971 5.119992-28.671957 8.703987-36.351945 15.871976-63.487905 48.127928-72.703891 86.52787-5.119992 19.96797-5.119992 40.959939 0 60.41591-19.455971 0-38.911942-2.559996-57.343914-7.679989-57.343914-12.799981-111.103833-38.911942-156.671765-76.287885-13.823979-10.751984-26.62396-23.551965-37.887943-37.375944-4.095994-4.095994-8.191988-8.703987-11.775983-13.82398-6.143991 10.751984-10.751984 22.015967-13.823979 33.279951-9.727985 41.471938 1.023998 84.991873 28.671957 117.247824 6.65599 8.191988 16.895975 13.31198 23.551965 20.479969-5.631992 1.023998-11.775982 0.511999-17.407974-1.535998-9.215986-1.535998-18.431972-4.095994-27.135959-7.679988l-13.82398-5.119993c-1.535998 45.055932 21.503968 87.551869 60.41591 110.591835 12.287982 9.215986 26.62396 14.847978 41.983937 16.895974-8.191988 7.167989-44.543933 4.095994-57.343914 2.559996 12.799981 38.911942 43.007935 69.119896 81.407878 82.431877 12.287982 4.607993 25.087962 6.65599 37.887943 6.65599-10.751984 9.215986-22.527966 16.383975-34.815948 22.527966-24.063964 13.31198-50.175925 22.527966-76.799885 28.159958-11.775982 2.559996-24.063964 2.047997-37.375944 4.095994-13.823979 1.023998-27.135959 0.511999-40.959938-1.535998l11.263983 6.65599c11.775982 7.167989 23.551965 13.31198 36.351945 18.431972 24.575963 10.239985 49.663926 18.431972 75.263887 24.575963 60.415909 12.799981 123.391815 10.751984 182.783726-6.14399 134.143799-41.983937 219.135671-140.28779 251.391623-285.183573 5.119992-27.135959 7.167989-55.295917 6.143991-82.943875l20.479969-16.895975c16.895975-14.335978 31.743952-31.231953 43.519935-50.175925-23.039965 10.239985-47.615929 16.895975-72.703891 19.96797 5.119992-2.559996 9.727985-6.143991 14.335979-10.239984 19.455971-15.871976 33.791949-36.863945 41.471937-60.41591l-15.871976 8.703987c-20.991969 11.263983-43.519935 18.431972-66.5599 22.015967-26.111961-27.647959-62.975906-42.495936-100.863849-40.447939v0.511999h-0.511999z" fill="#2FB0EC" p-id="7017" style="--darkreader-inline-fill:#107aac;" data-darkreader-inline-fill=""></path>
+                    </svg>
+                  </button>
+                </a>
+                <img class="mdui-card-header-avatar" src="./pic/about_user03.webp" layout="responsive" height="1" width="1"></img>
+                <div class="mdui-card-header-title">Sponge Boyboy</div>
+                <div class="mdui-card-header-subtitle">理科大佬</div>
+              </div>
+              <div class="mdui-row">
+                <div class="mdui-col-xs-12 mdui-col-sm-8">
+                  <div class="mdui-chip">
+                    <span class="mdui-chip-icon mdui-color-theme-accent"><i class="mdui-icon material-icons">info_outline</i></span>
+                    <span class="mdui-chip-title">简介</span>
+                  </div>
+                  <br>
+                  <div class="mdui-typo">
+                    <blockquote>
+                      <p>这他妈有啥难的</p>
+                      <footer>海绵</footer>
+                    </blockquote>
+                    <ul>
+                      <li> 理科大佬，曾参加过物理竞赛
+                      </li>
+                      <li>
+                        乐于刷机，刷了不少砖
+                      </li>
+                      <li>
+                        二手佬，转手无数
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="mdui-col-xs-12 mdui-col-sm-4">
+                  <div class="mdui-chip">
+                    <span class="mdui-chip-icon mdui-color-theme-accent"><i class="mdui-icon material-icons">pie_chart</i></span>
+                    <span class="mdui-chip-title">能力</span>
+                  </div><br>
+                  捡二手
+                  <div class="mdui-progress">
+                    <div class="mdui-progress-determinate mdui-color-red" style="width: 75%;">
+                    </div>
+                  </div>
+                  理科思维
+                  <div class="mdui-progress">
+                    <div class="mdui-progress-determinate mdui-color-orange-900" style="width: 92%;">
+                    </div>
+                  </div>
+                  屑
+                  <div class="mdui-progress">
+                    <div class="mdui-progress-determinate mdui-color-indigo" style="width: 33%;">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mdui-divider"></div>
+            <!-- 团队成员4 -->
+            <div class="mdui-card-content">
+              <div class="mdui-card-header">
+                <!--哔哩哔哩-->
+                <a href="javascript:;"><button class="mdui-btn mdui-float-right mdui-btn-icon">
+                    <svg t="1613377966086" class="icon" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5018" data-darkreader-inline-fill="">
+                      <path d="M748.625228 438.362549c-4.127958-14.647594-15.180234-26.23251-29.694669-31.026268-9.054876-3.195839-18.642393-4.660598-28.363069-4.127959H335.962549c-7.190637-0.53264-14.248114-0.53264-21.438752 0-17.310793 3.062679-31.425748 15.846034-36.086346 32.890508-0.79896 5.725878-0.79896 11.584915 0 17.310793v215.985436c-1.06528 20.639792 11.851235 39.282185 31.558908 45.673862 6.258518 2.130559 12.916515 3.195839 19.574512 3.195838h371.116775c18.642393 0.6658 35.820026-9.986996 43.410143-26.898309 3.994798-9.587516 5.459558-19.840832 4.527439-30.094148V460.33394c1.06528-7.323797 1.06528-14.647594 0-21.971391z m-320.915475 155.264499c-9.454356 11.718075-23.968791 17.976593-38.882705 16.911314-14.913914-1.06528-28.363069-9.454356-35.953186-22.370872-4.793758-9.587516-6.791157-20.373472-5.992198-31.026268v-45.673862c3.195839-20.240312 19.441352-35.953186 39.681665-38.350065l2.796359 1.3316c11.451756-0.53264 22.637191 3.195839 31.558908 10.519636 9.853836 8.522237 15.712874 20.772952 15.979193 33.822626v45.673863c0.39948 10.386476-2.929519 20.772952-9.188036 29.162028z m239.687906-0.39948c-8.522237 12.383875-22.637191 19.840832-37.684265 19.840833s-29.162029-7.456957-37.684265-19.840833c-5.725878-9.720676-8.255917-21.172432-7.323797-32.357867v-45.673862c2.396879-20.906112 18.775553-37.551105 39.681664-40.214305l0.93212-0.399479c12.250715-0.93212 24.235111 3.195839 33.423147 11.185435 9.188036 8.122757 14.780754 19.441352 15.446554 31.692068v45.673862c0.79896 10.386476-1.597919 20.906112-6.791158 30.094148z" p-id="5019" fill="#d4237a" style="--darkreader-inline-fill:#aa1c62;" data-darkreader-inline-fill=""></path>
+                      <path d="M512 0C229.16827 0 0 229.16827 0 512S229.16827 1024 512 1024 1024 794.83173 1024 512 794.83173 0 512 0z m317.453316 722.792198c-5.992198 26.63199-22.504031 49.668661-45.673862 63.916775-15.712874 9.720676-33.955787 14.780754-52.46502 14.647594H312.126918c-13.715475 0.6658-27.564109 0-41.146424-2.263719-26.23251-6.125358-49.002861-22.637191-62.984655-45.673862-10.120156-15.712874-15.446554-33.822627-15.579714-52.46502V441.158908c-1.19844-12.650195-1.19844-25.30039 0-37.950586 8.522237-44.608583 45.940182-77.89857 91.347724-81.227568H343.552666c-9.587516-6.791157-17.843433-15.047074-26.49883-22.370871-10.386476-9.587516-15.846034-23.436151-14.647594-37.417945 1.06528-14.913914 9.454356-28.496229 22.370871-36.086346 12.250715-5.725878 26.49883-5.725878 38.749545 0 8.788557 4.527438 16.778153 10.386476 23.702471 17.310793l91.347724 79.895969h65.248375l91.347724-79.895969c6.924317-6.924317 15.047074-12.783355 23.702471-17.310793 13.182835-4.660598 27.697269-3.062679 39.548504 4.261118 11.851235 7.323797 19.574512 19.707672 21.172432 33.689467 0.53264 11.052276-3.062679 21.971391-9.986996 30.626788-6.391678 6.391678-13.049675 12.517035-20.107152 18.242913-3.994798 3.728479-8.255917 7.323797-12.783355 10.519636h57.125617c25.43355 0.79896 49.535501 11.584915 67.112614 30.094148 18.642393 17.443953 29.561508 41.545904 30.626788 67.112614V683.110533c0.79896 13.315995 0 26.63199-2.130559 39.681665z" p-id="5020" fill="#d4237a" style="--darkreader-inline-fill:#aa1c62;" data-darkreader-inline-fill=""></path>
+                    </svg>
+                  </button>
+                </a>
+                <!--微博-->
+                <a href="javascript:;"><button class="mdui-btn mdui-float-right mdui-btn-icon">
+                    <svg t="1613377251754" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6757" data-darkreader-inline-fill="">
+                      <path d="M411.270737 607.649684c-17.973895-7.504842-41.189053 0.229053-52.264421 17.542737-11.223579 17.394526-5.955368 38.103579 11.870316 46.201263 18.108632 8.232421 42.132211 0.417684 53.342316-17.421474C435.253895 635.944421 429.446737 615.370105 411.270737 607.649684zM455.545263 589.352421c-6.885053-2.721684-15.508211 0.579368-19.550316 7.329684-3.920842 6.790737-1.751579 14.524632 5.146947 17.367579 7.019789 2.883368 16.006737-0.458105 20.048842-7.370105C465.071158 599.740632 462.551579 591.912421 455.545263 589.352421zM427.52 469.315368c-115.968 11.439158-203.924211 82.216421-196.378947 158.073263 7.531789 75.910737 107.654737 128.161684 223.649684 116.749474 115.994947-11.439158 203.924211-82.216421 196.392421-158.140632C643.664842 510.140632 543.541895 457.889684 427.52 469.315368zM529.300211 648.299789c-23.673263 53.355789-91.769263 81.798737-149.530947 63.232-55.754105-17.933474-79.373474-72.811789-54.945684-122.246737 23.956211-48.464842 86.352842-75.870316 141.541053-61.561263C523.506526 542.437053 552.663579 596.143158 529.300211 648.299789zM512 0C229.241263 0 0 229.227789 0 512c0 282.758737 229.241263 512 512 512 282.772211 0 512-229.241263 512-512C1024 229.227789 794.772211 0 512 0zM455.531789 794.974316c-145.354105 0-293.941895-70.197895-293.941895-185.667368 0-60.362105 38.386526-130.182737 104.474947-196.069053 88.252632-87.929263 191.164632-127.986526 229.874526-89.397895 17.084632 17.003789 18.741895 46.457263 7.760842 81.623579-5.726316 17.690947 16.666947 7.895579 16.666947 7.936 71.343158-29.763368 133.564632-31.514947 156.321684 0.862316 12.139789 17.246316 10.954105 41.472-0.215579 69.510737-5.173895 12.921263 1.589895 14.928842 11.466105 17.879579 40.178526 12.422737 84.924632 42.455579 84.924632 95.380211C772.837053 684.638316 646.090105 794.974316 455.531789 794.974316zM718.672842 427.802947c4.715789-14.457263 1.765053-30.962526-9.202526-43.061895-10.954105-12.072421-27.136-16.666947-42.037895-13.527579l0-0.026947c-12.463158 2.694737-24.724211-5.268211-27.392-17.664-2.667789-12.463158 5.281684-24.697263 17.744842-27.338105 30.531368-6.467368 63.595789 2.937263 85.989053 27.715368 22.447158 24.764632 28.456421 58.489263 18.849684 88.064-3.907368 12.099368-16.936421 18.728421-29.062737 14.848-12.139789-3.920842-18.782316-16.922947-14.874947-28.995368L718.672842 427.816421zM853.261474 471.134316c-0.013474 0.013474-0.013474 0.080842-0.013474 0.107789-4.567579 14.026105-19.712 21.706105-33.778526 17.165474-14.133895-4.554105-21.854316-19.590737-17.300211-33.670737l0-0.013474c13.999158-43.169684 5.12-92.429474-27.567158-128.565895-32.714105-36.122947-80.949895-49.92-125.507368-40.488421-14.484211 3.085474-28.752842-6.130526-31.838316-20.574316-3.098947-14.403368 6.144-28.631579 20.641684-31.717053l0.026947 0c62.625684-13.271579 130.519579 6.117053 176.545684 56.966737C860.483368 341.113263 872.892632 410.381474 853.261474 471.134316z" p-id="6758" fill="#ed690f" style="--darkreader-inline-fill:#be540c;" data-darkreader-inline-fill=""></path>
+                    </svg>
+                  </button>
+                </a>
+                <!--酷安-->
+                <a href="javascript:;"><button class="mdui-btn mdui-float-right mdui-btn-icon">
+                    <svg t="1613378034401" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6373" data-darkreader-inline-fill="">
+                      <path d="M429.653 52.16c113.814-21.28 235.094 2.667 332.907 64.373 79.36 49.814 143.36 123.947 180.427 210.08C990.133 434.507 993.92 560.48 953.973 671.2c-33.706 94.88-99.52 177.76-183.68 232.8-77.44 51.2-170.56 78.293-263.36 76.587-100.8-0.587-200.8-35.627-280.373-97.28-85.067-65.28-146.453-160.534-170.24-265.12C32.693 517.867 44.107 410.08 87.36 316.64 149.493 179.787 281.44 77.547 429.653 52.16m-172.16 317.333c-65.76 44.267-93.12 135.574-62.56 208.694C215.04 629.6 260.96 669.92 314.56 683.2c61.547 14.827 128.747-1.92 177.813-41.547C563.36 585.76 602.56 502.347 650.24 427.893c22.187 40.587 45.653 80.534 67.787 121.174-23.36-16.32-45.867-33.707-68.8-50.507-17.547 12.16-35.84 23.253-52.48 36.747C661.867 584 727.627 631.84 792.8 680.48c13.227 11.413 37.44 10.24 46.347-6.027 5.866-10.88 5.226-24.96-1.334-35.413-53.92-95.573-107.466-191.36-161.173-287.093-9.173-18.507-38.24-20.267-49.333-2.774-37.974 58.774-69.334 121.76-110.667 178.347-26.987 36.587-59.307 72.213-102.56 89.173-36.107 13.867-79.2 14.827-113.387-4.906-35.306-19.68-59.2-59.04-58.133-99.68 0.107-40.214 24.267-78.667 59.52-97.44 34.667-19.2 77.28-17.28 113.813-4.694 39.467 13.654 69.707 43.68 102.294 68.48 17.226-12.053 35.84-22.506 51.786-36.053-24.906-22.4-52.213-42.88-79.253-62.933-66.72-47.414-164.213-59.2-233.227-9.974z" fill="#17B257" p-id="6374" style="--darkreader-inline-fill:#128e46;" data-darkreader-inline-fill=""></path>
+                      <path d="M257.493 369.493c69.014-49.226 166.507-37.44 233.227 9.974C517.76 399.52 545.067 420 569.973 442.4c-15.946 13.547-34.56 24-51.786 36.053-32.587-24.8-62.827-54.826-102.294-68.48-36.533-12.586-79.146-14.506-113.813 4.694-35.253 18.773-59.413 57.226-59.52 97.44-1.067 40.64 22.827 80 58.133 99.68 34.187 19.733 77.28 18.773 113.387 4.906 43.253-16.96 75.573-52.586 102.56-89.173 41.333-56.587 72.693-119.573 110.667-178.347 11.093-17.493 40.16-15.733 49.333 2.774 53.707 95.733 107.253 191.52 161.173 287.093 6.56 10.453 7.2 24.533 1.334 35.413-8.907 16.267-33.12 17.44-46.347 6.027-65.173-48.64-130.933-96.48-196.053-145.173 16.64-13.494 34.933-24.587 52.48-36.747 22.933 16.8 45.44 34.187 68.8 50.507-22.134-40.64-45.6-80.587-67.787-121.174-47.68 74.454-86.88 157.867-157.867 213.76-49.066 39.627-116.266 56.374-177.813 41.547-53.6-13.28-99.52-53.6-119.627-105.013-30.56-73.12-3.2-164.427 62.56-208.694z" fill="#FFFFFF" p-id="6375" style="--darkreader-inline-fill:#181a1b;" data-darkreader-inline-fill=""></path>
+                    </svg>
+                  </button>
+                </a>
+                <!--推特-->
+                <a href="javascript:;"><button class="mdui-btn mdui-float-right mdui-btn-icon">
+                    <svg t="1613378099386" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7016" data-darkreader-inline-fill="">
+                      <path d="M512.739532 1023.998464c-207.359689 0.511999-394.239409-124.415813-473.59929-315.903526-79.359881-191.487713-35.839946-411.647383 110.591835-558.079163 146.43178-146.43178 367.103449-190.463714 558.079162-110.591834 191.487713 79.359881 315.903526 266.239601 315.903527 473.599289 0 282.111577-228.351657 510.463234-510.975234 510.975234z m112.639831-738.814892l-15.871976 2.047997c-9.727985 2.047997-19.455971 5.119992-28.671957 8.703987-36.351945 15.871976-63.487905 48.127928-72.703891 86.52787-5.119992 19.96797-5.119992 40.959939 0 60.41591-19.455971 0-38.911942-2.559996-57.343914-7.679989-57.343914-12.799981-111.103833-38.911942-156.671765-76.287885-13.823979-10.751984-26.62396-23.551965-37.887943-37.375944-4.095994-4.095994-8.191988-8.703987-11.775983-13.82398-6.143991 10.751984-10.751984 22.015967-13.823979 33.279951-9.727985 41.471938 1.023998 84.991873 28.671957 117.247824 6.65599 8.191988 16.895975 13.31198 23.551965 20.479969-5.631992 1.023998-11.775982 0.511999-17.407974-1.535998-9.215986-1.535998-18.431972-4.095994-27.135959-7.679988l-13.82398-5.119993c-1.535998 45.055932 21.503968 87.551869 60.41591 110.591835 12.287982 9.215986 26.62396 14.847978 41.983937 16.895974-8.191988 7.167989-44.543933 4.095994-57.343914 2.559996 12.799981 38.911942 43.007935 69.119896 81.407878 82.431877 12.287982 4.607993 25.087962 6.65599 37.887943 6.65599-10.751984 9.215986-22.527966 16.383975-34.815948 22.527966-24.063964 13.31198-50.175925 22.527966-76.799885 28.159958-11.775982 2.559996-24.063964 2.047997-37.375944 4.095994-13.823979 1.023998-27.135959 0.511999-40.959938-1.535998l11.263983 6.65599c11.775982 7.167989 23.551965 13.31198 36.351945 18.431972 24.575963 10.239985 49.663926 18.431972 75.263887 24.575963 60.415909 12.799981 123.391815 10.751984 182.783726-6.14399 134.143799-41.983937 219.135671-140.28779 251.391623-285.183573 5.119992-27.135959 7.167989-55.295917 6.143991-82.943875l20.479969-16.895975c16.895975-14.335978 31.743952-31.231953 43.519935-50.175925-23.039965 10.239985-47.615929 16.895975-72.703891 19.96797 5.119992-2.559996 9.727985-6.143991 14.335979-10.239984 19.455971-15.871976 33.791949-36.863945 41.471937-60.41591l-15.871976 8.703987c-20.991969 11.263983-43.519935 18.431972-66.5599 22.015967-26.111961-27.647959-62.975906-42.495936-100.863849-40.447939v0.511999h-0.511999z" fill="#2FB0EC" p-id="7017" style="--darkreader-inline-fill:#107aac;" data-darkreader-inline-fill=""></path>
+                    </svg>
+                  </button>
+                </a>
+                <img class="mdui-card-header-avatar" src="./pic/about_user04.webp" layout="responsive" height="1" width="1"></img>
+                <div class="mdui-card-header-title">Quackdoctor</div>
+                <div class="mdui-card-header-subtitle">臭弟弟约小妹妹</div>
+              </div>
+              <div class="mdui-row">
+                <div class="mdui-col-xs-12 mdui-col-sm-8">
+                  <div class="mdui-chip">
+                    <span class="mdui-chip-icon mdui-color-theme-accent"><i class="mdui-icon material-icons">info_outline</i></span>
+                    <span class="mdui-chip-title">简介</span>
+                  </div>
+                  <br>
+                  <div class="mdui-typo">
+                    <blockquote>
+                      <p>实际上我也不想出去</p>
+                      <footer>臭弟弟</footer>
+                    </blockquote>
+                    <ul>
+                      <li>军宅，军品收藏家
+                      </li>
+                      <li>
+                        单片机玩家，研究电气工程学
+                      </li>
+                      <li>
+                        经常出没于漫展
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="mdui-col-xs-12 mdui-col-sm-4">
+                  <div class="mdui-chip">
+                    <span class="mdui-chip-icon mdui-color-theme-accent"><i class="mdui-icon material-icons">pie_chart</i></span>
+                    <span class="mdui-chip-title">能力</span>
+                  </div><br>
+                  色胚
+                  <div class="mdui-progress">
+                    <div class="mdui-progress-determinate mdui-color-red" style="width: 55%;">
+                    </div>
+                  </div>
+                  整活
+                  <div class="mdui-progress">
+                    <div class="mdui-progress-determinate mdui-color-orange-900" style="width: 22%;">
+                    </div>
+                  </div>
+                  臭弟弟
+                  <div class="mdui-progress">
+                    <div class="mdui-progress-determinate mdui-color-indigo" style="width: 67%;">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mdui-card-actions">
+              <button class="mdui-btn mdui-ripple">未完待续</button>
+              <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">expand_more</i></button>
             </div>
           </div>
         </div>
@@ -555,34 +1395,40 @@
         <div class=" mdui-row">
           <div class="mdui-col-sm-6">
             <div class="mdui-text-left" style="color:#787878">Copyright;©&nbsp;
-              2016-2022&nbsp;&nbsp;by<strong>&nbsp;Redsunsets Institute </strong>All rights reserved.</div><br>
-            <div class="mdui-text-left">
-              <a style="color:#464646;text-decoration: none" href="https://icp.gov.moe/?keyword=202038250">萌站联盟
-                NO.202038250</a> &nbsp;
-              <a class="has-text-white" style="color:#464646;text-decoration:none;"
-                href="https://blog.rssins.net/privacy-policy" data-translatable>用户协议 屑一次 隱私政策 屑一次 Privacy Policy 屑一次 ユーザー規約</a> &nbsp;
-              <a style="color:#464646" mdui-dialog="{target: '#Dialog_links'}" data-translatable>友链申请 屑一次 申請友鏈 屑一次 Apply Links 屑一次 リンク申請</a> &nbsp;
-              <a style="color:#464646;text-decoration: none" href="https://pan.rssins.net/s/ayhq">相关软件</a>
-              &nbsp;
-            </div>
-          </div>
-          <div class="mdui-col-sm-6">
-            <div class="mdui-hidden-sm-up">
-              <br><br> <img style="max-width:180px;margin-top:-60px" class="mdui-center mdui-img-rounded mdui-img-fluid" src="./pic/logo.png"/>
-            </div>
-            <div class="mdui-hidden-xs-down">
-            <img style="max-width:180px;margin-top:-60px" class="mdui-float-right mdui-img-rounded mdui-img-fluid" src="./pic/logo.png"/>
+              2016<a  mdui-dialog="{target: '#li'}" data-translatable>-</a>2022&nbsp;&nbsp;by<strong>&nbsp;Redsunsets Institute </strong>All rights reserved.</div><br>
+            <div class="mdui-text-left"><a style="color:#464646;text-decoration: none" href="https://icp.gov.moe/?keyword=202038250">萌站联盟 NO.202038250</a> &nbsp;
+              <a class="has-text-white" style="color:#464646;text-decoration:none;" href="https://blog.rssins.net/privacy-policy" data-translatable>用户协议 屑一次 隱私政策 屑一次 Privacy Policy 屑一次 ユーザー規約</a> &nbsp; &nbsp;<a style="color:#464646" mdui-dialog="{target: '#Dialog_links'}" data-translatable>友链申请 屑一次 申請友鏈 屑一次 Apply Links 屑一次 リンク申請</a>
+              <div class="mdui-dialog" id="li">
+                <div class="mdui-dialog-title">少年よ神话になれ!</div>
+                <div class="mdui-dialog-content">
+                  <div class="mdui-typo">
+
+                      <li>
+                        clash_for_windows: https://github.com/Fndroid/clash_for_windows_pkg/releases
+                      </li>
+                      <li>
+                        telegram: https://telegram.org/
+                      </li>
+                      <li>
+                        clash_for_android: https://github.com/Kr328/ClashForAndroid/releases/tag/v2.4.14
+                      </li>
+                      <li>
+                        加速连接: https://1drv.ms/u/s!AvQNCOLVt9flgU0vJUuK_pjsLli8?e=OssCOP
+                      </li>
+
+                  </div>
+                </div>
+              </div>
+              </div>
             </div>
           </div>
         </div>
+        <br>
       </div>
-      <br>
-    </div>
     </div>
   </footer>
 </body>
 <!-- 多语言 -->
-<script src="./js/dom-i18n.js"></script>
 <script>
   var i18n = domI18n({
     selector: '[data-translatable]',
