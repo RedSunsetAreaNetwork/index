@@ -1,53 +1,44 @@
 <!doctype html>
 <html lang="zh-Hans">
-<!-- 测试版本4-->
+<!-- 2022重构版本-->
 
 <head>
-  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-  <title>余晖无垠官方网站
-  </title>
-  <meta name="description" content="不止是摸鱼中的干货，这里是余晖无垠团队官方网站，向您展示我们所有的服务与内容。">
-  <meta name="keywords" content="余晖无垠,redsunsets,团队,余晖,rss" />
-  <link rel="shortcut icon" href="./icons/logo.png">
-  <!-- 引入样式 -->
-  <link rel="stylesheet" href="./css/mtu.min.css">
-  <!-- 引入组件库 -->
-  <script src="./js/mtu.min.js"></script>
-  <!-- <script async src="https://cdn.ampproject.org/v0.js"></script> -->
-  <link rel="stylesheet" href="./css/mdui.min.css">
-  <link rel="stylesheet" href="./css/myui.css">
-  <script src="./js/jquery.min.js"></script>
-  <script src="./js/dom-i18n.js"></script>
-  <script src="./js/mdui.min.js"></script>
-  <script type="text/javascript">
-    window.$crisp = [];
-    window.CRISP_WEBSITE_ID = "f474d4ef-5f20-44d0-a1f5-f38ec3bb6457";
-    (function() {
-      d = document;
-      s = d.createElement("script");
-      s.src = "https://client.crisp.chat/l.js";
-      s.async = 1;
-      d.getElementsByTagName("head")[0].appendChild(s);
-    })();
-  </script>
-  <!-- <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.min.css"> -->
-  <!-- <link href="https://fonts.loli.net/css?family=Noto+Sans+SC" rel="stylesheet"> -->
-  <style type="text/css">
-    body {
-      background-image: url();
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: cover;
-    }
-  </style>
-  <!--引入MDUI 内置的 JavaScript 工具库-->
-  <script>
-    var $m = mdui.$;
-  </script>
+    <meta charset="utf-8" name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>余晖无垠官方网站
+    </title>
+    <meta name="description" content="不止是摸鱼中的干货，这里是余晖无垠团队官方网站，向您展示我们所有的服务与内容。">
+    <meta name="keywords" content="余晖无垠,redsunsets,团队,余晖,rss" />
+    <link rel="shortcut icon" href="./icons/logo.png">
+    <!-- <script async src="https://cdn.ampproject.org/v0.js"></script> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma-rtl.min.css">
 
-  <!--替换内容JS,替换目标：服务-->
-  <!-- <script type="text/javascript" defer src="./js/switchserve.js"></script> -->
-  <!-- <style type="text/css">
+    <link rel="stylesheet" href="./css/mdui.min.css" />
+    <script src="./js/mdui.min.js"></script>
+    <link rel="stylesheet" href="./css/myui.css">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/dom-i18n.js"></script>
+    <script type="text/javascript">
+        window.$crisp = [];
+        window.CRISP_WEBSITE_ID = "f474d4ef-5f20-44d0-a1f5-f38ec3bb6457";
+        (function () {
+            d = document;
+            s = d.createElement("script");
+            s.src = "https://client.crisp.chat/l.js";
+            s.async = 1;
+            d.getElementsByTagName("head")[0].appendChild(s);
+        })();
+    </script>
+    <!-- <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.min.css"> -->
+    <!-- <link href="https://fonts.loli.net/css?family=Noto+Sans+SC" rel="stylesheet"> -->
+    <!--引入MDUI 内置的 JavaScript 工具库-->
+    <script>
+        var $m = mdui.$;
+    </script>
+    <!--替换内容JS,替换目标：服务-->
+    <!-- <script type="text/javascript" defer src="./js/switchserve.js"></script> -->
+    <!-- <style type="text/css">
         body {
             background: url(./pic/background.webp) no-repeat center center;
 
@@ -58,122 +49,124 @@
             background-color: #CCCCCC;
         }
     </style> -->
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175582657-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175582657-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
 
-    gtag('config', 'UA-175582657-1');
-  </script>
-  <script>
+        gtag('config', 'UA-175582657-1');
+    </script>
+    <!-- <script>
     var i18n = domI18n({
       selector: '[data-translatable]',
       separator: ' // ',
       languages: ['zh-CN', 'zh-TW', 'en-US', 'ja'],
       defaultLanguage: 'zh-CN'
     });
-  </script>
+  </script> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap" rel="stylesheet">
+    <style>
+        .body {
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+    </style>
 </head>
 </script>
 
-<body id="setdarkmodeclass" class="mdui-theme-primary-pink mdui-theme-accent-pink">
-  <audio id="bgMusic">
-    <source src="https://music.163.com/song/media/outer/url?id=1350128941" type="audio/mp3">
-  </audio>
-  <!--顶栏与侧栏-->
-  <div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide">
-    <div class="mdui-toolbar">
-      <!-- <a href="javascript:;" class="mdui-btn mdui-btn-icon mdui-text-color-white-text"
+<body class="mdui-theme-primary-pink mdui-theme-accent-pink mdui-theme-layout-auto">
+    <audio id="bgMusic">
+        <source src="https://music.163.com/song/media/outer/url?id=1350128941" type="audio/mp3">
+    </audio>
+    <!--顶栏与侧栏-->
+    <div class="mdui-appbar mdui-appbar-fixed mdui-shadow-0">
+        <div class="mdui-toolbar mdui-text-color-white">
+            <a href="javascript:;" class="mdui-btn mdui-btn-icon"
                 mdui-drawer="{target: '#left-drawer',overlay:true,swipe:true}">
-                <i class="mdui-icon material-icons">menu</i></a> -->
-      <a href="javascript:;" class="mdui-btn mdui-btn-icon"  mdui-drawer="{target: '#left-drawer',overlay:true,swipe:true}">
-        <i class="mdui-icon material-icons">menu</i></a>
-      <a href="./index.html" class="mdui-typo-headline mdui-hidden-sm-down" data-translatable>余晖无垠 屑一次 余暉無垠 屑一次 Redsunsets 屑一次 暮れ残る</a>
-      <!-- <a href="javascript:;" class="mdui-typo-title mdui-hidden-sm-down" data-lang="string_lang2">主站</a> -->
-      <a href="javascript:;" class="mdui-typo-title mdui-hidden-md-up" data-translatable>余晖无垠 屑一次 余暉無垠 屑一次 Redsunsets 屑一次 暮れ残る</a>
-      <div class="mdui-tab mdui-hidden-sm-down" mdui-tab>
-        <a href="#tab1" class="mdui-ripple mdui-ripple-white" data-translatable>门户 屑一次 門戶 屑一次 Home 屑一次 ポータル</a>
-        <a href="#tab2" class="mdui-ripple mdui-ripple-white" data-translatable>信息 屑一次 訊息 屑一次 Info 屑一次 情報</a>
-      </div>
-      <div class="mdui-toolbar-spacer"></div>
-      <a href="javascript:;" class="mdui-btn mdui-btn-icon setdark"><i class="mdui-icon material-icons">brightness_7</i></a>
-      <a href="javascript:;" class="mdui-btn mdui-btn-icon musicSt" id="musicBox" onclick="nmsl()"><i class="mdui-icon material-icons">music_note</i>
-        <script>
-          function nmsl() {
-            if ($('a').is('.musicSt')) {
-              var audio = document.getElementById('bgMusic')
-              document.getElementById('musicBox').classList.remove('musicSt')
-              document.getElementById('musicBox').classList.add('nmsl')
-              audio.play();
-            } else {
-              var audio = document.getElementById('bgMusic')
-              document.getElementById('musicBox').classList.add('musicSt')
-              audio.pause();
-            }
+                <i class="mdui-icon material-icons">menu</i></a>
+            <a href="./index.html" class="mdui-typo-headline mdui-hidden-sm-down" data-translatable>余晖无垠</a>
+            <a href="javascript:;" class="mdui-typo-title mdui-hidden-md-up" data-translatable>余晖无垠</a>
+            <div class="mdui-toolbar-spacer"></div>
+            <a href="javascript:;" class="mdui-btn mdui-btn-icon setdark"><i
+                    class="mdui-icon material-icons">brightness_7</i></a>
+            <a href="javascript:;" class="mdui-btn mdui-btn-icon musicSt" id="musicBox" onclick="nmsl()"><i
+                    class="mdui-icon material-icons">music_note</i>
+                <script>
+                    function nmsl() {
+                        if ($('a').is('.musicSt')) {
+                            var audio = document.getElementById('bgMusic')
+                            document.getElementById('musicBox').classList.remove('musicSt')
+                            document.getElementById('musicBox').classList.add('nmsl')
+                            audio.play();
+                        } else {
+                            var audio = document.getElementById('bgMusic')
+                            document.getElementById('musicBox').classList.add('musicSt')
+                            audio.pause();
+                        }
 
-          };
-        </script>
-      </a>
-      <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-menu="{target: '#langSet'}" id="J_lang_switch"><i class="mdui-icon material-icons">translate</i>
-      </a>
-      <ul class="mdui-menu" id="langSet">
-        <li class="mdui-menu-item" onclick="i18n.changeLanguage('zh-CN');">
-          <a class="mdui-ripple">简体中文</a>
-        </li>
-        <li class="mdui-menu-item" onclick="i18n.changeLanguage('zh-TW');">
-          <a class="mdui-ripple">繁體中文</a>
-        </li>
-        <li class="mdui-menu-item" onclick="i18n.changeLanguage('en-US');">
-          <a class="mdui-ripple">English(US)</a>
-        </li>
-        <li class="mdui-menu-item" onclick="i18n.changeLanguage('ja');">
-          <a class="mdui-ripple">日本語</a>
-        </li>
-        <li class="mdui-divider"></li>
-        <li class="mdui-menu-item">
-          <a href="javascript:;" class="mdui-ripple">More</a>
-        </li>
-      </ul>
+                    };
+                </script>
+            </a>
+            <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-menu="{target: '#langSet'}" id="J_lang_switch"><i
+                    class="mdui-icon material-icons">translate</i>
+            </a>
+            <ul class="mdui-menu" id="langSet">
+                <li class="mdui-menu-item" onclick="i18n.changeLanguage('zh-CN');">
+                    <a class="mdui-ripple">简体中文</a>
+                </li>
+                <li class="mdui-menu-item" onclick="i18n.changeLanguage('zh-TW');">
+                    <a class="mdui-ripple">繁體中文</a>
+                </li>
+                <li class="mdui-menu-item" onclick="i18n.changeLanguage('en-US');">
+                    <a class="mdui-ripple">English(US)</a>
+                </li>
+                <li class="mdui-menu-item" onclick="i18n.changeLanguage('ja');">
+                    <a class="mdui-ripple">日本語</a>
+                </li>
+                <li class="mdui-divider"></li>
+                <li class="mdui-menu-item">
+                    <a href="javascript:;" class="mdui-ripple">More</a>
+                </li>
+            </ul>
+        </div>
     </div>
-    <div class="mdui-tab mdui-hidden-md-up" mdui-tab>
-      <a href="#tab1" class="mdui-ripple mdui-ripple-white" data-translatable>门户 屑一次 門戶 屑一次 Home 屑一次 ポータル</a>
-      <a href="#tab2" class="mdui-ripple mdui-ripple-white" data-translatable>信息 屑一次 訊息 屑一次 Info 屑一次 情報</a>
+    <div class="mdui-drawer mdui-color-white mdui-drawer-close" id="left-drawer" mdui-drawer="{swipe: ture}"
+        mdui-drawer="{overlay: ture}">
+        <div class="mdui-card-media">
+        </div>
+        <ul class="mdui-list">
+            <li class="mdui-list-item mdui-ripple" onclick="window.location.href = 'https://status.rssins.net/';"> <i
+                    class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-purple">cloud_circle</i>
+                <div class="mdui-list-item-content" data-translatable>服务器状态</div>
+            </li>
+            <li class="mdui-list-item mdui-ripple" onclick="window.location.href = 'https://t.me/bocc_group';"> <i
+                    class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-deep-purple">comment</i>
+                <div class="mdui-list-item-content" data-translatable>联系我们</div>
+            </li>
+            <li class="mdui-list-item mdui-ripple"> <i
+                    class="mdui-list-item-icon mdui-icon material-icons">brightness_4</i>
+                <div class="mdui-list-item-content" data-translatable>夜间模式</div>
+            </li>
+        </ul>
     </div>
-  </div>
-  <div class="mdui-drawer mdui-color-white mdui-drawer-close" id="left-drawer" mdui-drawer="{swipe: ture}" mdui-drawer="{overlay: ture}">
-    <div class="mdui-card-media">
-      <!-- <img src="https://ylypan.oss-cn-chengdu.aliyuncs.com/20200510%2F2%2F2_wMgKabnb_1.png?Expires=1594810005" /> -->
-      <!-- 卡片中可以包含一个或多个菜单按钮 -->
-    </div>
-    <ul class="mdui-list">
-      <li class="mdui-list-item mdui-ripple" onclick="window.location.href = 'https://status.rssins.net/';"> <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-purple">cloud_circle</i>
-        <div class="mdui-list-item-content" data-translatable>服务器状态 屑一次 伺服器状态 屑一次 Service Position 屑一次 サーバーの状態</div>
-      </li>
-      <li class="mdui-list-item mdui-ripple" onclick="window.location.href = 'https://t.me/bocc_group';"> <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-deep-purple">comment</i>
-        <div class="mdui-list-item-content" data-translatable>联系我们 屑一次 联络我们 屑一次 Ask Our Support 屑一次 連絡先情報</div>
-      </li>
-      <li class="mdui-list-item mdui-ripple setdark"> <i class="mdui-list-item-icon mdui-icon material-icons">brightness_4</i>
-        <div class="mdui-list-item-content" data-translatable>夜间模式 屑一次 暗色模式 屑一次 Dark Mode 屑一次 暗いモード</div>
-      </li>
-      <!--主题切换-->
-      <div id="setdarkmodesetting" class="setdarkmodesetting"></div>
-      <!--上面这个储存黑暗模式开关状态，默认存在时为关闭，开启时class被删除,关闭时class被重新添加-->
-    </ul>
-  </div>
-  <!--顶栏侧栏结束-->
-  <!--主内容开始-->
-  <div>
-    <!--应用栏1-->
-    <div id="tab1">
-    <div class="rss-largepic" style="height: calc(100vh);">
-    </div>
-       <div class="mdui-container">
-        <div class="mdui-container-fluid" id="indexPic" style="
+    <!--顶栏侧栏结束-->
+    <!--主内容开始-->
+    <section>
+        <div class="rss-largepic" style="height: calc(100vh);background-image:url(../img/qVmVyWg9.webp);">
+            <div style="margin-top: calc(95vh);"
+                class="mdui-float-right mdui-typo-caption-opacity mdui-text-color-white">
+                陕西省 太白山 © 余晖无垠 @海绵 &nbsp;&nbsp;&nbsp;
+            </div>
+        </div>
+        <div class="mdui-container">
+            <div class="mdui-container-fluid" id="indexPic" style="
         position: absolute;
         top: 70px;
         left: 0;
@@ -182,801 +175,32 @@
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;">
-          <div class="mdui-row" id="backG">
-            <div class="" style="margin-top: calc(25vh);">
-              <div class="mdui-text-color-white" style="margin-left: 15%;"><samp class="mdui-typo-display-3" data-translatable >余晖无垠 屑一次 余暉無垠 屑一次 Redsunsets 屑一次 暮れ残る</samp><samp class="mdui-typo-title-opacity">团队</samp></div>
-              <div class="mdui-typo-display-1-opacity mdui-m-t-2 mdui-text-color-white" style="margin-left: 15%;">比上不足而比下有余</div>
-              <div style="margin-left: 15%;" class="mdui-m-t-4">
-                  <button class="mdui-btn mdui-color-theme-accent mdui-ripple" onclick="window.location.href = 'https://t.me/bocc_group'">
-                    <i class="mdui-icon mdui-icon-left material-icons">send</i> <span data-translatable>
-                  群组 屑一次 群組 屑一次 TG Group 屑一次 コミュニティ</span></button>
-              &nbsp;
-                  <button class="mdui-color-purple mdui-btn mdui-ripple" onclick="">
-                    <i class="mdui-icon mdui-icon-left material-icons">arrow_downward</i>
-                    <span data-translatable>更多</button>
-              </div>
-            </div>
-          </div>
-        </div>
-          <div class="mdui-row">
-          <div class="mdui-typo-display-2 mdui-m-l-4 mdui-hidden-xs-down"><span data-translatable>我们运营的站点 屑一次 我們的站點 屑一次 Our Service 屑一次 当社のウェブサイト</span> <i class="mdui-typo-display-2 mdui-text-color-theme-accent mdui-icon material-icons">arrow_forward</i></div>
-          <div class="mdui-typo-display-1-opacity mdui-m-l-4 mdui-m-t-2 mdui-hidden-xs-down" data-translatable>随时跑路 屑一次 隨時跑路 屑一次 You should be patient. 屑一次 いつでも破産
-          </div>
-          <div class="mdui-typo-display-1 mdui-m-l-4 mdui-hidden-sm-up"><span data-translatable>我们运营的站点 屑一次 我們的站點 屑一次 Our Service 屑一次 当社のウェブサイト</span> <i class="mdui-typo-display-1 mdui-text-color-theme-accent mdui-icon material-icons">arrow_forward</i></div>
-          <div class="mdui-typo-headline-opacity mdui-m-l-4 mdui-m-t-2 mdui-hidden-sm-up" data-translatable>随时跑路 屑一次 隨時跑路 屑一次 You should be patient. 屑一次 いつでも破産
-          </div>
-          <div class="mdui-m-t-4"></div>
-          <div class="mdui-col-md-4 mdui-m-t-2 mdui-col-sm-6" id="in_L01">
-            <div class="mdui-card mdui-typo">
-              <div class="mdui-card-primary">
-                <li class="mdui-list-item mdui-ripple">
-                  <div class="mdui-list-item-avatar mdui-color-indigo"><i class="mdui-icon material-icons">insert_chart</i></div>
-                  <div class="mdui-list-item-content">
-                    <div class="mdui-list-item-title">Redsunsets Hub</div>
-                    <div class="mdui-list-item-text mdui-list-item-one-line" data-translatable>余晖无垠科技博客，时常发布一些干货 屑一次 我們的博客 屑一次 Our blog with our socialism technology 屑一次 私たちのブログはしばしば実践的な知識を公開しています。</div>
-                  </div>
-                </li>
-              </div>
-              <div class="mdui-card-actions mdui-color-indigo">
-                <div class="mdui-btn mdui-text-color-white-disabled">Blog</div>
-                <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
-              </div>
-            </div>
-            <script>
-              document.getElementById('in_L01').addEventListener('click', function() {
-                window.location.href = "https://blog.rssins.net/";
-              });
-            </script>
-          </div>
-          <div class="mdui-col-md-4 mdui-m-t-2 mdui-col-sm-6" id="in_L02">
-            <div class="mdui-card mdui-typo">
-              <div class="mdui-card-primary">
-                <li class="mdui-list-item mdui-ripple">
-                  <div class="mdui-list-item-avatar mdui-color-pink"><i class="mdui-icon material-icons">lightbulb_outline</i></div>
-                  <div class="mdui-list-item-content">
-                    <div class="mdui-list-item-title">Redsunset Lab</div>
-                    <div class="mdui-list-item-text mdui-list-item-one-line" data-translatable>余晖无垠实验室，公共API与项目 屑一次 提供免費API與產品 屑一次 Provide free API and more. 屑一次 使用するAPIを提供する</div>
-                  </div>
-                </li>
-              </div>
-              <div class="mdui-card-actions mdui-color-pink">
-                <div class="mdui-btn mdui-text-color-white-disabled">Lab</div>
-                <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
-              </div>
-            </div>
-            <script>
-              document.getElementById('in_L02').addEventListener('click', function() {
-                window.location.href = "https://lab.rssins.net/";
-              });
-            </script>
-          </div>
-          <div class="mdui-col-md-4 mdui-m-t-2 mdui-col-sm-6" id="in_L03">
-            <div class="mdui-card mdui-typo">
-              <div class="mdui-card-primary">
-                <li class="mdui-list-item mdui-ripple">
-                  <div class="mdui-list-item-avatar mdui-color-teal"><i class="mdui-icon material-icons">receipt</i>
-                  </div>
-                  <div class="mdui-list-item-content">
-                    <div class="mdui-list-item-title">晴空备忘录</div>
-                    <div class="mdui-list-item-text mdui-list-item-one-line" data-translatable>记录您的任何想法，现内测中 屑一次 記錄您的任何想法，現內測中 屑一次 Record any of your thoughts, now in closed beta. 屑一次 気まぐれなアイデアを書き留めてください。現在はクローズドベータ版です。</div>
-                  </div>
-                </li>
-              </div>
-              <div class="mdui-card-actions mdui-color-teal">
-                <div class="mdui-btn mdui-text-color-white-disabled">Orss</div>
-                <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
-              </div>
-            </div>
-            <script>
-              document.getElementById('in_L03').addEventListener('click', function() {
-                window.location.href = "https://www.orss.cf/";
-              });
-            </script>
-          </div>
-          <div class="mdui-col-md-4 mdui-m-t-2 mdui-col-sm-6" id="in_L04">
-            <div class="mdui-card mdui-typo">
-              <div class="mdui-card-primary">
-                <li class="mdui-list-item mdui-ripple">
-                  <div class="mdui-list-item-avatar mdui-color-deep-orange"><i class="mdui-icon material-icons mdui-text-color-white">cloud_queue</i>
-                  </div>
-                  <div class="mdui-list-item-content">
-                    <div class="mdui-list-item-title">夕阳红养老云</div>
-                    <div class="mdui-list-item-text mdui-list-item-one-line" data-translatable>小型自用网盘，暂不对外开放 屑一次 雲端硬盤，暂不對外開放 屑一次 Drive, we are not open to the public 屑一次 内部クラウドストレージは一般に公開されていません。</div>
-                  </div>
-                </li>
-              </div>
-              <div class="mdui-card-actions mdui-color-deep-orange">
-                <div class="mdui-btn mdui-text-color-white-disabled">pan</div>
-                <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons mdui-text-color-white">arrow_forward</i></button>
-              </div>
-            </div>
-            <script>
-              document.getElementById('in_L04').addEventListener('click', function() {
-                window.location.href = "https://pan.rssins.net/";
-              });
-            </script>
-          </div>
-        </div>
-        <!-- 捐赠 -->
-        <div class="mdui-card mdui-m-t-4" style="opacity: 0.9;">
-          <div class="mdui-card-primary">
-            <li class="mdui-list-item mdui-ripple">
-              <div class="mdui-list-item-avatar mdui-color-indigo"><i class="mdui-icon material-icons">attach_money</i>
-              </div>
-              <div class="mdui-list-item-content">
-                <div class="mdui-list-item-title" data-translatable>捐赠 屑一次 捐贈 屑一次 Donation 屑一次 寄付</div>
-                <div class="mdui-list-item-text mdui-list-item-one-line" data-translatable>没钱啥都干不了 屑一次 我們需要更多的資金以搞事情 屑一次 More funds more we do. 屑一次 今、気まぐれなことを成し遂げるためにもっとお金が必要です！</div>
-              </div>
-            </li>
-          </div>
-          <!-- 卡片的内容 -->
-          <div class="mdui-card-content" data-translatable>不管怎样，对我个人而言，没钱不仅仅是一个重大的事件，还可能会改变我的人生。 屑一次 不管怎樣，對我個人而言，沒錢不僅僅是一個重大的事件，還可能會改變我的人生。 屑一次 In any case, for me personally, lack of money is not just a major event, it may also change my life. 屑一次 いずれにせよ、私個人としては、お金の不足は大きな出来事であるだけでなく、私の人生を変えるかもしれません。</div>
-          <!-- 卡片的按钮 -->
-          <div class="mdui-card-actions">
-            <button class="mdui-btn mdui-ripple mdui-color-theme-accent" mdui-dialog="{target: '#Dialog_donate'}" data-translatable>在线支付 屑一次 在線支付 屑一次 Pay online 屑一次 オンライン支払い</button>
-            <button class="mdui-btn mdui-ripple" mdui-dialog="{target: '#Dialog_donationInfo'}" data-translatable>捐赠公示 屑一次 捐贈公示 屑一次 Donor 屑一次 寄付発表</button>
-            <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">expand_more</i></button>
-          </div>
-        </div>
-        <div class="mdui-dialog" id="Dialog_donate">
-          <div class="mdui-dialog-title" data-translatable>支付 屑一次 捐贈 屑一次 Donation 屑一次 支払うには</div>
-          <div class="mdui-dialog-content">
-            <div class="mdui-row">
-              <img class="mdui-img-fluid mdui-col-xs-5" src="./pic/donate_qr.jpg" width="9" height="16" layout="responsive"></img>
-              <div class="mdui-typo mdui-col-xs-7">
-                <h1 class="mdui-text-color-theme-accent">小老弟，来都来了，还不快PY一波？</h1>
-                <ul>
-                  <li>现仅支持云闪付和各大银行APP支付</li>
-                  <li>您的捐赠就是我们前进的动力</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="mdui-dialog-actions">
-            <button class="mdui-btn mdui-ripple" mdui-dialog-close>确定</button>
-          </div>
-        </div>
-        <div class="mdui-dialog" id="Dialog_donationInfo">
-          <div class="mdui-dialog-title">捐赠公示</div>
-          <div class="mdui-dialog-content">
-            <div class="mdui-typo">
-              <ol>
-                <li>
-                  匿名 <code>0.2</code> CNY
-                </li>
-                <li>
-                  TG<a href="https://t.me/Hoshino_Yumemi">@Hoshino_Yumemi</a>
-                  <code>114514</code> JPY
-                </li>
-              </ol>
-            </div>
-          </div>
-          <div class="mdui-dialog-actions">
-            <button class="mdui-btn mdui-ripple" mdui-dialog-close>确定</button>
-          </div>
-        </div>
-        <!-- 友链 -->
-        <br><br><br>
-        <!-- <button class="mdui-btn mdui-ripple" mdui-dialog="{target: '#Dialog_links'}">申请</button> -->
-        <div class="mdui-dialog" id="Dialog_links">
-          <div class="mdui-dialog-title">申请友链</div>
-          <div class="mdui-dialog-content">
-            <div class="mdui-typo">
-              <ol>
-                <li>
-                  网站要求：非营利性站点，且拒绝广告过多的站点。我们有权无条件拒绝您的申请。
-                </li>
-                <li>
-                  申请方式：将标题为<code>[友链申请]</code>的邮件，内容附上您的站点信息<strong>发送至</strong><code>support@rssins.net</code>，并在您的站点可见处添加本站的链接。
-                </li>
-                <li>
-                  您现在可以给我们提供您网站的简繁中文、日语以及英文信息了。
-                </li>
-                <li>
-                  本站信息：<ul>
-                    <li>名称 <code>余晖无垠</code></li>
-                    <li>简介 <code>神奇的鸽子窝</code></li>
-                    <li>主页 <code>https://www.rssins.net/</code></li>
-                    <li>图像链接
-                      <code>https://cdn.jsdelivr.net/gh/RSSYLY/redsunsetpic@mull/pic/blog/2021/1621731809290.jpg</code>
-                    </li>
-                  </ul>
-                </li>
-              </ol>
-            </div>
-          </div>
-          <div class="mdui-dialog-actions">
-            <button class="mdui-btn mdui-ripple" mdui-dialog-close>确定</button>
-          </div>
-        </div>
-        <div class="mdui-m-t-4">
-          <div class="mdui-row">
-            <div class="mdui-typo-display-2 mdui-m-l-4 mdui-m-t-4 mdui-hidden-xs-down"><span data-translatable>友情链接 屑一次 友情鏈接 屑一次 Links 屑一次 友情リンク</span> <i class="mdui-typo-display-1 mdui-text-color-theme-accent mdui-icon material-icons">arrow_forward</i></div>
-            <div class="mdui-typo-display-1-opacity mdui-m-l-4 mdui-m-t-2 mdui-hidden-xs-down" data-translatable>我的朋友们 屑一次 我的朋友們 屑一次 My friends 屑一次 私の友達</div>
-            <div class="mdui-typo-display-1 mdui-m-l-4 mdui-hidden-sm-up"><span data-translatable>友情链接 屑一次 友情鏈接 屑一次 Links 屑一次 友情リンク</span> <i class="mdui-typo-display-2 mdui-text-color-theme-accent mdui-icon material-icons">arrow_forward</i></div>
-            <div class="mdui-typo-headline-opacity mdui-m-l-4 mdui-m-t-2 mdui-hidden-sm-up" data-translatable>我的朋友们 屑一次 我的朋友們 屑一次 My friends 屑一次 私の友達</div>
-            <div class="mdui-m-t-4"></div>
-            <div class="mdui-col-md-4">
-              <ul class="mdui-list">
-                <div class="mdui-card" id="link_1" style="border-radius: 10px !important;">
-                  <div class="mdui-card-media">
-                    <li class="mdui-list-item mdui-ripple">
-                      <div class="mdui-list-item-avatar mdui-color-red">
-                        <img src="./pic/yl1.webp" width="1" height="1" layout="responsive">
-                        </img>
-                      </div>
-                      <div class="mdui-list-item-content">
-                        <div class="mdui-list-item-title">Grassblock's Blog</div>
-                        <div class="mdui-list-item-text mdui-list-item-one-line">
-                          这里住着一只乐于分享知识和生活的大绒布球～
+                <div class="mdui-row" id="backG">
+                    <div style="margin-top: calc(25vh);">
+                        <h1 class="mdui-text-color-white" style="margin-left: 15%;"><samp class="mdui-typo-display-3"
+                                data-translatable>余晖无垠</samp><samp class="mdui-typo-title-opacity">团队</samp></h1>
+                        <div class="mdui-typo-display-1-opacity mdui-m-t-2 mdui-text-color-white"
+                            style="margin-left: 15%;">比上不足而比下有余</div>
+                        <div style="margin-left: 15%;" class="mdui-m-t-4">
+                            <button class="mdui-btn mdui-color-theme-accent mdui-ripple"
+                                onclick="window.location.href = 'https://t.me/bocc_group'">
+                                <i class="mdui-icon mdui-icon-left material-icons">send</i> <span data-translatable>
+                                    群组</span></button>
+                            &nbsp;
+                            <button class="mdui-color-purple mdui-btn mdui-ripple" onclick="">
+                                <i class="mdui-icon mdui-icon-left material-icons">arrow_downward</i>
+                                <span data-translatable>更多</button>
                         </div>
-                      </div>
-                      <i class="mdui-icon material-icons mdui-text-color-orange" mdui-tooltip="{content: 'PY'}">favorite_border</i>
-                      <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
-                    </li>
-                  </div>
-                  <script>
-                    document.getElementById('link_1').addEventListener('click', function() {
-                      window.location.href = "https://blog.imgb.space/";
-                    });
-                  </script>
-                </div>
-              </ul>
-            </div>
-            <div class="mdui-col-md-4">
-              <ul class="mdui-list">
-                <div class="mdui-card" id="link_2" style="border-radius: 10px !important;">
-                  <div class="mdui-card-media">
-                    <li class="mdui-list-item mdui-ripple">
-                      <div class="mdui-list-item-avatar">
-                        <img src="https://gitee.com/jsun969/assets/raw/master/avatar.png" width="1" height="1" layout="responsive"></img>
-                      </div>
-                      <div class="mdui-list-item-content">
-                        <div class="mdui-list-item-title">荆棘小栈</div>
-                        <div class="mdui-list-item-text mdui-list-item-one-line">
-                          好看的皮囊千篇一律，有趣的灵魂万里挑一
-                        </div>
-                      </div>
-                      <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
-                    </li>
-                  </div>
-                  <script>
-                    document.getElementById('link_2').addEventListener('click', function() {
-                      window.location.href = "https://jsun969.cn";
-                    });
-                  </script>
-                </div>
-              </ul>
-            </div>
-            <div class="mdui-col-md-4">
-              <ul class="mdui-list">
-                <div class="mdui-card" id="link_3" style="border-radius: 10px !important;">
-                  <div class="mdui-card-media">
-                    <li class="mdui-list-item mdui-ripple">
-                      <div class="mdui-list-item-avatar">
-                        <img src="./pic/yl2.webp" width="1" height="1" layout="responsive"></img>
-                      </div>
-                      <div class="mdui-list-item-content">
-                        <div class="mdui-list-item-title">XenWayne's Blog</div>
-                        <div class="mdui-list-item-text mdui-list-item-one-line">
-                          鸽子的自我修养
-                        </div>
-                      </div>
-                      <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
-                    </li>
-                  </div>
-                  <script>
-                    document.getElementById('link_3').addEventListener('click', function() {
-                      window.location.href = "https://xenwayne.top/";
-                    });
-                  </script>
-                </div>
-              </ul>
-            </div>
-          </div>
-          <!-- 第二列 -->
-          <div class="mdui-row">
-            <div class="mdui-col-md-4">
-              <ul class="mdui-list">
-                <div class="mdui-card" id="link_4" style="border-radius: 10px !important;">
-                  <div class="mdui-card-media">
-                    <li class="mdui-list-item mdui-ripple">
-                      <div class="mdui-list-item-avatar">
-                        <img src="#" width="1" height="1" layout="responsive"></img>
-                      </div>
-                      <div class="mdui-list-item-content">
-                        <div class="mdui-list-item-title">ROYWANG</div>
-                        <div class="mdui-list-item-text mdui-list-item-one-line">
-                          知善恶，懂因果。但行好事，莫问前程。
-                        </div>
-                      </div>
-                      <i class="mdui-icon material-icons mdui-text-color-red-a700" mdui-tooltip="{content: '图片炸了'}">error_outline</i>
-                      <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
-                    </li>
-                  </div>
-                  <script>
-                    document.getElementById('link_4').addEventListener('click', function() {
-                      window.location.href = "https://roywang.cn/";
-                    });
-                  </script>
-                </div>
-              </ul>
-            </div>
-            <div class="mdui-col-md-4">
-              <ul class="mdui-list">
-                <div class="mdui-card" id="link_5" style="border-radius: 10px !important;">
-                  <div class="mdui-card-media">
-                    <li class="mdui-list-item mdui-ripple">
-                      <div class="mdui-list-item-avatar mdui-color-red">
-                        <img src="./pic/yl3.webp" width="1" height="1" layout="responsive"></img>
-                      </div>
-                      <div class="mdui-list-item-content">
-                        <div class="mdui-list-item-title">LYM'S BLOG</div>
-                        <div class="mdui-list-item-text mdui-list-item-one-line">
-                          一个萌新的小站
-                        </div>
-                      </div>
-                      <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
-                    </li>
-                  </div>
-                  <script>
-                    document.getElementById('link_5').addEventListener('click', function() {
-                      window.location.href = "https://loli.by/";
-                    });
-                  </script>
-                </div>
-              </ul>
-            </div>
-            <div class="mdui-col-md-4">
-              <ul class="mdui-list">
-                <div class="mdui-card" id="link_6" style="border-radius: 10px !important;">
-                  <div class="mdui-card-media">
-                    <li class="mdui-list-item mdui-ripple">
-                      <div class="mdui-list-item-avatar mdui-color-red">
-                        <img src="https://blog.im.ci/wp-content/uploads/2020/07/IMG_20191231_052259-scaled-e1596127234331.jpg" width="1" height="1" layout="responsive"></img>
-                      </div>
-                      <div class="mdui-list-item-content">
-                        <div class="mdui-list-item-title">Rain's Blog</div>
-                        <div class="mdui-list-item-text mdui-list-item-one-line">
-                          Rain的随笔小记
-                        </div>
-                      </div>
-                      <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
-                    </li>
-                  </div>
-                  <script>
-                    document.getElementById('link_6').addEventListener('click', function() {
-                      window.location.href = "https://blog.im.ci/";
-                    });
-                  </script>
-                </div>
-              </ul>
-            </div>
-          </div>
-          <!-- 第三行 -->
-          <div class="mdui-row">
-            <div class="mdui-col-md-4">
-              <ul class="mdui-list">
-                <div class="mdui-card" id="link_7" style="border-radius: 10px !important;">
-                  <div class="mdui-card-media">
-                    <li class="mdui-list-item mdui-ripple">
-                      <div class="mdui-list-item-avatar">
-                        <img src="./pic/yl07.jpg" width="1" height="1" layout="responsive"></img>
-                      </div>
-                      <div class="mdui-list-item-content">
-                        <div class="mdui-list-item-title">星痕图床</div>
-                        <div class="mdui-list-item-text mdui-list-item-one-line">
-                          他说不给他添加友链就扬了余晖无垠
-                        </div>
-                      </div>
-                      <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
-                    </li>
-                  </div>
-                  <script>
-                    document.getElementById('link_7').addEventListener('click', function() {
-                      window.location.href = "https://imgtu.pro/";
-                    });
-                  </script>
-                </div>
-              </ul>
-            </div>
-            <div class="mdui-col-md-4">
-              <ul class="mdui-list">
-                <div class="mdui-card" id="link_8" style="border-radius: 10px !important;">
-                  <div class="mdui-card-media">
-                    <li class="mdui-list-item mdui-ripple">
-                      <div class="mdui-list-item-avatar mdui-color-red">
-                        <img src="./pic/yl4.webp" width="1" height="1" layout="responsive"></img>
-                      </div>
-                      <div class="mdui-list-item-content">
-                        <div class="mdui-list-item-title">乱谈府</div>
-                        <div class="mdui-list-item-text mdui-list-item-one-line">
-                          也扯淡，也思考，也学习，也生活
-                        </div>
-                      </div>
-                      <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
-                    </li>
-                  </div>
-                  <script>
-                    document.getElementById('link_8').addEventListener('click', function() {
-                      window.location.href = "https://laffitto.xyz";
-                    });
-                  </script>
-                </div>
-              </ul>
-            </div>
-            <div class="mdui-col-md-4">
-              <ul class="mdui-list">
-                <div class="mdui-card" id="link_9" style="border-radius: 10px !important;">
-                  <div class="mdui-card-media">
-                    <li class="mdui-list-item mdui-ripple">
-                      <div class="mdui-list-item-avatar">
-                        <img src="./pic/yl5.webp" width="1" height="1" layout="responsive"></img>
-                      </div>
-                      <div class="mdui-list-item-content">
-                        <div class="mdui-list-item-title">西安咸阳国际机场</div>
-                        <div class="mdui-list-item-text mdui-list-item-one-line">
-                          已跑路的机场
-                        </div>
-                      </div>
-                    </li>
-                  </div>
-                  <script>
-                    document.getElementById('link_fuck').addEventListener('click', function() {
-                      window.location.href = "";
-                    });
-                  </script>
-                </div>
-              </ul>
-            </div>
-          </div>
-          <!-- 第四行 -->
-          <div class="mdui-row">
-            <div class="mdui-col-md-4">
-              <ul class="mdui-list">
-                <div class="mdui-card" id="link_10" style="border-radius: 10px !important;">
-                  <div class="mdui-card-media">
-                    <li class="mdui-list-item mdui-ripple">
-                      <div class="mdui-list-item-avatar">
-                        <img src="./pic/yl6.webp" width="1" height="1" layout="responsive"></img>
-                      </div>
-                      <div class="mdui-list-item-content">
-                        <div class="mdui-list-item-title">暮れ残る合同会社</div>
-                        <div class="mdui-list-item-text mdui-list-item-one-line">
-                          私たちは新興インターネット企業であり
-                        </div>
-                      </div>
-                      <i class="mdui-icon material-icons mdui-text-color-green" mdui-tooltip="{content: '合作网站'}">check_circle</i>
-                      <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
-                    </li>
-                  </div>
-                  <script>
-                    document.getElementById('link_10').addEventListener('click', function() {
-                      window.location.href = "https://www.rste.club/";
-                    });
-                  </script>
-                </div>
-              </ul>
-            </div>
-            <div class="mdui-col-md-4">
-              <ul class="mdui-list">
-                <div class="mdui-card" style="border-radius: 10px !important;">
-                  <div class="mdui-card-media">
-                    <li class="mdui-list-item mdui-ripple">
-                      <div class="mdui-list-item-avatar mdui-color-white">
-                        <img src="https://box.othing.xyz/themes/icons/icon.svg" width="1" height="1" layout="responsive"></img>
-                      </div>
-                      <div class="mdui-list-item-content" id="link_11">
-                        <div class="mdui-list-item-title">独立博客&播客全订阅计划</div>
-                        <div class="mdui-list-item-text mdui-list-item-one-line">
-                          订阅全部中文博客&播客！
-                        </div>
-                      </div>
-                      <i class="mdui-icon material-icons mdui-text-color-indigo" onclick="window.location.href = 'https://t.me/blogrsslist';">info_outline</i>
-                      <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
-                    </li>
-                  </div>
-                  <script>
-                    document.getElementById('link_11').addEventListener('click', function() {
-                      window.location.href = "https://box.othing.xyz";
-                    });
-                  </script>
-                </div>
-              </ul>
-            </div>
-            <div class="mdui-col-md-4">
-              <ul class="mdui-list">
-                <div class="mdui-card" id="link_12" style="border-radius: 10px !important;">
-                  <div class="mdui-card-media">
-                    <li class="mdui-list-item mdui-ripple">
-                      <div class="mdui-list-item-avatar">
-                        <img src="https://www.luminous.top/wp-content/uploads/2021/07/favicon.ico" width="1" height="1" layout="responsive"></img>
-                      </div>
-                      <div class="mdui-list-item-content">
-                        <div class="mdui-list-item-title">Luminous</div>
-                        <div class="mdui-list-item-text mdui-list-item-one-line">
-                          一个普通的联盟
-                        </div>
-                      </div>
-                      <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
-                    </li>
-                  </div>
-                  <script>
-                    document.getElementById('link_12').addEventListener('click', function() {
-                      window.location.href = "https://luminous.top/";
-                    });
-                  </script>
-                </div>
-              </ul>
-            </div>
-          </div>
-          <!-- 第五行 -->
-          <div class="mdui-row">
-            <div class="mdui-col-md-4">
-              <ul class="mdui-list">
-                <div class="mdui-card" id="link_13" style="border-radius: 10px !important;">
-                  <div class="mdui-card-media">
-                    <li class="mdui-list-item mdui-ripple">
-                      <div class="mdui-list-item-avatar">
-                        <img src="./pic/yl7.webp" width="1" height="1" layout="responsive"></img>
-                      </div>
-                      <div class="mdui-list-item-content">
-                        <div class="mdui-list-item-title">Roof</div>
-                        <div class="mdui-list-item-text mdui-list-item-one-line">
-                          不能止步于顶部
-                        </div>
-                      </div>
-                      <i class="mdui-icon material-icons mdui-text-color-green" mdui-tooltip="{content: '合作网站'}">check_circle</i>
-                      <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
-                    </li>
-                  </div>
-                  <script>
-                    document.getElementById('link_13').addEventListener('click', function() {
-                      window.location.href = "https://www.rendsunsetsr.ml/";
-                    });
-                  </script>
-                </div>
-              </ul>
-            </div>
-            <div class="mdui-col-md-4">
-              <ul class="mdui-list">
-                <div class="mdui-card" style="border-radius: 10px !important;">
-                  <div class="mdui-card-media">
-                    <li class="mdui-list-item mdui-ripple">
-                      <div class="mdui-list-item-avatar mdui-color-white">
-                        <img src="./pic/yl8.webp" width="1" height="1" layout="responsive"></img>
-                      </div>
-                      <div class="mdui-list-item-content" id="link_14">
-                        <div class="mdui-list-item-title">郭桓桓的小 blog</div>
-                        <div class="mdui-list-item-text mdui-list-item-one-line">
-                          台灣小喵的雜物間，紀錄一些 coding 和折騰日常～
-                        </div>
-                      </div>
-                      <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
-                    </li>
-                  </div>
-                  <script>
-                    document.getElementById('link_14').addEventListener('click', function() {
-                      window.location.href = "https://blog.nekohuan.cyou/";
-                    });
-                  </script>
-                </div>
-              </ul>
-            </div>
-            <div class="mdui-col-md-4">
-              <ul class="mdui-list">
-                <div class="mdui-card" id="link_15" style="border-radius: 10px !important;">
-                  <div class="mdui-card-media">
-                    <li class="mdui-list-item mdui-ripple">
-                      <div class="mdui-list-item-avatar">
-                        <img src="./pic/yl9.webp" width="1" height="1" layout="responsive"></img>
-                      </div>
-                      <div class="mdui-list-item-content">
-                        <div class="mdui-list-item-title">吃土的小智
-                        </div>
-                        <div class="mdui-list-item-text mdui-list-item-one-line">
-                          我家还蛮大的.jpg
-                        </div>
-                      </div>
-                      <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
-                    </li>
-                  </div>
-                  <script>
-                    document.getElementById('link_15').addEventListener('click', function() {
-                      window.location.href = "https://chitudexiaozhi.com";
-                    });
-                  </script>
-                </div>
-              </ul>
-            </div>
-          </div>
-          <!-- 第六行 -->
-          <div class="mdui-row">
-            <div class="mdui-col-md-4">
-              <ul class="mdui-list">
-                <div class="mdui-card" id="link_16" style="border-radius: 10px !important;">
-                  <div class="mdui-card-media">
-                    <li class="mdui-list-item mdui-ripple">
-                      <div class="mdui-list-item-avatar">
-                        <img src="./pic/y20.webp" width="1" height="1" layout="responsive"></img>
-                      </div>
-                      <div class="mdui-list-item-content">
-                        <div class="mdui-list-item-title">测试站
-                        </div>
-                        <div class="mdui-list-item-text mdui-list-item-one-line">
-                          测试站
-                        </div>
-                      </div>
-                      <button class="mdui-btn mdui-btn-icon mdui-float-right"><i
-                          class="mdui-icon material-icons">arrow_forward</i></button>
-                    </li>
-                  </div>
-                  <script>
-                    document.getElementById('link_16').addEventListener('click', function () {
-                      window.location.href = "https://itforweb666.github.io/";
-                    });
-                  </script>
-                </div>
-              </ul>
-            </div>
-          </div>
-        </div>
-        </div>
-      </div>
-    </div>
-    <!--应用栏2-->
-    <div id="tab2">
-      <br><br><br><br><br>
-      <div class="mdui-hidden-md-up"><br><br><br></div>
-      <div class="mdui-container">
-        <div class="mdui-row">
-          <div class="mdui-card">
-            <div class="mdui-card-media mdui-img-fluid">
-              <img src="./pic/bg5.jpg" /></div>
-            <div class="mdui-card-primary">
-              <div class="mdui-card-primary-title" data-translatable>关于我们 屑一次 關於我們 屑一次 About Us 屑一次 私たちについて</div>
-              <div class="mdui-card-primary-subtitle" data-translatable>一个由一群高中生鸽子组成的团队 屑一次 一個由一群高中生鴿子組成的團隊 屑一次 A team composed of a group of high school students. 屑一次 このチームは高校生のグループで構成されています</div>
-            </div>
-            <div class="mdui-card-media mdui-hidden-md-up">
-              <!-- <img
-                                src="https://cdn.jsdelivr.net/gh/RSSYLY/redsunsetpic/pic/blog/2021/20210219162815.webp" />
-                        </div>
-                        <div class="mdui-card-media mdui-hidden-sm-down">
-                            <img
-                                src="https://cdn.jsdelivr.net/gh/RSSYLY/redsunsetpic/pic/blog/2021/20210219162809.webp" /> -->
-            </div>
-            <br>
-            <!--简介-->
-            <div class="mdui-card-content mdui-typo">
-              <div class="mdui-chip">
-                <span class="mdui-chip-icon mdui-color-theme-accent"><i class="mdui-icon material-icons">info_outline</i></span>
-                <span class="mdui-chip-title" data-translatable>简介 屑一次 簡介 屑一次 Introduction  屑一次 イントロ</span>
-              </div>
-              <br>
-              <blockquote>
-                <p data-translatable>一群喜欢摸鱼的高中生，整的活比较杂，有会C++的有会单片机的，不过共同点是全是老色批。 屑一次 一群喜歡摸魚的高中生，整的活比較雜，有會C++的有會單片機的，不過共同點是全是老色批。 屑一次  A group of high school students who do unusual things, some who know C++ and some who know how to use microcontrollers, but they are Laosepi (A word for describing the people focusing only on the sexy side of something,just used to steer at himself ) in common. 屑一次 先延ばしのある高校生のグループは、C ++を知っている人もいれば、MCUを知っている人もいますが、すべてポルノが好きです。</p>
-                <footer data-translatable>某成员 屑一次 🐔 屑一次 A sexful man 屑一次 匿名メンバー</footer>
-              </blockquote><br>
-              <ul>
-                <li>
-                  <del>人均单身</del>好吧有人已经脱单了
-                </li>
-                <li>不少鸽子，经常性咕咕咕</li>
-                <li>NSFW警告</li>
-                <li>都是汉子，不过我想之后会有妹子的</li>
-              </ul>
-            </div>
-            <div class="mdui-divider"></div>
-            <!--历程-->
-            <div class="mdui-card-content">
-              <div class="mdui-chip">
-                <span class="mdui-chip-icon mdui-color-theme-accent"><i class="mdui-icon material-icons">history</i></span>
-                <span class="mdui-chip-title">历程</span>
-              </div>
-              <br>
-              <m-timeline class="mdui-m-t-1">
-                <m-timeline-item>
-                  <div slot="title" class="mdui-text-color-theme-text">成立</div>
-                  <div slot="icon"><i class="mdui-icon material-icons mdui-text-color-pink">done_all</i>
-                  </div>
-                  <m-card class="mdui-card">
-                    [数据删除] <br />2016年[数据删除]
-                  </m-card>
-                </m-timeline-item>
-                <m-timeline-item>
-                  <div slot="icon"><i class="mdui-icon material-icons mdui-text-color-purple">directions_walk</i>
-                  </div>
-                  <div slot="title" class="mdui-text-color-theme-text">事件</div>
-                  <m-card class="mdui-card mdui-typo">
-                    MC还原西安项目 <br />于 <code>2020-02-12</code>
-                  </m-card>
-                </m-timeline-item>
-                <m-timeline-item>
-                  <div slot="icon"><i class="mdui-icon material-icons mdui-text-color-indigo">language</i>
-                  </div>
-                  <div slot="title" class="mdui-text-color-theme-text">事件</div>
-                  <m-card class="mdui-card mdui-typo">
-                    第一个网站 <br />于 <code>2020-02-28</code>
-                  </m-card>
-                </m-timeline-item>
-                <m-timeline-item>
-                  <div slot="icon"><i class="mdui-icon material-icons mdui-text-color-orange-900">cloud_upload</i>
-                  </div>
-                  <div slot="title" class="mdui-text-color-theme-text">事件</div>
-                  <m-card class="mdui-card mdui-typo">
-                    夕阳红养老云 <br />于 <code>2020-03-01</code>
-                  </m-card>
-                </m-timeline-item>
-                <m-timeline-item>
-                  <div slot="icon"><i class="mdui-icon material-icons mdui-text-color-light-green">rate_review</i>
-                  </div>
-                  <div slot="title" class="mdui-text-color-theme-text">事件</div>
-                  <m-card class="mdui-card mdui-typo">
-                    Redsunsets Hub <br />于 <code>2020-05-16</code>
-                  </m-card>
-                </m-timeline-item>
-              </m-timeline>
-            </div>
-            <div class="mdui-card-actions">
-              <button class="mdui-btn mdui-ripple"></button>
-              <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">expand_more</i></button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--主内容结束-->
-  <!--底部-->
-  <br>
-  <footer class="foot mdui-text-center">
-    <div id="setdarkmodeclass2" class="mdui-container-fluid mdui-color-grey-100">
-      <br><br>
-      <div class="mdui-container">
-        <div class=" mdui-row">
-          <div class="mdui-col-sm-6">
-            <div class="mdui-text-left" style="color:#787878">Copyright;©&nbsp;
-              2016<a  mdui-dialog="{target: '#li'}" data-translatable>-</a>2022&nbsp;&nbsp;by<strong>&nbsp;Redsunsets Institute </strong>All rights reserved.</div><br>
-            <div class="mdui-text-left"><a style="color:#464646;text-decoration: none" href="https://icp.gov.moe/?keyword=202038250">萌站联盟 NO.202038250</a> &nbsp;
-              <a class="has-text-white" style="color:#464646;text-decoration:none;" href="https://blog.rssins.net/privacy-policy" data-translatable>用户协议 屑一次 隱私政策 屑一次 Privacy Policy 屑一次 ユーザー規約</a> &nbsp; &nbsp;<a style="color:#464646" mdui-dialog="{target: '#Dialog_links'}" data-translatable>友链申请 屑一次 申請友鏈 屑一次 Apply Links 屑一次 リンク申請</a>
-              <div class="mdui-dialog" id="li">
-                <div class="mdui-dialog-title">少年よ神话になれ!</div>
-                <div class="mdui-dialog-content">
-                  <div class="mdui-typo">
+                    </div>
 
-                      <li>
-                        clash_for_windows: https://github.com/Fndroid/clash_for_windows_pkg/releases
-                      </li>
-                      <li>
-                        telegram: https://telegram.org/
-                      </li>
-                      <li>
-                        clash_for_android: https://github.com/Kr328/ClashForAndroid/releases/tag/v2.4.14
-                      </li>
-                      <li>
-                        加速连接: https://1drv.ms/u/s!AvQNCOLVt9flgU0vJUuK_pjsLli8?e=OssCOP
-                      </li>
-
-                  </div>
                 </div>
-              </div>
-              </div>
             </div>
-          </div>
         </div>
-        <br>
-      </div>
-    </div>
-  </footer>
+        <div class="mdui-container-fluid" style="height: calc(50vh);">
+            <div class="" style="margin-top: calc(10vh);">
+                <h2 class="mdui-typo-display-2 mdui-text-center mdui-m-t-4">小逗包根据地</h2>
+                <p class="mdui-typo-display-1-opacity mdui-text-center mdui-m-t-2">探动漫精髓，论哲学深邃</p>
+            </div>
+        </div>
+    </section>
 </body>
-<!-- 多语言 -->
-<script>
-  var i18n = domI18n({
-    selector: '[data-translatable]',
-    separator: ' 屑一次 ',
-    languages: ['zh-CN', 'zh-TW', 'en-US', 'ja'],
-    defaultLanguage: 'zh-CN'
-  });
-</script>
-
-</html>
