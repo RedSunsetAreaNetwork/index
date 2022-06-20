@@ -44,8 +44,7 @@
   <script>
     var $m = mdui.$;
   </script>
-  <!--判断浏览器黑暗主题是否开启-->
-  <script type="text/javascript" defer src="./js/darkauto.js"></script>
+
   <!--替换内容JS,替换目标：服务-->
   <!-- <script type="text/javascript" defer src="./js/switchserve.js"></script> -->
   <!-- <style type="text/css">
@@ -87,8 +86,8 @@
     <source src="https://music.163.com/song/media/outer/url?id=1350128941" type="audio/mp3">
   </audio>
   <!--顶栏与侧栏-->
-  <div class="mdui-appbar mdui-appbar-fixed">
-    <div class="mdui-toolbar mdui-color-white">
+  <div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide">
+    <div class="mdui-toolbar">
       <!-- <a href="javascript:;" class="mdui-btn mdui-btn-icon mdui-text-color-white-text"
                 mdui-drawer="{target: '#left-drawer',overlay:true,swipe:true}">
                 <i class="mdui-icon material-icons">menu</i></a> -->
@@ -141,7 +140,7 @@
         </li>
       </ul>
     </div>
-    <div class="mdui-tab mdui-color-white mdui-hidden-md-up" mdui-tab>
+    <div class="mdui-tab mdui-hidden-md-up" mdui-tab>
       <a href="#tab1" class="mdui-ripple mdui-ripple-white" data-translatable>门户 屑一次 門戶 屑一次 Home 屑一次 ポータル</a>
       <a href="#tab2" class="mdui-ripple mdui-ripple-white" data-translatable>信息 屑一次 訊息 屑一次 Info 屑一次 情報</a>
     </div>
@@ -164,60 +163,16 @@
       <!--主题切换-->
       <div id="setdarkmodesetting" class="setdarkmodesetting"></div>
       <!--上面这个储存黑暗模式开关状态，默认存在时为关闭，开启时class被删除,关闭时class被重新添加-->
-      <script>
-        // 绑定按钮点击事件
-        $('.setdark').on('click', function() {
-
-          if ($('div').is('.setdarkmodesetting')) //判断上面的class是否存在
-          {
-            // console.log('点击了元素');
-            //js添加指定id的class
-            document.getElementById("setdarkmodeclass").classList.add("mdui-theme-layout-dark");
-            document.getElementById("left-drawer").classList.add("mdui-theme-layout-dark");
-            //js删除指定id的class
-            document.getElementById("setdarkmodeclass2").classList.remove("mdui-color-grey-100");
-            document.getElementById("setdarkmodeclass2").classList.add("mdui-color-grey-900");
-            document.getElementById("left-drawer").classList.remove("mdui-color-white");
-            document.getElementById("setdarkmodesetting").classList.remove("setdarkmodesetting");
-            // document.getElementById("indexPic").style.background = "url('./pic/indexpic03dark.webp')";
-
-          } else {
-            //js删除指定id的class
-            document.getElementById("setdarkmodeclass").classList.remove("mdui-theme-layout-dark");
-            document.getElementById("left-drawer").classList.remove("mdui-theme-layout-dark");
-            //js添加指定id的class
-            document.getElementById("setdarkmodeclass2").classList.remove("mdui-color-grey-900");
-            document.getElementById("setdarkmodeclass2").classList.add("mdui-color-grey-100");
-            document.getElementById("left-drawer").classList.add("mdui-color-white");
-            document.getElementById("setdarkmodesetting").classList.add("setdarkmodesetting");
-            // document.getElementById("indexPic").style.background = "url('./pic/indexpic03.webp')";
-
-          }
-        });
-      </script>
     </ul>
   </div>
   <!--顶栏侧栏结束-->
   <!--主内容开始-->
-  <div class="mdui-container-fluid">
+  <div>
     <!--应用栏1-->
     <div id="tab1">
-      <!-- 动画 -->
-      <div class="area" >
-        <ul class="circles">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-        </ul>
-      </div >
-      <div class="mdui-container">
+    <div class="rss-largepic" style="height: calc(100vh);">
+    </div>
+       <div class="mdui-container">
         <div class="mdui-container-fluid" id="indexPic" style="
         position: absolute;
         top: 70px;
@@ -228,21 +183,22 @@
         background-size: cover;
         background-repeat: no-repeat;">
           <div class="mdui-row" id="backG">
-            <div class="" style="margin-top: calc(30vh);">
-              <div class="mdui-typo-display-2 mdui-text-center" data-translatable>不止是鸽子 屑一次 不止是鴿子 屑一次 Do Nothing 屑一次 ハト以上</div>
-              <div class="mdui-typo-display-1 mdui-m-t-2 mdui-text-center" data-translatable>更是废物 屑一次 一群廢物 屑一次 How litter we are. 屑一次 まだ無駄</div>
-              <button class="mdui-btn mdui-color-theme-accent mdui-ripple mdui-m-t-4 mdui-center" onclick="window.location.href = 'https://blog.rssins.net/';">
-                <i class="mdui-icon mdui-icon-left material-icons">assignment</i> <span data-translatable>
-                  博客 屑一次 部落格 屑一次 Blog 屑一次 ブログ</span></button>
+            <div class="" style="margin-top: calc(25vh);">
+              <div class="mdui-text-color-white" style="margin-left: 15%;"><samp class="mdui-typo-display-3" data-translatable >余晖无垠 屑一次 余暉無垠 屑一次 Redsunsets 屑一次 暮れ残る</samp><samp class="mdui-typo-title-opacity">团队</samp></div>
+              <div class="mdui-typo-display-1-opacity mdui-m-t-2 mdui-text-color-white" style="margin-left: 15%;">比上不足而比下有余</div>
+              <div style="margin-left: 15%;" class="mdui-m-t-4">
+                  <button class="mdui-btn mdui-color-theme-accent mdui-ripple" onclick="window.location.href = 'https://t.me/bocc_group'">
+                    <i class="mdui-icon mdui-icon-left material-icons">send</i> <span data-translatable>
+                  群组 屑一次 群組 屑一次 TG Group 屑一次 コミュニティ</span></button>
               &nbsp;
-              <button class="mdui-color-purple mdui-btn mdui-ripple mdui-center" onclick="window.location.href = 'https://t.me/bocc_group';">
-                <i class="mdui-icon mdui-icon-left material-icons">send</i>
-                <span data-translatable>群组 屑一次 群組 屑一次 TG Group 屑一次 コミュニティ</button>
+                  <button class="mdui-color-purple mdui-btn mdui-ripple" onclick="">
+                    <i class="mdui-icon mdui-icon-left material-icons">arrow_downward</i>
+                    <span data-translatable>更多</button>
+              </div>
             </div>
           </div>
         </div>
-        <div class="mdui-text-center" style="margin-top: calc(90vh);"><i class="mdui-icon material-icons">expand_more</i><span data-translatable>下面还有内容哦 屑一次 下滑以查看更多 屑一次 Learn more 屑一次 滑り降りてください</span></div>
-        <div class="mdui-row" style="margin-top: calc(5vh);">
+          <div class="mdui-row">
           <div class="mdui-typo-display-2 mdui-m-l-4 mdui-hidden-xs-down"><span data-translatable>我们运营的站点 屑一次 我們的站點 屑一次 Our Service 屑一次 当社のウェブサイト</span> <i class="mdui-typo-display-2 mdui-text-color-theme-accent mdui-icon material-icons">arrow_forward</i></div>
           <div class="mdui-typo-display-1-opacity mdui-m-l-4 mdui-m-t-2 mdui-hidden-xs-down" data-translatable>随时跑路 屑一次 隨時跑路 屑一次 You should be patient. 屑一次 いつでも破産
           </div>
@@ -337,51 +293,6 @@
             <script>
               document.getElementById('in_L04').addEventListener('click', function() {
                 window.location.href = "https://pan.rssins.net/";
-              });
-            </script>
-          </div>
-          <div class="mdui-col-md-4 mdui-m-t-2 mdui-col-sm-6" id="in_L05">
-            <div class="mdui-card mdui-typo">
-              <div class="mdui-card-primary">
-                <li class="mdui-list-item mdui-ripple">
-                  <div class="mdui-list-item-avatar mdui-color-deep-purple"><i class="mdui-icon material-icons">remove_from_queue</i></div>
-                  <div class="mdui-list-item-content">
-                    <div class="mdui-list-item-title">余晖无垠资源共享</div>
-                    <div class="mdui-list-item-text mdui-list-item-one-line">这里有些好康的</div>
-                  </div>
-                </li>
-              </div>
-              <div class="mdui-card-actions mdui-color-deep-purple">
-                <div class="mdui-btn mdui-text-color-white-disabled">share</div>
-                <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
-              </div>
-            </div>
-            <script>
-              document.getElementById('in_L05').addEventListener('click', function() {
-                window.location.href = "https://share.rssins.net/";
-              });
-            </script>
-          </div>
-          <div class="mdui-col-md-4 mdui-m-t-2 mdui-col-sm-6" id="in_L06">
-            <div class="mdui-card mdui-typo">
-              <div class="mdui-card-primary">
-                <li class="mdui-list-item mdui-ripple">
-                  <div class="mdui-list-item-avatar mdui-color-purple"><i class="mdui-icon material-icons">comment</i>
-                  </div>
-                  <div class="mdui-list-item-content">
-                    <div class="mdui-list-item-title">余晖俱乐部</div>
-                    <div class="mdui-list-item-text mdui-list-item-one-line" data-translatable>余晖无垠的论坛！ 屑一次 我們的線上論壇 屑一次 Our online forum 屑一次 当社のWebフォーラム。</div>
-                  </div>
-                </li>
-              </div>
-              <div class="mdui-card-actions mdui-color-purple">
-                <div class="mdui-btn mdui-text-color-white-disabled">club</div>
-                <button class="mdui-btn mdui-btn-icon mdui-float-right"><i class="mdui-icon material-icons">arrow_forward</i></button>
-              </div>
-            </div>
-            <script>
-              document.getElementById('in_L06').addEventListener('click', function() {
-                window.location.href = "https://club.rssins.net/";
               });
             </script>
           </div>
