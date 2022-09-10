@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="zh-Hans">
+<!-- 2022重构版本-->
+
+<head>
+    <meta charset="utf-8" name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>余晖无垠官方网站
+    </title>
+    <meta name="description" content="不止是摸鱼中的干货，这里是余晖无垠团队官方网站，向您展示我们所有的服务与内容。">
+    <meta name="keywords" content="余晖无垠,redsunsets,团队,余晖,rss" />
+    <link rel="shortcut icon" href="./icons/logo.png">
+    <!-- <script async src="https://cdn.ampproject.org/v0.js"></script> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma-rtl.min.css">
+
+    <link rel="stylesheet" href="./css/mdui.min.css" />
+    <script src="./js/mdui.min.js"></script>
+    <link rel="stylesheet" href="./css/myui.css">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/dom-i18n.js"></script>
+    <script type="text/javascript">
+        window.$crisp = [];
+        window.CRISP_WEBSITE_ID = "f474d4ef-5f20-44d0-a1f5-f38ec3bb6457";
+        (function () {
+            d = document;
+            s = d.createElement("script");
+            s.src = "https://client.crisp.chat/l.js";
+            s.async = 1;
+            d.getElementsByTagName("head")[0].appendChild(s);
+        })();
+    </script>
+    <!-- <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.min.css"> -->
+    <!-- <link href="https://fonts.loli.net/css?family=Noto+Sans+SC" rel="stylesheet"> -->
+    <!--引入MDUI 内置的 JavaScript 工具库-->
+    <script>
+        var $m = mdui.$;
+    </script>
+    <!--替换内容JS,替换目标：服务-->
+    <!-- <script type="text/javascript" defer src="./js/switchserve.js"></script> -->
+    <!-- <style type="text/css">
+        body {
+            background: url(./pic/background.webp) no-repeat center center;
+
+            background-size: cover;
+
+            background-attachment: fixed;
+
+            background-color: #CCCCCC;
+        }
+    </style> -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175582657-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-175582657-1');
+    </script>
+    <!-- <script>
+    var i18n = domI18n({
+      selector: '[data-translatable]',
+      separator: ' // ',
+      languages: ['zh-CN', 'zh-TW', 'en-US', 'ja'],
+      defaultLanguage: 'zh-CN'
+    });
+  </script> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, sans-serif;
+        }
+    </style>
+</head>
+</script>
+
+<body class="mdui-theme-primary-pink mdui-theme-accent-pink mdui-theme-layout-auto">
+    <audio id="bgMusic">
+        <source src="https://music.163.com/song/media/outer/url?id=1350128941" type="audio/mp3">
+    </audio>
+    <!--顶栏与侧栏-->
+    <div class="mdui-appbar mdui-appbar-fixed mdui-shadow-0">
+        <div class="mdui-toolbar mdui-text-color-white">
+            <a href="javascript:;" class="mdui-btn mdui-btn-icon"
+                mdui-drawer="{target: '#left-drawer',overlay:true,swipe:true}">
+                <i class="mdui-icon material-icons">menu</i></a>
+            <a href="./index.html" class="mdui-typo-headline mdui-hidden-sm-down" data-translatable>余晖无垠</a>
+            <a href="javascript:;" class="mdui-typo-title mdui-hidden-md-up" data-translatable>余晖无垠</a>
+            <div class="mdui-toolbar-spacer"></div>
+            <a href="javascript:;" class="mdui-btn mdui-btn-icon setdark"><i
+                    class="mdui-icon material-icons">brightness_7</i></a>
+            <a href="javascript:;" class="mdui-btn mdui-btn-icon musicSt" id="musicBox" onclick="nmsl()"><i
+                    class="mdui-icon material-icons">music_note</i>
+                <script>
+                    function nmsl() {
+                        if ($('a').is('.musicSt')) {
+                            var audio = document.getElementById('bgMusic')
+                            document.getElementById('musicBox').classList.remove('musicSt')
+                            document.getElementById('musicBox').classList.add('nmsl')
+                            audio.play();
+                        } else {
+                            var audio = document.getElementById('bgMusic')
+                            document.getElementById('musicBox').classList.add('musicSt')
+                            audio.pause();
+                        }
+
+                    };
+                </script>
+            </a>
+            <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-menu="{target: '#langSet'}" id="J_lang_switch"><i
+                    class="mdui-icon material-icons">translate</i>
+            </a>
+            <ul class="mdui-menu" id="langSet">
+                <li class="mdui-menu-item" onclick="i18n.changeLanguage('zh-CN');">
+                    <a class="mdui-ripple">简体中文</a>
+                </li>
+                <li class="mdui-menu-item" onclick="i18n.changeLanguage('zh-TW');">
+                    <a class="mdui-ripple">繁體中文</a>
+                </li>
+                <li class="mdui-menu-item" onclick="i18n.changeLanguage('en-US');">
+                    <a class="mdui-ripple">English(US)</a>
+                </li>
+                <li class="mdui-menu-item" onclick="i18n.changeLanguage('ja');">
+                    <a class="mdui-ripple">日本語</a>
+                </li>
+                <li class="mdui-divider"></li>
+                <li class="mdui-menu-item">
+                    <a href="javascript:;" class="mdui-ripple">More</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="mdui-drawer mdui-color-white mdui-drawer-close" id="left-drawer" mdui-drawer="{swipe: ture}"
+        mdui-drawer="{overlay: ture}">
+        <div class="mdui-card-media">
+        </div>
+        <ul class="mdui-list">
+            <li class="mdui-list-item mdui-ripple" onclick="window.location.href = 'https://status.rssins.net/';"> <i
+                    class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-purple">cloud_circle</i>
+                <div class="mdui-list-item-content" data-translatable>服务器状态</div>
+            </li>
+            <li class="mdui-list-item mdui-ripple" onclick="window.location.href = 'https://t.me/bocc_group';"> <i
+                    class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-deep-purple">comment</i>
+                <div class="mdui-list-item-content" data-translatable>联系我们</div>
+            </li>
+            <li class="mdui-list-item mdui-ripple"> <i
+                    class="mdui-list-item-icon mdui-icon material-icons">brightness_4</i>
+                <div class="mdui-list-item-content" data-translatable>夜间模式</div>
+            </li>
+        </ul>
+    </div>
+    <!--顶栏侧栏结束-->
+    <!--主内容开始-->
+    <section>
+        <div class="rss-largepic" style="height: calc(100vh);background-image:url(./img/qVmVyWg9.webp);">
+            <div style="margin-top: calc(95vh);"
+                class="mdui-float-right mdui-typo-caption-opacity mdui-text-color-white">
+                陕西省 太白山 © 余晖无垠 @海绵 &nbsp;&nbsp;&nbsp;
+            </div>
+        </div>
+        <div class="mdui-container">
+            <div class="mdui-container-fluid" id="indexPic" style="
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;">
+                <div class="mdui-row" id="backG">
+                    <div style="margin-top: calc(25vh);">
+                        <h1 class="mdui-text-color-white" style="margin-left: 15%;"><samp class="mdui-typo-display-3"
+                                data-translatable>余晖无垠</samp><samp class="mdui-typo-title-opacity">团队</samp></h1>
+                        <div class="mdui-typo-display-1-opacity mdui-text-color-white" style="margin-left: 15%;">
+                            做最摆烂的一群人</div>
+                        <div style="margin-left: 15%;" class="mdui-m-t-4">
+                            <button class="mdui-btn mdui-color-theme-accent mdui-ripple"
+                                onclick="window.location.href = 'https://t.me/bocc_group'">
+                                <i class="mdui-icon mdui-icon-left material-icons">send</i> <span data-translatable>
+                                    群组</span></button>
+                            &nbsp;
+                            <button class="mdui-color-purple mdui-btn mdui-ripple" onclick="">
+                                <i class="mdui-icon mdui-icon-left material-icons">arrow_downward</i>
+                                <span data-translatable>更多</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- 1 -->
+        <div style="">
+            <div style="margin-top: calc(10vh);">
+                <p class="mdui-typo-display-2 mdui-m-t-4 mdui-text-center">小逗包根据地</p>
+                <p class="mdui-typo-display-1-opacity mdui-m-t-2 mdui-text-center"
+                    onclick="window.open('https://blog.rssins.net');">我们的博客<i
+                        class="mdui-icon material-icons mdui-typo-display-1-opacity">arrow_forward</i></p>
+            </div>
+            <div class="mdui-card mdui-m-t-4 mdui-container" style="max-width:calc(85vh);">
+                <div class="mdui-row">
+                    <div class="mdui-col-md-4">
+                        <ul class="mdui-list">
+                            <li class="mdui-list-item mdui-ripple">
+                                <div class="mdui-list-item-avatar mdui-color-red"><i
+                                        class="mdui-icon material-icons">timer</i></div>
+                                <div class="mdui-list-item-content">
+                                    <div class="mdui-list-item-title">玩机技巧</div>
+                                    <div class="mdui-list-item-text mdui-list-item-one-line">各种姿势的刷机搞机</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mdui-col-md-4">
+                        <ul class="mdui-list">
+                            <li class="mdui-list-item mdui-ripple">
+                                <div class="mdui-list-item-avatar  mdui-color-pink"><i
+                                        class="mdui-icon material-icons">security</i></div>
+                                <div class="mdui-list-item-content">
+                                    <div class="mdui-list-item-title">网安经验</div>
+                                    <div class="mdui-list-item-text mdui-list-item-one-line">我们个人如何做好自己的隐私安全防护</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mdui-col-md-4">
+                        <ul class="mdui-list">
+                            <li class="mdui-list-item mdui-ripple">
+                                <div class="mdui-list-item-avatar mdui-color-purple"><i
+                                        class="mdui-icon material-icons">attach_money</i></div>
+                                <div class="mdui-list-item-content">
+                                    <div class="mdui-list-item-title">羊毛大师</div>
+                                    <div class="mdui-list-item-text mdui-list-item-one-line">白嫖党是最终的胜利者</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 2 -->
+        <div class="mdui-color-pink" style="margin-top: 100px;">
+                <p class="mdui-typo-display-2 mdui-m-t-4" style="margin-left: 15%;">老司机实验室</p>
+                <p class="mdui-typo-display-1-opacity mdui-m-t-2"
+                style="margin-left: 15%;" onclick="window.open('https://lab.rssins.net');">一些我们搞的小工具<i
+                        class="mdui-icon material-icons mdui-typo-display-1-opacity">arrow_forward</i></p>
+        </div>
+        <!-- 3 -->
+
+    </section>
+</body>
