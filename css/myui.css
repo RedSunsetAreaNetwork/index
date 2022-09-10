@@ -23,3 +23,7 @@
 .mdui-chip {
     background-color: #f1f6fe;
 }
+
+.img-round {
+    border-radius: 10px !important;
+}
