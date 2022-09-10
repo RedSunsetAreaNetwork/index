@@ -18,3 +18,8 @@
 .mdui-toolbar , .mdui-appbar {
     background-color: transparent;
 }
+
+
+.mdui-chip {
+    background-color: #f1f6fe;
+}
