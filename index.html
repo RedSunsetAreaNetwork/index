@@ -29,8 +29,24 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-  <!-- JS -->
+  <!-- MDUI JS -->
   <script src="./js/mdui.min.js"></script>
+  <!-- Analysic -->
+  <!-- Matomo -->
+  <script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function () {
+      var u = "//data.rssins.app/";
+      _paq.push(['setTrackerUrl', u + 'matomo.php']);
+      _paq.push(['setSiteId', '6']);
+      var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+      g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
   <!-- =======================================================
   * Template Name: BizLand - v3.8.1
   * Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
@@ -41,21 +57,6 @@
 
 <body class="mdui-appbar-with-toolbar mdui-theme-primary-pink mdui-theme-accent-pink">
 
-  <!-- ======= Top Bar ======= -->
-  <!-- <section id="topbar" class="d-flex align-items-center">
-    <div class="container d-flex justify-content-center justify-content-md-between">
-      <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">contact@example.com</a></i>
-        <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
-      </div>
-      <div class="social-links d-none d-md-flex align-items-center">
-        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
-      </div>
-    </div>
-  </section> -->
 
   <!-- ======= Header ======= -->
 
@@ -157,7 +158,7 @@
               <div class="icon"><i class="mdui-icon material-icons mdui-text-color-indigo">insert_chart</i></div>
               <h4><a href="https://blog.rssins.net">小逗包根据地</a></h4>
               <p>我们的博客，发布各种乱七八糟的东西。同时刷机指南，玩机大法将持续更新。偶尔发布薅羊毛活动。
-              
+
               </p>
             </div>
           </div>
@@ -224,8 +225,8 @@
           <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
             <img src="assets/img/about.jpg" class="img-fluid img-round" alt="">
           </div>
-          <div class="mdui-card mdui-shadow-0 col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up"
-            data-aos-delay="100">
+          <div class="mdui-card mdui-shadow-0 col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center"
+            data-aos="fade-up" data-aos-delay="100">
             <h3>热爱技术，喜欢折腾，同时又是一群鸽子的年轻人。</h3>
             <p class="fst-italic">
               我们团队成员个个身怀绝技，不仅咕咕还爱咕咕，更是咕咕，但最重要是复读机。
@@ -273,7 +274,7 @@
                 <div class="mdui-card-primary-subtitle">修文物</div>
               </div>
               <div class="mdui-card-header">
-                <img class="mdui-card-header-avatar" src="./assets/img/team/1.jpg"/>
+                <img class="mdui-card-header-avatar" src="./assets/img/team/1.jpg" />
                 <div class="mdui-card-header-title">王新知</div>
                 <div class="mdui-card-header-subtitle">Xinzhi Wang</div>
               </div>
@@ -287,7 +288,7 @@
                 <div class="mdui-card-primary-subtitle">某学计算机的</div>
               </div>
               <div class="mdui-card-header">
-                <img class="mdui-card-header-avatar" src="./assets/img/team/2.jpg"/>
+                <img class="mdui-card-header-avatar" src="./assets/img/team/2.jpg" />
                 <div class="mdui-card-header-title">贾工</div>
                 <div class="mdui-card-header-subtitle">AmaTsume Akira</div>
               </div>
@@ -301,7 +302,7 @@
                 <div class="mdui-card-primary-subtitle">某学计算机的</div>
               </div>
               <div class="mdui-card-header">
-                <img class="mdui-card-header-avatar" src="./assets/img/team/3.jpg"/>
+                <img class="mdui-card-header-avatar" src="./assets/img/team/3.jpg" />
                 <div class="mdui-card-header-title">浪涛之引</div>
                 <div class="mdui-card-header-subtitle">Taoyin</div>
               </div>
@@ -315,7 +316,7 @@
                 <div class="mdui-card-primary-subtitle">造半导体</div>
               </div>
               <div class="mdui-card-header">
-                <img class="mdui-card-header-avatar" src="./assets/img/team/4.jpg"/>
+                <img class="mdui-card-header-avatar" src="./assets/img/team/4.jpg" />
                 <div class="mdui-card-header-title">小逗包</div>
                 <div class="mdui-card-header-subtitle">sbwxw</div>
               </div>
@@ -329,7 +330,7 @@
                 <div class="mdui-card-primary-subtitle">学计算机的</div>
               </div>
               <div class="mdui-card-header">
-                <img class="mdui-card-header-avatar" src="./assets/img/team/5.jpg"/>
+                <img class="mdui-card-header-avatar" src="./assets/img/team/5.jpg" />
                 <div class="mdui-card-header-title">🐎</div>
                 <div class="mdui-card-header-subtitle">Mark</div>
               </div>
@@ -343,7 +344,7 @@
                 <div class="mdui-card-primary-subtitle">[数据删除]]</div>
               </div>
               <div class="mdui-card-header">
-                <img class="mdui-card-header-avatar" src="./assets/img/team/6.jpg"/>
+                <img class="mdui-card-header-avatar" src="./assets/img/team/6.jpg" />
                 <div class="mdui-card-header-title">全村最皮的皮</div>
                 <div class="mdui-card-header-subtitle">Null</div>
               </div>
@@ -357,7 +358,7 @@
                 <div class="mdui-card-primary-subtitle">上辈子不知道是干啥的</div>
               </div>
               <div class="mdui-card-header">
-                <img class="mdui-card-header-avatar" src="./assets/img/team/7.jpg"/>
+                <img class="mdui-card-header-avatar" src="./assets/img/team/7.jpg" />
                 <div class="mdui-card-header-title">琉璃</div>
                 <div class="mdui-card-header-subtitle">Neko</div>
               </div>
@@ -442,13 +443,14 @@
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bizland-bootstrap-business-template/ -->
-      使用<a href="https://bootstrapmade.com/">BootstrapMade</a>的模板进行改进，遵守非商业性用途条例。<br>我们是非盈利性组织，拒绝一切捐赠。
+        使用<a href="https://bootstrapmade.com/">BootstrapMade</a>的模板进行改进，遵守非商业性用途条例。<br>我们是非盈利性组织，拒绝一切捐赠。
       </div>
     </div>
   </footer><!-- End Footer -->
 
   <div id="preloader"></div>
-      <a  href="#" class="mdui-fab mdui-fab-fixed mdui-color-blue"><i class="mdui-icon material-icons mdui-text-color-white">arrow_upward</i></a>
+  <a href="#" class="mdui-fab mdui-fab-fixed mdui-color-blue"><i
+      class="mdui-icon material-icons mdui-text-color-white">arrow_upward</i></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
