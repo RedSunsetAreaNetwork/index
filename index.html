@@ -71,8 +71,7 @@
       <strong href="javascript:;" class="mdui-text-color-indigo">主站</strong>
       <div class="mdui-toolbar-spacer"></div>
       <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#themedialog'}">
-        <i class="mdui-icon material-icons" 
-          onclick="radioBoxSwitch()">color_lens</i>
+        <i class="mdui-icon material-icons" onclick="radioBoxSwitch()">color_lens</i>
       </a>
       <a href="javascript:;" class="mdui-btn mdui-btn-icon">
         <i class="mdui-icon material-icons" mdui-tooltip="{content: 'Coming Soon'}">translate</i>
@@ -504,7 +503,12 @@
     </div>
   </footer><!-- End Footer -->
 
-  <div id="preloader"></div>
+  <div id="preloader" class="mdui-theme-layout-auto">
+    <div class="mdui-progress mdui-valign">
+      <div class="mdui-progress-indeterminate"></div>
+    </div>
+    
+  </div>
   <a href="#" class="mdui-fab mdui-fab-fixed mdui-color-blue"><i
       class="mdui-icon material-icons mdui-text-color-white">arrow_upward</i></a>
 

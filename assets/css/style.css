@@ -43,10 +43,10 @@ h6 {
   bottom: 0;
   z-index: 9999;
   overflow: hidden;
-  background: #fff;
+  
 }
 
-#preloader:before {
+/* #preloader:before {
   content: "";
   position: fixed;
   top: calc(50% - 30px);
@@ -58,7 +58,7 @@ h6 {
   height: 60px;
   -webkit-animation: animate-preloader 1s linear infinite;
   animation: animate-preloader 1s linear infinite;
-}
+} */
 
 @-webkit-keyframes animate-preloader {
   0% {
