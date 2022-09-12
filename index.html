@@ -70,8 +70,9 @@
       <a href="javascript:;" class="mdui-typo-headline">余晖无垠</a>
       <strong href="javascript:;" class="mdui-text-color-indigo">主站</strong>
       <div class="mdui-toolbar-spacer"></div>
-      <a href="javascript:;" class="mdui-btn mdui-btn-icon">
-        <i class="mdui-icon material-icons" mdui-dialog="{target: '#themedialog'}" onclick="radioBoxSwitch()">color_lens</i>
+      <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#themedialog'}">
+        <i class="mdui-icon material-icons" 
+          onclick="radioBoxSwitch()">color_lens</i>
       </a>
       <a href="javascript:;" class="mdui-btn mdui-btn-icon">
         <i class="mdui-icon material-icons" mdui-tooltip="{content: 'Coming Soon'}">translate</i>
@@ -109,31 +110,37 @@
     <div class="mdui-dialog" id="themedialog">
       <div class="mdui-dialog-title">主题设定</div>
       <div class="mdui-dialog-content">
-        <form id="themeForm">
-<br><br>
-          <label class="mdui-radio">
-            <input type="radio" name="themeInput" value="bright" id="themeBright"/>
-            <i class="mdui-radio-icon"></i>
-            亮色
-          </label>
-        
-          <label class="mdui-radio">
-            <input type="radio" name="themeInput" value="dark" id="themeDark"/>
-            <i class="mdui-radio-icon"></i>
-            暗色
-          </label>
-        
-          <label class="mdui-radio">
-            <input type="radio" name="themeInput" value="auto" id="themeAuto"/>
-            <i class="mdui-radio-icon"></i>
-            系统设定
-          </label>
-        
+        <form id="themeForm" class="mdui-row">
+          <p class="mdui-typo-title">主题色</p>
+          <div class="mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-3">
+            <div class="mdui-col">
+              <label class="mdui-radio mdui-m-b-1">
+                <input type="radio" name="themeInput" value="bright" id="themeBright" />
+                <i class="mdui-radio-icon"></i>
+                亮色
+              </label>
+            </div>
+            <div class="mdui-col">
+              <label class="mdui-radio mdui-m-b-1">
+                <input type="radio" name="themeInput" value="dark" id="themeDark" />
+                <i class="mdui-radio-icon"></i>
+                暗色
+              </label>
+            </div>
+            <div class="mdui-col">
+              <label class="mdui-radio mdui-m-b-1">
+                <input type="radio" name="themeInput" value="auto" id="themeAuto" />
+                <i class="mdui-radio-icon"></i>
+                系统设定
+              </label>
+            </div>
+          </div>
+
         </form>
-        
+
       </div>
       <div class="mdui-dialog-actions">
-        <button class="mdui-btn mdui-ripple" mdui-dialog-close onclick="submitTheme()">确定并关闭</button>
+        <button class="mdui-btn mdui-ripple" mdui-dialog-close onclick="submitTheme()">确定</button>
       </div>
     </div>
     <!-- theme swtich end -->
@@ -196,7 +203,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box mdui-card">
               <div class="icon"><i class="mdui-icon material-icons mdui-text-color-indigo">insert_chart</i></div>
-              <h4 ><a href="https://blog.rssins.net" class="mdui-text-color-theme-text">小逗包根据地</a></h4>
+              <h4><a href="https://blog.rssins.net" class="mdui-text-color-theme-text">小逗包根据地</a></h4>
               <p>我们的博客，发布各种乱七八糟的东西。同时刷机指南，玩机大法将持续更新。偶尔发布薅羊毛活动。
 
               </p>
@@ -283,7 +290,8 @@
                 <i class="mdui-icon material-icons">email</i>
                 <div>
                   <h5 class="mdui-text-color-theme-text">联系我们</h5>
-                  <p class="mdui-text-color-theme-secondary">请在<span>Telegram</span><a href="https://t.me/bocc_chanel">@bocc_chanel</a>上联系我们</p>
+                  <p class="mdui-text-color-theme-secondary">请在<span>Telegram</span><a
+                      href="https://t.me/bocc_chanel">@bocc_chanel</a>上联系我们</p>
                 </div>
               </li>
             </ul>
@@ -433,18 +441,24 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4 class="mdui-text-color-theme-text">联系我们</h4>
             <ul>
-              <li><i class="mdui-icon material-icons">chevron_right</i> <a href="https://t.me/bocc_group" class="mdui-text-color-theme-secondary">Telegram</a></li>
-              <li><i class="mdui-icon material-icons">chevron_right</i> <a href="#" class="mdui-text-color-theme-disabled">Email（即将到来）</a></li>
-              <li><i class="mdui-icon material-icons">chevron_right</i> <a href="#" class="mdui-text-color-theme-disabled">QQ（即将到来）</a></li>
-              <li><i class="mdui-icon material-icons">chevron_right</i> <a href="#" class="mdui-text-color-theme-disabled">Wechat（即将到来）</a></li>
+              <li><i class="mdui-icon material-icons">chevron_right</i> <a href="https://t.me/bocc_group"
+                  class="mdui-text-color-theme-secondary">Telegram</a></li>
+              <li><i class="mdui-icon material-icons">chevron_right</i> <a href="#"
+                  class="mdui-text-color-theme-disabled">Email（即将到来）</a></li>
+              <li><i class="mdui-icon material-icons">chevron_right</i> <a href="#"
+                  class="mdui-text-color-theme-disabled">QQ（即将到来）</a></li>
+              <li><i class="mdui-icon material-icons">chevron_right</i> <a href="#"
+                  class="mdui-text-color-theme-disabled">Wechat（即将到来）</a></li>
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
             <h4 class="mdui-text-color-theme-text">外部链接</h4>
             <ul>
-              <li><i class="mdui-icon material-icons">chevron_right</i> <a href="#" class="mdui-text-color-theme-disabled">友情链接（即将到来）</a></li>
-              <li><i class="mdui-icon material-icons">chevron_right</i> <a href="#" class="mdui-text-color-theme-disabled">官方MC服务器（暂时关闭）</a></li>
+              <li><i class="mdui-icon material-icons">chevron_right</i> <a href="#"
+                  class="mdui-text-color-theme-disabled">友情链接（即将到来）</a></li>
+              <li><i class="mdui-icon material-icons">chevron_right</i> <a href="#"
+                  class="mdui-text-color-theme-disabled">官方MC服务器（暂时关闭）</a></li>
             </ul>
           </div>
 
@@ -476,14 +490,16 @@
 
     <div class="container py-4">
       <div class="copyright mdui-text-color-theme-text">
-        &copy; 2016-2022 余晖无垠 <br><a class="mdui-text-color-theme-secondary" href="https://icp.gov.moe/?keyword=202038250">萌站联盟 NO.202038250</a>
+        &copy; 2016-2022 余晖无垠 <br><a class="mdui-text-color-theme-secondary"
+          href="https://icp.gov.moe/?keyword=202038250">萌站联盟 NO.202038250</a>
       </div>
       <div class="credits" class="mdui-text-color-theme-secondary">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bizland-bootstrap-business-template/ -->
-        使用<a href="https://bootstrapmade.com/"  class="mdui-text-color-theme-secondary">BootstrapMade</a>的模板进行改进，遵守非商业性用途条例。<br>我们是非盈利性组织，拒绝一切捐赠。
+        使用<a href="https://bootstrapmade.com/"
+          class="mdui-text-color-theme-secondary">BootstrapMade</a>的模板进行改进，遵守非商业性用途条例。<br>我们是非盈利性组织，拒绝一切捐赠。
       </div>
     </div>
   </footer><!-- End Footer -->
@@ -504,8 +520,8 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-    <!-- theme -->
-    <script src="./js/theme.js"></script>
+  <!-- theme -->
+  <script src="./js/theme.js"></script>
 
 </body>
 
