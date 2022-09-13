@@ -31,7 +31,11 @@
   <link href="assets/css/style.css" rel="stylesheet">
   <!-- MDUI JS -->
   <script src="./js/mdui.min.js"></script>
-
+  <!-- I18N -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.1.1/dist/jquery.min.js"></script>
+  <script src="./js/jquery.i18n.properties.min.js"></script>
+  <script src="./js/i18n.js"></script>
+  <meta id="i18n_pagename" content="common">
   <!-- Analysic -->
   <!-- Matomo -->
   <script>
@@ -59,476 +63,481 @@
 
 <body class="mdui-appbar-with-toolbar mdui-theme-primary-pink mdui-theme-accent-pink" id="bodyclass">
 
+  <div>
+    <!-- ======= Header ======= -->
 
-  <!-- ======= Header ======= -->
-
-  <div class="mdui-appbar mdui-appbar-fixed mdui-color-white">
-    <div class="mdui-toolbar mdui-color-white">
-      <a href="javascript:;" class="mdui-btn mdui-btn-icon">
-        <i class="mdui-icon material-icons">menu</i>
-      </a>
-      <a href="javascript:;" class="mdui-typo-headline">余晖无垠</a>
-      <strong href="javascript:;" class="mdui-text-color-indigo">主站</strong>
-      <div class="mdui-toolbar-spacer"></div>
-      <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#themedialog'}">
-        <i class="mdui-icon material-icons" onclick="radioBoxSwitch()">color_lens</i>
-      </a>
-      <a href="javascript:;" class="mdui-btn mdui-btn-icon">
-        <i class="mdui-icon material-icons" mdui-tooltip="{content: 'Coming Soon'}">translate</i>
-      </a>
-    </div>
-  </div>
-
-  <!-- End Header -->
-
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center heroBright">
-    <div class="container" data-aos="zoom-out" data-aos-delay="100">
-      <h1 class="mdui-text-color-theme-text">做<span>最会摆烂的</span>一群人</h1>
-      <h2 class="mdui-text-color-theme-secondary">这便是我们的生活方式</h2>
-      <div class="d-flex">
-        <button class="mdui-btn mdui-color-theme-accent mdui-ripple"
-          onclick="window.location.href = 'https://t.me/bocc_group'">
-          <i class="mdui-icon mdui-icon-left material-icons">send</i> <span data-translatable>
-            群组</span></button>
-        &nbsp; &nbsp;
-        <button class="mdui-color-purple mdui-btn mdui-ripple" href="#services">
-          <i class="mdui-icon mdui-icon-left material-icons">arrow_downward</i>
-          <span data-translatable>更多</button>
+    <div class="mdui-appbar mdui-appbar-fixed mdui-color-white">
+      <div class="mdui-toolbar mdui-color-white">
+        <a href="javascript:;" class="mdui-btn mdui-btn-icon">
+          <i class="mdui-icon material-icons">menu</i>
+        </a>
+        <a href="javascript:;" class="mdui-typo-headline i18n" name="barTitle">[barTitle]
+        </a>
+        <div class="mdui-toolbar-spacer"></div>
+        <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#themedialog'}">
+          <i class="mdui-icon material-icons" onclick="radioBoxSwitch()">color_lens</i>
+        </a>
+        <a href="javascript:;" class="mdui-btn mdui-btn-icon">
+          <i class="mdui-icon material-icons" mdui-tooltip="{content: 'Coming Soon'}">translate</i>
+        </a>
       </div>
     </div>
-  </section>
-  <!-- End Hero -->
 
-  <main id="main">
+    <!-- End Header -->
 
 
-
-    <!-- theme swtich -->
-    <div class="mdui-dialog" id="themedialog">
-      <div class="mdui-dialog-title">主题设定</div>
-      <div class="mdui-dialog-content">
-        <form id="themeForm" class="mdui-row">
-          <p class="mdui-typo-title">主题色</p>
-          <div class="mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-3">
-            <div class="mdui-col">
-              <label class="mdui-radio mdui-m-b-1">
-                <input type="radio" name="themeInput" value="bright" id="themeBright" />
-                <i class="mdui-radio-icon"></i>
-                亮色
-              </label>
-            </div>
-            <div class="mdui-col">
-              <label class="mdui-radio mdui-m-b-1">
-                <input type="radio" name="themeInput" value="dark" id="themeDark" />
-                <i class="mdui-radio-icon"></i>
-                暗色
-              </label>
-            </div>
-            <div class="mdui-col">
-              <label class="mdui-radio mdui-m-b-1">
-                <input type="radio" name="themeInput" value="auto" id="themeAuto" />
-                <i class="mdui-radio-icon"></i>
-                系统设定
-              </label>
-            </div>
-          </div>
-
-        </form>
-
-      </div>
-      <div class="mdui-dialog-actions">
-        <button class="mdui-btn mdui-ripple" mdui-dialog-close onclick="submitTheme()">确定</button>
-      </div>
-    </div>
-    <!-- theme swtich end -->
-
-    <!-- ======= Featured Services Section ======= -->
-    <section id="featured-services" class="featured-services">
-      <div class="container" data-aos="fade-up">
-
-        <div class="mdui-row">
-          <div class="mdui-col-md-4">
-            <ul class="mdui-list">
-              <li class="mdui-list-item mdui-ripple">
-                <div class="mdui-list-item-avatar mdui-color-red"><i class="mdui-icon material-icons">timer</i></div>
-                <div class="mdui-list-item-content">
-                  <div class="mdui-list-item-title">玩机技巧</div>
-                  <div class="mdui-list-item-text mdui-list-item-one-line">各种姿势的刷机搞机</div>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="mdui-col-md-4">
-            <ul class="mdui-list">
-              <li class="mdui-list-item mdui-ripple">
-                <div class="mdui-list-item-avatar  mdui-color-pink"><i class="mdui-icon material-icons">security</i>
-                </div>
-                <div class="mdui-list-item-content">
-                  <div class="mdui-list-item-title">网安经验</div>
-                  <div class="mdui-list-item-text mdui-list-item-one-line">我们个人如何做好自己的隐私安全防护</div>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="mdui-col-md-4">
-            <ul class="mdui-list">
-              <li class="mdui-list-item mdui-ripple">
-                <div class="mdui-list-item-avatar mdui-color-purple"><i
-                    class="mdui-icon material-icons">attach_money</i></div>
-                <div class="mdui-list-item-content">
-                  <div class="mdui-list-item-title">羊毛大师</div>
-                  <div class="mdui-list-item-text mdui-list-item-one-line">白嫖党是最终的胜利者</div>
-                </div>
-              </li>
-            </ul>
-          </div>
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex align-items-center heroBright">
+      <div class="container" data-aos="zoom-out" data-aos-delay="100">
+        <h1 class="mdui-text-color-theme-text">做<span>最会摆烂的</span>一群人</h1>
+        <h2 class="mdui-text-color-theme-secondary">这便是我们的生活方式</h2>
+        <div class="d-flex">
+          <button class="mdui-btn mdui-color-theme-accent mdui-ripple"
+            onclick="window.location.href = 'https://t.me/bocc_group'">
+            <i class="mdui-icon mdui-icon-left material-icons">send</i> <span data-translatable>
+              群组</span></button>
+          &nbsp; &nbsp;
+          <button class="mdui-color-purple mdui-btn mdui-ripple" href="#services">
+            <i class="mdui-icon mdui-icon-left material-icons">arrow_downward</i>
+            <span data-translatable>更多</button>
         </div>
       </div>
-    </section><!-- End Featured Services Section -->
+    </section>
+    <!-- End Hero -->
 
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
-      <div class="container" data-aos="fade-up">
+    <main id="main">
 
-        <div class="section-title">
-          <h2>服务</h2>
-          <h3>这些是我们<span>提供的</span>服务</h3>
-          <p class="mdui-text-color-theme-secondary">或许之后可以合作一下？</p>
+
+
+      <!-- theme swtich -->
+      <div class="mdui-dialog" id="themedialog">
+        <div class="mdui-dialog-title">主题设定</div>
+        <div class="mdui-dialog-content">
+          <form id="themeForm" class="mdui-row">
+            <p class="mdui-typo-title">主题色</p>
+            <div class="mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-3">
+              <div class="mdui-col">
+                <label class="mdui-radio mdui-m-b-1">
+                  <input type="radio" name="themeInput" value="bright" id="themeBright" />
+                  <i class="mdui-radio-icon"></i>
+                  亮色
+                </label>
+              </div>
+              <div class="mdui-col">
+                <label class="mdui-radio mdui-m-b-1">
+                  <input type="radio" name="themeInput" value="dark" id="themeDark" />
+                  <i class="mdui-radio-icon"></i>
+                  暗色
+                </label>
+              </div>
+              <div class="mdui-col">
+                <label class="mdui-radio mdui-m-b-1">
+                  <input type="radio" name="themeInput" value="auto" id="themeAuto" />
+                  <i class="mdui-radio-icon"></i>
+                  系统设定
+                </label>
+              </div>
+            </div>
+
+          </form>
+          <select id="language" class="mdui-select">
+            <option value="zh-CN">简体中文</option>
+            <option value="en">English</option>
+            <option value="jp">日文</option>
+          </select>
+
         </div>
+        <div class="mdui-dialog-actions">
+          <button class="mdui-btn mdui-ripple" mdui-dialog-close onclick="submitTheme()">确定</button>
+        </div>
+      </div>
+      <!-- theme swtich end -->
 
-        <div class="row mdui-typo">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box mdui-card">
-              <div class="icon"><i class="mdui-icon material-icons mdui-text-color-indigo">insert_chart</i></div>
-              <h4><a href="https://blog.rssins.net" class="mdui-text-color-theme-text">小逗包根据地</a></h4>
-              <p>我们的博客，发布各种乱七八糟的东西。同时刷机指南，玩机大法将持续更新。偶尔发布薅羊毛活动。
+      <!-- ======= Featured Services Section ======= -->
+      <section id="featured-services" class="featured-services">
+        <div class="container" data-aos="fade-up">
 
+          <div class="mdui-row">
+            <div class="mdui-col-md-4">
+              <ul class="mdui-list">
+                <li class="mdui-list-item mdui-ripple">
+                  <div class="mdui-list-item-avatar mdui-color-red"><i class="mdui-icon material-icons">timer</i></div>
+                  <div class="mdui-list-item-content">
+                    <div class="mdui-list-item-title">玩机技巧</div>
+                    <div class="mdui-list-item-text mdui-list-item-one-line">各种姿势的刷机搞机</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="mdui-col-md-4">
+              <ul class="mdui-list">
+                <li class="mdui-list-item mdui-ripple">
+                  <div class="mdui-list-item-avatar  mdui-color-pink"><i class="mdui-icon material-icons">security</i>
+                  </div>
+                  <div class="mdui-list-item-content">
+                    <div class="mdui-list-item-title">网安经验</div>
+                    <div class="mdui-list-item-text mdui-list-item-one-line">我们个人如何做好自己的隐私安全防护</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="mdui-col-md-4">
+              <ul class="mdui-list">
+                <li class="mdui-list-item mdui-ripple">
+                  <div class="mdui-list-item-avatar mdui-color-purple"><i
+                      class="mdui-icon material-icons">attach_money</i></div>
+                  <div class="mdui-list-item-content">
+                    <div class="mdui-list-item-title">羊毛大师</div>
+                    <div class="mdui-list-item-text mdui-list-item-one-line">白嫖党是最终的胜利者</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section><!-- End Featured Services Section -->
+
+      <!-- ======= Services Section ======= -->
+      <section id="services" class="services">
+        <div class="container" data-aos="fade-up">
+
+          <div class="section-title">
+            <h2>服务</h2>
+            <h3>这些是我们<span>提供的</span>服务</h3>
+            <p class="mdui-text-color-theme-secondary">或许之后可以合作一下？</p>
+          </div>
+
+          <div class="row mdui-typo">
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+              <div class="icon-box mdui-card">
+                <div class="icon"><i class="mdui-icon material-icons mdui-text-color-indigo">insert_chart</i></div>
+                <h4><a href="https://blog.rssins.net" class="mdui-text-color-theme-text">小逗包根据地</a></h4>
+                <p>我们的博客，发布各种乱七八糟的东西。同时刷机指南，玩机大法将持续更新。偶尔发布薅羊毛活动。
+
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in"
+              data-aos-delay="200">
+              <div class="icon-box mdui-card">
+                <div class="icon"><i class="mdui-icon material-icons mdui-text-color-pink">lightbulb_outline</i></div>
+                <h4><a href="https://lab.rssins.net" class="mdui-text-color-theme-text">老司机实验室</a></h4>
+                <p>我们所有的公共API，在线工具均在这里发布。请阅读我们的协议后，再使用本产品。
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in"
+              data-aos-delay="300">
+              <div class="icon-box mdui-card">
+                <div class="icon"><i class="mdui-icon material-icons mdui-text-color-deep-orange">cloud_queue</i></div>
+                <h4><a href="https://pan.rssins.net" class="mdui-text-color-theme-text">养老云</a></h4>
+                <p>网络硬盘，仅对内部人员开放，拥有文件分享，离线下载，在线解压的功能，多源存储，机房爆炸文件还在。</p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
+              <div class="icon-box mdui-card">
+                <div class="icon"><i class="mdui-icon material-icons mdui-text-color-purple">cloud_queue</i></div>
+                <h4><a href="https://share.rssins.net" class="mdui-text-color-theme-text">老司机仓库</a></h4>
+                <p>平常下的一些资源大概在这里，低调使用，谁知道哪天就无了。当然如果侵犯了您的权益，请及时联系我们。</p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
+              <div class="icon-box mdui-card">
+                <div class="icon"><i class="mdui-icon material-icons mdui-text-color-green">crop_original</i></div>
+                <h4><a href="" class="mdui-text-color-theme-text">晴空画廊</a></h4>
+                <p>展示成员们日常拍的照片，以及一些公版美图，现正开发，即将上线，敬请期待。</p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
+              <div class="icon-box">
+                <div class="icon"><i class="mdui-icon material-icons">control_point</i></div>
+                <h4><a href="" class="mdui-text-color-theme-text">还没有上线的功能</a></h4>
+                <p>这些功能还在计划中，也可能未曾提出，如有任何建议，请联系我们。</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section><!-- End Services Section -->
+
+      <!-- ======= About Section ======= -->
+      <section id="about" class="about">
+        <div class="container" data-aos="fade-up">
+
+          <div class="section-title">
+            <h2>关于</h2>
+            <h3>更多关于<span>我们余晖无垠团队</span>的信息</h3>
+            <p class="mdui-text-color-theme-secondary">鸽子与废物。</p>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+              <img src="assets/img/about.jpg" class="img-fluid img-round" alt="">
+            </div>
+            <div class="mdui-card mdui-shadow-1 col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center"
+              data-aos="fade-up" data-aos-delay="100">
+              <h3>热爱技术，喜欢折腾，同时又是一群鸽子的年轻人。</h3>
+              <p class="fst-italic mdui-text-color-theme-secondary">
+                就是一群鸽子
+              </p>
+              <ul>
+                <li>
+                  <i class="mdui-icon material-icons">location_on</i>
+                  <div>
+                    <h5 class="mdui-text-color-theme-text">我们的总部位于西安市信鸽协会</h5>
+                    <p class="mdui-text-color-theme-secondary">别问我们为什么在这儿，因为里面有许多我们的同类。</p>
+                  </div>
+                </li>
+                <li>
+                  <i class="mdui-icon material-icons">email</i>
+                  <div>
+                    <h5 class="mdui-text-color-theme-text">联系我们</h5>
+                    <p class="mdui-text-color-theme-secondary">请在<span>Telegram</span><a
+                        href="https://t.me/bocc_chanel">@bocc_chanel</a>上联系我们</p>
+                  </div>
+                </li>
+              </ul>
+              <p style="margin-bottom: 40px;">
+                同时，您也可以点击左下角的按钮直接与我们进行交流，不过我们回复您可能需要一定时间。
               </p>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in"
-            data-aos-delay="200">
-            <div class="icon-box mdui-card">
-              <div class="icon"><i class="mdui-icon material-icons mdui-text-color-pink">lightbulb_outline</i></div>
-              <h4><a href="https://lab.rssins.net" class="mdui-text-color-theme-text">老司机实验室</a></h4>
-              <p>我们所有的公共API，在线工具均在这里发布。请阅读我们的协议后，再使用本产品。
+        </div>
+      </section>
+      <!-- End About Section -->
+
+      <!-- ======= Team Section ======= -->
+      <section id="team" class="team">
+        <div class="container" data-aos="fade-up">
+
+          <div class="section-title">
+            <h2>成员</h2>
+            <h3>目前我们 <span>团队中的成员</span></h3>
+            <p class="mdui-text-color-theme-secondary">希望我们的成员将会越来越多</p>
+          </div>
+          <div class="mdui-row">
+            <div class="mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-3 mdui-m-t-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="mdui-card">
+                <div class="mdui-card-primary">
+                  <div class="mdui-card-primary-title">网络与前端维护</div>
+                  <div class="mdui-card-primary-subtitle">修文物</div>
+                </div>
+                <div class="mdui-card-header">
+                  <img class="mdui-card-header-avatar" src="./assets/img/team/1.jpg" />
+                  <div class="mdui-card-header-title">王新知</div>
+                  <div class="mdui-card-header-subtitle">Xinzhi Wang</div>
+                </div>
+                <div class="mdui-card-content">屑，我一个臭学历史的为何要干这些？</div>
+              </div>
+            </div>
+            <div class="mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-3 mdui-m-t-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="mdui-card">
+                <div class="mdui-card-primary">
+                  <div class="mdui-card-primary-title">维护与软件开发者</div>
+                  <div class="mdui-card-primary-subtitle">某学计算机的</div>
+                </div>
+                <div class="mdui-card-header">
+                  <img class="mdui-card-header-avatar" src="./assets/img/team/2.jpg" />
+                  <div class="mdui-card-header-title">贾工</div>
+                  <div class="mdui-card-header-subtitle">AmaTsume Akira</div>
+                </div>
+                <div class="mdui-card-content">懒。</div>
+              </div>
+            </div>
+            <div class="mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-3 mdui-m-t-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="mdui-card">
+                <div class="mdui-card-primary">
+                  <div class="mdui-card-primary-title">后端开发者</div>
+                  <div class="mdui-card-primary-subtitle">某学计算机的</div>
+                </div>
+                <div class="mdui-card-header">
+                  <img class="mdui-card-header-avatar" src="./assets/img/team/3.jpg" />
+                  <div class="mdui-card-header-title">浪涛之引</div>
+                  <div class="mdui-card-header-subtitle">Taoyin</div>
+                </div>
+                <div class="mdui-card-content">屑，屑，屑！</div>
+              </div>
+            </div>
+            <div class="mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-3 mdui-m-t-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="mdui-card">
+                <div class="mdui-card-primary">
+                  <div class="mdui-card-primary-title">刷机大佬</div>
+                  <div class="mdui-card-primary-subtitle">造半导体</div>
+                </div>
+                <div class="mdui-card-header">
+                  <img class="mdui-card-header-avatar" src="./assets/img/team/4.jpg" />
+                  <div class="mdui-card-header-title">小逗包</div>
+                  <div class="mdui-card-header-subtitle">sbwxw</div>
+                </div>
+                <div class="mdui-card-content">爷发誓在大学刚开学就去加妹子联系方式</div>
+              </div>
+            </div>
+            <div class="mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-3 mdui-m-t-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="mdui-card">
+                <div class="mdui-card-primary">
+                  <div class="mdui-card-primary-title">软件开发者</div>
+                  <div class="mdui-card-primary-subtitle">学计算机的</div>
+                </div>
+                <div class="mdui-card-header">
+                  <img class="mdui-card-header-avatar" src="./assets/img/team/5.jpg" />
+                  <div class="mdui-card-header-title">🐎</div>
+                  <div class="mdui-card-header-subtitle">Mark</div>
+                </div>
+                <div class="mdui-card-content">屑，男人就不能透了</div>
+              </div>
+            </div>
+            <div class="mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-3 mdui-m-t-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="mdui-card">
+                <div class="mdui-card-primary">
+                  <div class="mdui-card-primary-title">无线电管理</div>
+                  <div class="mdui-card-primary-subtitle">[数据删除]]</div>
+                </div>
+                <div class="mdui-card-header">
+                  <img class="mdui-card-header-avatar" src="./assets/img/team/6.jpg" />
+                  <div class="mdui-card-header-title">全村最皮的皮</div>
+                  <div class="mdui-card-header-subtitle">Null</div>
+                </div>
+                <div class="mdui-card-content">[数据删除]]</div>
+              </div>
+            </div>
+            <div class="mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-3 mdui-m-t-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="mdui-card">
+                <div class="mdui-card-primary">
+                  <div class="mdui-card-primary-title">猫猫</div>
+                  <div class="mdui-card-primary-subtitle">上辈子不知道是干啥的</div>
+                </div>
+                <div class="mdui-card-header">
+                  <img class="mdui-card-header-avatar" src="./assets/img/team/7.jpg" />
+                  <div class="mdui-card-header-title">琉璃</div>
+                  <div class="mdui-card-header-subtitle">Neko</div>
+                </div>
+                <div class="mdui-card-content">Nya~</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Team Section -->
+
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-lg-3 col-md-6 footer-contact">
+              <h3 class="mdui-text-color-theme-text">余晖无垠<span>团队</span></h3>
+              <p class="mdui-text-color-theme-secondary">
+                顺城南路东段 <br>
+                陕西省西安市碑林区<br>
+                中华人民共和国 <br><br>
+                <strong>Phone:</strong> +86 10000<br>
+                <strong>Email:</strong> support@rssins.net<br>
               </p>
             </div>
-          </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in"
-            data-aos-delay="300">
-            <div class="icon-box mdui-card">
-              <div class="icon"><i class="mdui-icon material-icons mdui-text-color-deep-orange">cloud_queue</i></div>
-              <h4><a href="https://pan.rssins.net" class="mdui-text-color-theme-text">养老云</a></h4>
-              <p>网络硬盘，仅对内部人员开放，拥有文件分享，离线下载，在线解压的功能，多源存储，机房爆炸文件还在。</p>
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4 class="mdui-text-color-theme-text">联系我们</h4>
+              <ul>
+                <li><i class="mdui-icon material-icons">chevron_right</i> <a href="https://t.me/bocc_group"
+                    class="mdui-text-color-theme-secondary">Telegram</a></li>
+                <li><i class="mdui-icon material-icons">chevron_right</i> <a href="#"
+                    class="mdui-text-color-theme-disabled">Email（即将到来）</a></li>
+                <li><i class="mdui-icon material-icons">chevron_right</i> <a href="#"
+                    class="mdui-text-color-theme-disabled">QQ（即将到来）</a></li>
+                <li><i class="mdui-icon material-icons">chevron_right</i> <a href="#"
+                    class="mdui-text-color-theme-disabled">Wechat（即将到来）</a></li>
+              </ul>
             </div>
-          </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box mdui-card">
-              <div class="icon"><i class="mdui-icon material-icons mdui-text-color-purple">cloud_queue</i></div>
-              <h4><a href="https://share.rssins.net" class="mdui-text-color-theme-text">老司机仓库</a></h4>
-              <p>平常下的一些资源大概在这里，低调使用，谁知道哪天就无了。当然如果侵犯了您的权益，请及时联系我们。</p>
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4 class="mdui-text-color-theme-text">外部链接</h4>
+              <ul>
+                <li><i class="mdui-icon material-icons">chevron_right</i> <a href="#"
+                    class="mdui-text-color-theme-disabled">友情链接（即将到来）</a></li>
+                <li><i class="mdui-icon material-icons">chevron_right</i> <a href="#"
+                    class="mdui-text-color-theme-disabled">官方MC服务器（暂时关闭）</a></li>
+              </ul>
             </div>
-          </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box mdui-card">
-              <div class="icon"><i class="mdui-icon material-icons mdui-text-color-green">crop_original</i></div>
-              <h4><a href="" class="mdui-text-color-theme-text">晴空画廊</a></h4>
-              <p>展示成员们日常拍的照片，以及一些公版美图，现正开发，即将上线，敬请期待。</p>
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4 class="mdui-text-color-theme-text">社交媒体</h4>
+              <p class="mdui-text-color-theme-secondary">在各个社交媒体平台上关注我们（即将到来）</p>
+              <div class="social-links mt-3">
+                <button class="mdui-btn mdui-btn-icon mdui-color-indigo">
+                  <i class="bx bxl-twitter mdui-icon"></i>
+                </button>
+                <button class="mdui-btn mdui-btn-icon mdui-color-red-700">
+                  <i class="bx bxl-youtube mdui-icon"></i>
+                </button>
+                <button class="mdui-btn mdui-btn-icon mdui-color-teal">
+                  <i class="bx bxl-play-store mdui-icon"></i>
+                </button>
+                <button class="mdui-btn mdui-btn-icon mdui-color-purple">
+                  <i class="bx bxl-github mdui-icon"></i>
+                </button>
+                <button class="mdui-btn mdui-btn-icon mdui-color-orange-900">
+                  <i class="bx bxl-windows mdui-icon"></i>
+                </button>
+              </div>
             </div>
-          </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box">
-              <div class="icon"><i class="mdui-icon material-icons">control_point</i></div>
-              <h4><a href="" class="mdui-text-color-theme-text">还没有上线的功能</a></h4>
-              <p>这些功能还在计划中，也可能未曾提出，如有任何建议，请联系我们。</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Services Section -->
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>关于</h2>
-          <h3>更多关于<span>我们余晖无垠团队</span>的信息</h3>
-          <p class="mdui-text-color-theme-secondary">鸽子与废物。</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
-            <img src="assets/img/about.jpg" class="img-fluid img-round" alt="">
-          </div>
-          <div class="mdui-card mdui-shadow-1 col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center"
-            data-aos="fade-up" data-aos-delay="100">
-            <h3>热爱技术，喜欢折腾，同时又是一群鸽子的年轻人。</h3>
-            <p class="fst-italic mdui-text-color-theme-secondary">
-              就是一群鸽子
-            </p>
-            <ul>
-              <li>
-                <i class="mdui-icon material-icons">location_on</i>
-                <div>
-                  <h5 class="mdui-text-color-theme-text">我们的总部位于西安市信鸽协会</h5>
-                  <p class="mdui-text-color-theme-secondary">别问我们为什么在这儿，因为里面有许多我们的同类。</p>
-                </div>
-              </li>
-              <li>
-                <i class="mdui-icon material-icons">email</i>
-                <div>
-                  <h5 class="mdui-text-color-theme-text">联系我们</h5>
-                  <p class="mdui-text-color-theme-secondary">请在<span>Telegram</span><a
-                      href="https://t.me/bocc_chanel">@bocc_chanel</a>上联系我们</p>
-                </div>
-              </li>
-            </ul>
-            <p style="margin-bottom: 40px;">
-              同时，您也可以点击左下角的按钮直接与我们进行交流，不过我们回复您可能需要一定时间。
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-    <!-- End About Section -->
-
-    <!-- ======= Team Section ======= -->
-    <section id="team" class="team">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>成员</h2>
-          <h3>目前我们 <span>团队中的成员</span></h3>
-          <p class="mdui-text-color-theme-secondary">希望我们的成员将会越来越多</p>
-        </div>
-        <div class="mdui-row">
-          <div class="mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-3 mdui-m-t-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="mdui-card">
-              <div class="mdui-card-primary">
-                <div class="mdui-card-primary-title">网络与前端维护</div>
-                <div class="mdui-card-primary-subtitle">修文物</div>
-              </div>
-              <div class="mdui-card-header">
-                <img class="mdui-card-header-avatar" src="./assets/img/team/1.jpg" />
-                <div class="mdui-card-header-title">王新知</div>
-                <div class="mdui-card-header-subtitle">Xinzhi Wang</div>
-              </div>
-              <div class="mdui-card-content">屑，我一个臭学历史的为何要干这些？</div>
-            </div>
-          </div>
-          <div class="mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-3 mdui-m-t-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="mdui-card">
-              <div class="mdui-card-primary">
-                <div class="mdui-card-primary-title">维护与软件开发者</div>
-                <div class="mdui-card-primary-subtitle">某学计算机的</div>
-              </div>
-              <div class="mdui-card-header">
-                <img class="mdui-card-header-avatar" src="./assets/img/team/2.jpg" />
-                <div class="mdui-card-header-title">贾工</div>
-                <div class="mdui-card-header-subtitle">AmaTsume Akira</div>
-              </div>
-              <div class="mdui-card-content">懒。</div>
-            </div>
-          </div>
-          <div class="mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-3 mdui-m-t-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="mdui-card">
-              <div class="mdui-card-primary">
-                <div class="mdui-card-primary-title">后端开发者</div>
-                <div class="mdui-card-primary-subtitle">某学计算机的</div>
-              </div>
-              <div class="mdui-card-header">
-                <img class="mdui-card-header-avatar" src="./assets/img/team/3.jpg" />
-                <div class="mdui-card-header-title">浪涛之引</div>
-                <div class="mdui-card-header-subtitle">Taoyin</div>
-              </div>
-              <div class="mdui-card-content">屑，屑，屑！</div>
-            </div>
-          </div>
-          <div class="mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-3 mdui-m-t-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="mdui-card">
-              <div class="mdui-card-primary">
-                <div class="mdui-card-primary-title">刷机大佬</div>
-                <div class="mdui-card-primary-subtitle">造半导体</div>
-              </div>
-              <div class="mdui-card-header">
-                <img class="mdui-card-header-avatar" src="./assets/img/team/4.jpg" />
-                <div class="mdui-card-header-title">小逗包</div>
-                <div class="mdui-card-header-subtitle">sbwxw</div>
-              </div>
-              <div class="mdui-card-content">爷发誓在大学刚开学就去加妹子联系方式</div>
-            </div>
-          </div>
-          <div class="mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-3 mdui-m-t-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="mdui-card">
-              <div class="mdui-card-primary">
-                <div class="mdui-card-primary-title">软件开发者</div>
-                <div class="mdui-card-primary-subtitle">学计算机的</div>
-              </div>
-              <div class="mdui-card-header">
-                <img class="mdui-card-header-avatar" src="./assets/img/team/5.jpg" />
-                <div class="mdui-card-header-title">🐎</div>
-                <div class="mdui-card-header-subtitle">Mark</div>
-              </div>
-              <div class="mdui-card-content">屑，男人就不能透了</div>
-            </div>
-          </div>
-          <div class="mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-3 mdui-m-t-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="mdui-card">
-              <div class="mdui-card-primary">
-                <div class="mdui-card-primary-title">无线电管理</div>
-                <div class="mdui-card-primary-subtitle">[数据删除]]</div>
-              </div>
-              <div class="mdui-card-header">
-                <img class="mdui-card-header-avatar" src="./assets/img/team/6.jpg" />
-                <div class="mdui-card-header-title">全村最皮的皮</div>
-                <div class="mdui-card-header-subtitle">Null</div>
-              </div>
-              <div class="mdui-card-content">[数据删除]]</div>
-            </div>
-          </div>
-          <div class="mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-3 mdui-m-t-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="mdui-card">
-              <div class="mdui-card-primary">
-                <div class="mdui-card-primary-title">猫猫</div>
-                <div class="mdui-card-primary-subtitle">上辈子不知道是干啥的</div>
-              </div>
-              <div class="mdui-card-header">
-                <img class="mdui-card-header-avatar" src="./assets/img/team/7.jpg" />
-                <div class="mdui-card-header-title">琉璃</div>
-                <div class="mdui-card-header-subtitle">Neko</div>
-              </div>
-              <div class="mdui-card-content">Nya~</div>
-            </div>
           </div>
         </div>
       </div>
-    </section>
-    <!-- End Team Section -->
 
-  </main><!-- End #main -->
+      <div class="container py-4">
+        <div class="copyright mdui-text-color-theme-text">
+          &copy; 2016-2022 余晖无垠 <br><a class="mdui-text-color-theme-secondary"
+            href="https://icp.gov.moe/?keyword=202038250">萌站联盟 NO.202038250</a>
+        </div>
+        <div class="credits" class="mdui-text-color-theme-secondary">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bizland-bootstrap-business-template/ -->
+          使用<a href="https://bootstrapmade.com/"
+            class="mdui-text-color-theme-secondary">BootstrapMade</a>的模板进行改进，遵守非商业性用途条例。<br>我们是非盈利性组织，拒绝一切捐赠。
+        </div>
+      </div>
+    </footer><!-- End Footer -->
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3 class="mdui-text-color-theme-text">余晖无垠<span>团队</span></h3>
-            <p class="mdui-text-color-theme-secondary">
-              顺城南路东段 <br>
-              陕西省西安市碑林区<br>
-              中华人民共和国 <br><br>
-              <strong>Phone:</strong> +86 10000<br>
-              <strong>Email:</strong> support@rssins.net<br>
-            </p>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4 class="mdui-text-color-theme-text">联系我们</h4>
-            <ul>
-              <li><i class="mdui-icon material-icons">chevron_right</i> <a href="https://t.me/bocc_group"
-                  class="mdui-text-color-theme-secondary">Telegram</a></li>
-              <li><i class="mdui-icon material-icons">chevron_right</i> <a href="#"
-                  class="mdui-text-color-theme-disabled">Email（即将到来）</a></li>
-              <li><i class="mdui-icon material-icons">chevron_right</i> <a href="#"
-                  class="mdui-text-color-theme-disabled">QQ（即将到来）</a></li>
-              <li><i class="mdui-icon material-icons">chevron_right</i> <a href="#"
-                  class="mdui-text-color-theme-disabled">Wechat（即将到来）</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4 class="mdui-text-color-theme-text">外部链接</h4>
-            <ul>
-              <li><i class="mdui-icon material-icons">chevron_right</i> <a href="#"
-                  class="mdui-text-color-theme-disabled">友情链接（即将到来）</a></li>
-              <li><i class="mdui-icon material-icons">chevron_right</i> <a href="#"
-                  class="mdui-text-color-theme-disabled">官方MC服务器（暂时关闭）</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4 class="mdui-text-color-theme-text">社交媒体</h4>
-            <p class="mdui-text-color-theme-secondary">在各个社交媒体平台上关注我们（即将到来）</p>
-            <div class="social-links mt-3">
-              <button class="mdui-btn mdui-btn-icon mdui-color-indigo">
-                <i class="bx bxl-twitter mdui-icon"></i>
-              </button>
-              <button class="mdui-btn mdui-btn-icon mdui-color-red-700">
-                <i class="bx bxl-youtube mdui-icon"></i>
-              </button>
-              <button class="mdui-btn mdui-btn-icon mdui-color-teal">
-                <i class="bx bxl-play-store mdui-icon"></i>
-              </button>
-              <button class="mdui-btn mdui-btn-icon mdui-color-purple">
-                <i class="bx bxl-github mdui-icon"></i>
-              </button>
-              <button class="mdui-btn mdui-btn-icon mdui-color-orange-900">
-                <i class="bx bxl-windows mdui-icon"></i>
-              </button>
-            </div>
-          </div>
-
+    <div id="preloader" class="mdui-theme-layout-auto">
+      <div class="mdui-container">
+        <div class="mdui-spinner mdui-spinner-colorful mdui-center" style="margin-top: calc(40vh);"></div>
+        <div class="mdui-progress mdui-center" id="preloader-progress">
+          <div class="mdui-progress-indeterminate"></div>
         </div>
       </div>
     </div>
+    <a href="#" class="mdui-fab mdui-fab-fixed mdui-color-blue"><i
+        class="mdui-icon material-icons mdui-text-color-white">arrow_upward</i></a>
 
-    <div class="container py-4">
-      <div class="copyright mdui-text-color-theme-text">
-        &copy; 2016-2022 余晖无垠 <br><a class="mdui-text-color-theme-secondary"
-          href="https://icp.gov.moe/?keyword=202038250">萌站联盟 NO.202038250</a>
-      </div>
-      <div class="credits" class="mdui-text-color-theme-secondary">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bizland-bootstrap-business-template/ -->
-        使用<a href="https://bootstrapmade.com/"
-          class="mdui-text-color-theme-secondary">BootstrapMade</a>的模板进行改进，遵守非商业性用途条例。<br>我们是非盈利性组织，拒绝一切捐赠。
-      </div>
-    </div>
-  </footer><!-- End Footer -->
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
 
-  <div id="preloader" class="mdui-theme-layout-auto">
-    <div class="mdui-container">
-      <div class="mdui-spinner mdui-spinner-colorful mdui-center" style="margin-top: calc(40vh);"></div>
-      <div class="mdui-progress mdui-center" id="preloader-progress">
-        <div class="mdui-progress-indeterminate"></div>
-      </div>
-    </div>
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <!-- theme -->
+    <script src="./js/theme.js"></script>
   </div>
-  <a href="#" class="mdui-fab mdui-fab-fixed mdui-color-blue"><i
-      class="mdui-icon material-icons mdui-text-color-white">arrow_upward</i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-  <!-- theme -->
-  <script src="./js/theme.js"></script>
-
 </body>
 
 </html>
