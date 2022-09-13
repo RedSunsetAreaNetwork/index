@@ -48,16 +48,11 @@ h6 {
 
 
 #preloader-progress {
-  margin-top: calc(50vh);
+  max-width: 60%;
+  margin-top: calc(30vh);
   width: calc(60vh);
 }
-#preloader-pic {
-  margin-top: calc(30vh);
-  top: calc(70% - 30px);
-  left: calc(70% - 30px);
-  width: 60px;
-  height: 60px;
-}
+
 /* #preloader:before {
   content: "";
   position: fixed;
