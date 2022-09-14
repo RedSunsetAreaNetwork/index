@@ -57,8 +57,8 @@
   * Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
-  DO NOT USE FOR SALE! Redsunsets Group Edited
   ======================================================== -->
+  <!-- This project modfied by Redsunset.  Base on BizLand©Bootstrap . Do not USE FOR SALE -->
 </head>
 
 <body class="mdui-appbar-with-toolbar mdui-theme-primary-pink mdui-theme-accent-pink" id="bodyclass">
@@ -77,8 +77,8 @@
         <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#themedialog'}">
           <i class="mdui-icon material-icons" onclick="radioBoxSwitch()">color_lens</i>
         </a>
-        <a href="javascript:;" class="mdui-btn mdui-btn-icon">
-          <i class="mdui-icon material-icons" mdui-tooltip="{content: 'Coming Soon'}">translate</i>
+        <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#langdialog'}">
+          <i class="mdui-icon material-icons">translate</i>
         </a>
       </div>
     </div>
@@ -89,17 +89,17 @@
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex align-items-center heroBright">
       <div class="container" data-aos="zoom-out" data-aos-delay="100">
-        <h1 class="mdui-text-color-theme-text">做<span>最会摆烂的</span>一群人</h1>
-        <h2 class="mdui-text-color-theme-secondary">这便是我们的生活方式</h2>
+        <h1 class="mdui-text-color-theme-text i18n" name="heroH1">[heroH1]</h1>
+        <h2 class="mdui-text-color-theme-secondary i18n" name="heroH2">[heroH2}</h2>
         <div class="d-flex">
           <button class="mdui-btn mdui-color-theme-accent mdui-ripple"
             onclick="window.location.href = 'https://t.me/bocc_group'">
-            <i class="mdui-icon mdui-icon-left material-icons">send</i> <span data-translatable>
-              群组</span></button>
+            <i class="mdui-icon mdui-icon-left material-icons">send</i> <span class="i18n" name="heroButton1">
+              [heroButton1]</span></button>
           &nbsp; &nbsp;
           <button class="mdui-color-purple mdui-btn mdui-ripple" href="#services">
             <i class="mdui-icon mdui-icon-left material-icons">arrow_downward</i>
-            <span data-translatable>更多</button>
+            <span class="i18n" name="heroButton2">[heroButton2]</button>
         </div>
       </div>
     </section>
@@ -111,48 +111,105 @@
 
       <!-- theme swtich -->
       <div class="mdui-dialog" id="themedialog">
-        <div class="mdui-dialog-title">主题设定</div>
+        <div class="mdui-dialog-title i18n" name="themeSettingTitle">[themeSettingTitle]</div>
         <div class="mdui-dialog-content">
           <form id="themeForm" class="mdui-row">
-            <p class="mdui-typo-title">主题色</p>
+            <p class="mdui-typo-title">///////</p>
             <div class="mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-3">
               <div class="mdui-col">
                 <label class="mdui-radio mdui-m-b-1">
                   <input type="radio" name="themeInput" value="bright" id="themeBright" />
                   <i class="mdui-radio-icon"></i>
-                  亮色
+                  <span class="i18n" name="bright">[bright]</span>
                 </label>
               </div>
               <div class="mdui-col">
                 <label class="mdui-radio mdui-m-b-1">
                   <input type="radio" name="themeInput" value="dark" id="themeDark" />
                   <i class="mdui-radio-icon"></i>
-                  暗色
+                  <span class="i18n" name="dark">[dark]</span>
                 </label>
               </div>
               <div class="mdui-col">
                 <label class="mdui-radio mdui-m-b-1">
                   <input type="radio" name="themeInput" value="auto" id="themeAuto" />
                   <i class="mdui-radio-icon"></i>
-                  系统设定
+                  <spam class="i18n" name="followSys">[followSys]</spam>
                 </label>
               </div>
             </div>
 
           </form>
-          <select id="language" class="mdui-select">
-            <option value="zh-CN">简体中文</option>
-            <option value="en">English</option>
-            <option value="jp">日文</option>
-          </select>
-
         </div>
         <div class="mdui-dialog-actions">
-          <button class="mdui-btn mdui-ripple" mdui-dialog-close onclick="submitTheme()">确定</button>
+          <button class="mdui-btn mdui-ripple i18n" mdui-dialog-close onclick="submitTheme()"
+            name="confirm">[confirm]</button>
         </div>
       </div>
       <!-- theme swtich end -->
+      <!-- lang switch  -->
+      <div class="mdui-dialog" id="langdialog">
+        <div class="mdui-dialog-title i18n" name="language">[language]</div>
+        <div class="mdui-dialog-content">
+          <form class="mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-3" id="language">
+            <div class="mdui-col mdui-text-color-amber">
+              <label class="mdui-radio mdui-m-b-1">
+                <input type="radio" name="langSelect" value="zh-CN">
+                <i class="mdui-radio-icon"></i>
+                简体中文
+              </label>
+            </div>
+            <div class="mdui-col mdui-text-color-blue">
+              <label class="mdui-radio mdui-m-b-1">
+                <input type="radio" name="langSelect" value="zh-HK" disabled>
+                <i class="mdui-radio-icon"></i>
+                繁體中文(HongKong)
+              </label>
+            </div>
+            <div class="mdui-col mdui-text-color-blue-grey">
+              <label class="mdui-radio mdui-m-b-1">
+                <input type="radio" name="langSelect" value="en">
+                <i class="mdui-radio-icon"></i>
+                English
+              </label>
+            </div>
+            <div class="mdui-col mdui-text-color-brown">
+              <label class="mdui-radio mdui-m-b-1">
+                <input type="radio" name="langSelect" value="jp">
+                <i class="mdui-radio-icon"></i>
+                日本語
+              </label>
+            </div>
+            <div class="mdui-col mdui-text-color-cyan">
+              <label class="mdui-radio mdui-m-b-1">
+                <input type="radio" name="langSelect" value="cyan" disabled>
+                <i class="mdui-radio-icon"></i>
+                null
+              </label>
+            </div>
+            <div class="mdui-col mdui-text-color-deep-orange">
+              <label class="mdui-radio mdui-m-b-1">
+                <input type="radio" name="langSelect" value="deep-orange" disabled>
+                <i class="mdui-radio-icon"></i>
+                null
+              </label>
+            </div>
+            <div class="mdui-col mdui-text-color-deep-purple">
+              <label class="mdui-radio mdui-m-b-1">
+                <input type="radio" name="langSelect" value="deep-purple" disabled>
+                <i class="mdui-radio-icon"></i>
+                null
+              </label>
+            </div>
 
+          </form>
+
+        </div>
+        <div class="mdui-dialog-actions">
+          <button class="mdui-btn mdui-ripple i18n" onclick="changeLang()" name="confirm">[confirm]</button>
+        </div>
+      </div>
+      <!-- end -->
       <!-- ======= Featured Services Section ======= -->
       <section id="featured-services" class="featured-services">
         <div class="container" data-aos="fade-up">
@@ -163,8 +220,8 @@
                 <li class="mdui-list-item mdui-ripple">
                   <div class="mdui-list-item-avatar mdui-color-red"><i class="mdui-icon material-icons">timer</i></div>
                   <div class="mdui-list-item-content">
-                    <div class="mdui-list-item-title">玩机技巧</div>
-                    <div class="mdui-list-item-text mdui-list-item-one-line">各种姿势的刷机搞机</div>
+                    <div class="mdui-list-item-title i18n" name="sb1">[sb1]</div>
+                    <div class="mdui-list-item-text mdui-list-item-one-line i18n" name="sbs1">[sbs1]</div>
                   </div>
                 </li>
               </ul>
@@ -175,8 +232,8 @@
                   <div class="mdui-list-item-avatar  mdui-color-pink"><i class="mdui-icon material-icons">security</i>
                   </div>
                   <div class="mdui-list-item-content">
-                    <div class="mdui-list-item-title">网安经验</div>
-                    <div class="mdui-list-item-text mdui-list-item-one-line">我们个人如何做好自己的隐私安全防护</div>
+                    <div class="mdui-list-item-title i18n" name="sb2">[sb2]</div>
+                    <div class="mdui-list-item-text mdui-list-item-one-line i18n" name="sbs2">sbs2</div>
                   </div>
                 </li>
               </ul>
@@ -187,8 +244,8 @@
                   <div class="mdui-list-item-avatar mdui-color-purple"><i
                       class="mdui-icon material-icons">attach_money</i></div>
                   <div class="mdui-list-item-content">
-                    <div class="mdui-list-item-title">羊毛大师</div>
-                    <div class="mdui-list-item-text mdui-list-item-one-line">白嫖党是最终的胜利者</div>
+                    <div class="mdui-list-item-title i18n" name="sb3">sb3</div>
+                    <div class="mdui-list-item-text mdui-list-item-one-line i18n" name="sbs3">sbs3</div>
                   </div>
                 </li>
               </ul>
@@ -202,17 +259,18 @@
         <div class="container" data-aos="fade-up">
 
           <div class="section-title">
-            <h2>服务</h2>
-            <h3>这些是我们<span>提供的</span>服务</h3>
-            <p class="mdui-text-color-theme-secondary">或许之后可以合作一下？</p>
+            <h2 class="i18n" name="serviceTitle1">[serviceTitle1]</h2>
+            <h3 class="i18n" name="serviceTitle2">[serviceTitle2]</h3>
+            <p class="mdui-text-color-theme-secondary i18n" name="serviceTitle3">[serviceTitle3]</p>
           </div>
 
           <div class="row mdui-typo">
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
               <div class="icon-box mdui-card">
                 <div class="icon"><i class="mdui-icon material-icons mdui-text-color-indigo">insert_chart</i></div>
-                <h4><a href="https://blog.rssins.net" class="mdui-text-color-theme-text">小逗包根据地</a></h4>
-                <p>我们的博客，发布各种乱七八糟的东西。同时刷机指南，玩机大法将持续更新。偶尔发布薅羊毛活动。
+                <h4><a href="https://blog.rssins.net" class="mdui-text-color-theme-text i18n"
+                    name="service1Title">[service1Title]</a></h4>
+                <p class="i18n" name="service1Content">[service1Content]
 
                 </p>
               </div>
@@ -222,8 +280,9 @@
               data-aos-delay="200">
               <div class="icon-box mdui-card">
                 <div class="icon"><i class="mdui-icon material-icons mdui-text-color-pink">lightbulb_outline</i></div>
-                <h4><a href="https://lab.rssins.net" class="mdui-text-color-theme-text">老司机实验室</a></h4>
-                <p>我们所有的公共API，在线工具均在这里发布。请阅读我们的协议后，再使用本产品。
+                <h4><a href="https://lab.rssins.net" class="mdui-text-color-theme-text i18n"
+                    name="service2Title">[service2Title]</a></h4>
+                <p class="i18n" name="service2Content">[service2Content]
                 </p>
               </div>
             </div>
@@ -232,32 +291,34 @@
               data-aos-delay="300">
               <div class="icon-box mdui-card">
                 <div class="icon"><i class="mdui-icon material-icons mdui-text-color-deep-orange">cloud_queue</i></div>
-                <h4><a href="https://pan.rssins.net" class="mdui-text-color-theme-text">养老云</a></h4>
-                <p>网络硬盘，仅对内部人员开放，拥有文件分享，离线下载，在线解压的功能，多源存储，机房爆炸文件还在。</p>
+                <h4><a href="https://pan.rssins.net" class="mdui-text-color-theme-text i18n"
+                    name="service3Title">[service3Title]</a></h4>
+                <p class="i18n" name="service3Content">[service3Content]</p>
               </div>
             </div>
 
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
               <div class="icon-box mdui-card">
                 <div class="icon"><i class="mdui-icon material-icons mdui-text-color-purple">cloud_queue</i></div>
-                <h4><a href="https://share.rssins.net" class="mdui-text-color-theme-text">老司机仓库</a></h4>
-                <p>平常下的一些资源大概在这里，低调使用，谁知道哪天就无了。当然如果侵犯了您的权益，请及时联系我们。</p>
+                <h4><a href="https://share.rssins.net" class="mdui-text-color-theme-text i18n"
+                    name="service4Title">[service4Title]</a></h4>
+                <p class="i18n" name="service4Content">[service4Content]</p>
               </div>
             </div>
 
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
               <div class="icon-box mdui-card">
                 <div class="icon"><i class="mdui-icon material-icons mdui-text-color-green">crop_original</i></div>
-                <h4><a href="" class="mdui-text-color-theme-text">晴空画廊</a></h4>
-                <p>展示成员们日常拍的照片，以及一些公版美图，现正开发，即将上线，敬请期待。</p>
+                <h4><a href="" class="mdui-text-color-theme-text i18n" name="service5Title">[service5Title]</a></h4>
+                <p class="i18n" name="service5Content">[service5Content]</p>
               </div>
             </div>
 
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
               <div class="icon-box">
                 <div class="icon"><i class="mdui-icon material-icons">control_point</i></div>
-                <h4><a href="" class="mdui-text-color-theme-text">还没有上线的功能</a></h4>
-                <p>这些功能还在计划中，也可能未曾提出，如有任何建议，请联系我们。</p>
+                <h4><a href="" class="mdui-text-color-theme-text i18n" name="service6Title">[service6Title]</a></h4>
+                <p class="i18n" name="service6Content">[service6Content]</p>
               </div>
             </div>
 
@@ -271,9 +332,9 @@
         <div class="container" data-aos="fade-up">
 
           <div class="section-title">
-            <h2>关于</h2>
-            <h3>更多关于<span>我们余晖无垠团队</span>的信息</h3>
-            <p class="mdui-text-color-theme-secondary">鸽子与废物。</p>
+            <h2 class="i18n" name="aboutTitle1">[aboutTitle1]</h2>
+            <h3 class="i18n" name="aboutTitle2">[aboutTitle2]</h3>
+            <p class="mdui-text-color-theme-secondary i18n" name="aboutTitle3">[aboutTitle3]</p>
           </div>
 
           <div class="row">
@@ -282,33 +343,31 @@
             </div>
             <div class="mdui-card mdui-shadow-1 col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center"
               data-aos="fade-up" data-aos-delay="100">
-              <h3>热爱技术，喜欢折腾，同时又是一群鸽子的年轻人。</h3>
-              <p class="fst-italic mdui-text-color-theme-secondary">
-                就是一群鸽子
+              <h3 class="i18n" name="aboutContent1">[aboutContent1]</h3>
+              <p class="fst-italic mdui-text-color-theme-secondary i18n" name="aboutContent2">
+                [aboutContent2]
               </p>
               <ul>
                 <li>
                   <i class="mdui-icon material-icons">location_on</i>
                   <div>
-                    <h5 class="mdui-text-color-theme-text">我们的总部位于西安市信鸽协会</h5>
-                    <p class="mdui-text-color-theme-secondary">别问我们为什么在这儿，因为里面有许多我们的同类。</p>
+                    <h5 class="mdui-text-color-theme-text i18n" name="aboutContent3">[aboutContent3]</h5>
+                    <p class="mdui-text-color-theme-secondary i18n" name="aboutContent4">[aboutContent4]</p>
                   </div>
                 </li>
                 <li>
                   <i class="mdui-icon material-icons">email</i>
                   <div>
-                    <h5 class="mdui-text-color-theme-text">联系我们</h5>
-                    <p class="mdui-text-color-theme-secondary">请在<span>Telegram</span><a
-                        href="https://t.me/bocc_chanel">@bocc_chanel</a>上联系我们</p>
+                    <h5 class="mdui-text-color-theme-text i18n" name="aboutContent5">[aboutContent5]</h5>
+                    <p class="mdui-text-color-theme-secondary i18n" name="aboutContent6">[aboutContent6]</p>
                   </div>
                 </li>
               </ul>
-              <p style="margin-bottom: 40px;">
-                同时，您也可以点击左下角的按钮直接与我们进行交流，不过我们回复您可能需要一定时间。
+              <p style="margin-bottom: 40px;" class="i18n" name="aboutContent7">
+                [aboutContent7]
               </p>
             </div>
           </div>
-
         </div>
       </section>
       <!-- End About Section -->
@@ -318,9 +377,9 @@
         <div class="container" data-aos="fade-up">
 
           <div class="section-title">
-            <h2>成员</h2>
-            <h3>目前我们 <span>团队中的成员</span></h3>
-            <p class="mdui-text-color-theme-secondary">希望我们的成员将会越来越多</p>
+            <h2 class="i18n" name="teamTitle1">[teamTitle1]</h2>
+            <h3 class="i18n" name="teamTitle2">[teamTitle2]</h3>
+            <p class="mdui-text-color-theme-secondary i18n" name="teamTitle3">[teamTitle3]</p>
           </div>
           <div class="mdui-row">
             <div class="mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-3 mdui-m-t-4" data-aos="fade-up" data-aos-delay="100">
@@ -537,6 +596,7 @@
     <script src="assets/js/main.js"></script>
     <!-- theme -->
     <script src="./js/theme.js"></script>
+    <!-- 不会真有人看我屎山代码吧 -->
   </div>
 </body>
 

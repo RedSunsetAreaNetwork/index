@@ -2,7 +2,7 @@ var getCookie = function (name, value, options) {
     if (typeof value != 'undefined') { // name and value given, set cookie
         options = options || {};
         if (value === null) {
-            value = '';
+            language
             options.expires = -1;
         }
         var expires = '';
@@ -139,15 +139,33 @@ $(function () {
     /*执行I18n翻译*/
     execI18n();
     /*将语言选择默认选中缓存中的值*/
-    $("#language option[value=" + i18nLanguage + "]").attr("selected", true);
-    /* 选择语言 */
-    $("#language").on('change', function () {
-        var language = $(this).children('option:selected').val()
-        console.log(language);
-        getCookie("userLanguage", language, {
-            expires: 30,
-            path: '/'
-        });
-        location.reload();
-    });
+    // 希望有人告诉我下面这行是怎么运行的，此代码可用于本站的主题切换，我觉得我可以简化代码
+    $("#language input[value=" + i18nLanguage + "]").attr("checked", true);
+
+
 });
+
+
+
+
+/* 选择语言 */
+function changeLang() {
+    var radios = document.getElementsByName('langSelect');
+    for (var i = 0, length = radios.length; i < length; i++) {
+        if (radios[i].checked) {
+            // 弹出选中值
+            var language = (radios[i].value);
+            // 选中后退出循环
+            break;
+        }
+    }
+
+
+    // var language = $(this).children('option:selected').val()
+    console.log(language);
+    getCookie("userLanguage", language, {
+        expires: 2,
+        path: '/'
+    });
+    location.reload();
+};
