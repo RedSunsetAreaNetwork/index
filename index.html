@@ -142,6 +142,7 @@
           </form>
         </div>
         <div class="mdui-dialog-actions">
+          <button class="mdui-btn mdui-ripple i18n" mdui-dialog-close name="close">[confirm]</button>
           <button class="mdui-btn mdui-ripple i18n" mdui-dialog-close onclick="submitTheme()"
             name="confirm">[confirm]</button>
         </div>
@@ -152,53 +153,51 @@
         <div class="mdui-dialog-title i18n" name="language">[language]</div>
         <div class="mdui-dialog-content">
           <form class="mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-3" id="language">
-            <div class="mdui-col mdui-text-color-amber">
+            <div class="mdui-col">
               <label class="mdui-radio mdui-m-b-1">
                 <input type="radio" name="langSelect" value="zh-CN">
                 <i class="mdui-radio-icon"></i>
                 简体中文
               </label>
             </div>
-            <div class="mdui-col mdui-text-color-blue">
+            <div class="mdui-col">
               <label class="mdui-radio mdui-m-b-1">
                 <input type="radio" name="langSelect" value="zh-HK" disabled>
                 <i class="mdui-radio-icon"></i>
                 繁體中文(HongKong)
               </label>
             </div>
-            <div class="mdui-col mdui-text-color-blue-grey">
+            <div class="mdui-col">
               <label class="mdui-radio mdui-m-b-1">
                 <input type="radio" name="langSelect" value="en">
                 <i class="mdui-radio-icon"></i>
                 English
               </label>
             </div>
-            <div class="mdui-col mdui-text-color-brown">
+            <div class="mdui-col">
               <label class="mdui-radio mdui-m-b-1">
                 <input type="radio" name="langSelect" value="jp">
                 <i class="mdui-radio-icon"></i>
                 日本語
               </label>
             </div>
-            <div class="mdui-col mdui-text-color-cyan">
+            <div class="mdui-col">
               <label class="mdui-radio mdui-m-b-1">
-                <input type="radio" name="langSelect" value="cyan" disabled>
+                <input type="radio" name="langSelect" value="ru" disabled>
                 <i class="mdui-radio-icon"></i>
-                null
+                русский
               </label>
             </div>
-            <div class="mdui-col mdui-text-color-deep-orange">
+            <div class="mdui-col">
               <label class="mdui-radio mdui-m-b-1">
-                <input type="radio" name="langSelect" value="deep-orange" disabled>
+                <input type="radio" name="langSelect" value="it" disabled>
                 <i class="mdui-radio-icon"></i>
-                null
+                Italiano
               </label>
             </div>
-            <div class="mdui-col mdui-text-color-deep-purple">
+            <div class="mdui-col">
               <label class="mdui-radio mdui-m-b-1">
-                <input type="radio" name="langSelect" value="deep-purple" disabled>
-                <i class="mdui-radio-icon"></i>
-                null
+                <i class="mdui-icon material-icons">add</i> 帮助我们翻译
               </label>
             </div>
 
@@ -206,6 +205,7 @@
 
         </div>
         <div class="mdui-dialog-actions">
+          <button class="mdui-btn mdui-ripple i18n" mdui-dialog-close name="close">[confirm]</button>
           <button class="mdui-btn mdui-ripple i18n" onclick="changeLang()" name="confirm">[confirm]</button>
         </div>
       </div>
@@ -495,43 +495,38 @@
           <div class="row">
 
             <div class="col-lg-3 col-md-6 footer-contact">
-              <h3 class="mdui-text-color-theme-text">余晖无垠<span>团队</span></h3>
-              <p class="mdui-text-color-theme-secondary">
-                顺城南路东段 <br>
-                陕西省西安市碑林区<br>
-                中华人民共和国 <br><br>
-                <strong>Phone:</strong> +86 10000<br>
-                <strong>Email:</strong> support@rssins.net<br>
+              <h3 class="mdui-text-color-theme-text i18n" name="footTitle">[footTitle]</h3>
+              <p class="mdui-text-color-theme-secondary i18n" name="footContent1">[footContent1]
               </p>
             </div>
 
             <div class="col-lg-3 col-md-6 footer-links">
-              <h4 class="mdui-text-color-theme-text">联系我们</h4>
+              <h4 class="mdui-text-color-theme-text i18n" name="footContent2Title">[footContent2Title]</h4>
               <ul>
                 <li><i class="mdui-icon material-icons">chevron_right</i> <a href="https://t.me/bocc_group"
-                    class="mdui-text-color-theme-secondary">Telegram</a></li>
+                    class="mdui-text-color-theme-secondary i18n" name="footContent2List1">[footContent2List1]</a></li>
                 <li><i class="mdui-icon material-icons">chevron_right</i> <a href="#"
-                    class="mdui-text-color-theme-disabled">Email（即将到来）</a></li>
+                    class="mdui-text-color-theme-disabled i18n" name="footContent2List2">[footContent2List2]</a></li>
                 <li><i class="mdui-icon material-icons">chevron_right</i> <a href="#"
-                    class="mdui-text-color-theme-disabled">QQ（即将到来）</a></li>
+                    class="mdui-text-color-theme-disabled i18n" name="footContent2List3">[footContent2List3]</a></li>
                 <li><i class="mdui-icon material-icons">chevron_right</i> <a href="#"
-                    class="mdui-text-color-theme-disabled">Wechat（即将到来）</a></li>
+                    class="mdui-text-color-theme-disabled i18n" name="footContent2List4">[footContent2List4]</a></li>
               </ul>
             </div>
 
             <div class="col-lg-3 col-md-6 footer-links">
-              <h4 class="mdui-text-color-theme-text">外部链接</h4>
+              <h4 class="mdui-text-color-theme-text i18n" name="footContent3Title">[footContent3Title]</h4>
               <ul>
                 <li><i class="mdui-icon material-icons">chevron_right</i> <a href="#"
-                    class="mdui-text-color-theme-disabled">友情链接（即将到来）</a></li>
+                    class="mdui-text-color-theme-disabled i18n" name="footContent3List1">[footContent3List1]</a></li>
                 <li><i class="mdui-icon material-icons">chevron_right</i> <a href="#"
-                    class="mdui-text-color-theme-disabled">官方MC服务器（暂时关闭）</a></li>
+                    class="mdui-text-color-theme-disabled i18n" name="footContent3List2">[footContent3List2]</a></li>
               </ul>
             </div>
 
             <div class="col-lg-3 col-md-6 footer-links">
-              <h4 class="mdui-text-color-theme-text">社交媒体</h4>
-              <p class="mdui-text-color-theme-secondary">在各个社交媒体平台上关注我们（即将到来）</p>
+              <h4 class="mdui-text-color-theme-text i18n" name="footContent4Title">[footContent4Title]</h4>
+              <p class="mdui-text-color-theme-secondary i18n" name="footContent4Digest">[footContent4Digest]</p>
               <div class="social-links mt-3">
                 <button class="mdui-btn mdui-btn-icon mdui-color-indigo">
                   <i class="bx bxl-twitter mdui-icon"></i>
@@ -557,7 +552,7 @@
 
       <div class="container py-4">
         <div class="copyright mdui-text-color-theme-text">
-          &copy; 2016-2022 余晖无垠 <br><a class="mdui-text-color-theme-secondary"
+          &copy; 2016-2022 余晖无垠 (Redsunsets) <br><a class="mdui-text-color-theme-secondary"
             href="https://icp.gov.moe/?keyword=202038250">萌站联盟 NO.202038250</a>
         </div>
         <div class="credits" class="mdui-text-color-theme-secondary">

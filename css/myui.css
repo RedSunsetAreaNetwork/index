@@ -15,7 +15,9 @@
 .mdui-fab {
     border-radius: 20%;
 }
-
+.mdui-dialog {
+    border-radius: 20px;
+}
 /* 平铺大图 */
 .rss-largepic {  
     background-repeat: no-repeat;
