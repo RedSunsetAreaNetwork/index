@@ -55,11 +55,11 @@ var getNavLanguage = function () {
 /**
  * 设置语言类型： 默认为中文
  */
-var i18nLanguage = "zh-Hans";
+var i18nLanguage = "zh-CN";
 /*
 设置一下网站支持的语言种类
  */
-var webLanguage = ['zh-Hans', 'ja', 'en'];
+var webLanguage = ['zh-CN', 'ja', 'en'];
 
 /**
  * 执行页面i18n方法
