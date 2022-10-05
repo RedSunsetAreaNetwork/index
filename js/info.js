@@ -91,10 +91,7 @@ mdui.dialog({
     {
       text: '前往凯瑞兹',
       onClick: function(inst){
-        mdui.snackbar({
-          message: '今后不再显示此信息',
-          position: 'right-top',
-        }); 
+        
       }
     }
   ]
