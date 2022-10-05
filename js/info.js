@@ -72,8 +72,8 @@ var info_check = docCookies.getItem("info");
 // 暗色
 if (info_check == "false") {
 mdui.dialog({
-  title: '公告',
-  content: '我宣布，我是个傻x',
+  title: '广告',
+  content: '买手电，选凯瑞兹',
   buttons: [
     {
       text: '忽略'
@@ -86,6 +86,15 @@ mdui.dialog({
           position: 'right-top',
         });
         docCookies.setItem("info", "true");
+      }
+    },
+    {
+      text: '前往凯瑞兹',
+      onClick: function(inst){
+        mdui.snackbar({
+          message: '今后不再显示此信息',
+          position: 'right-top',
+        }); 
       }
     }
   ]
