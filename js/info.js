@@ -73,7 +73,7 @@ var info_check = docCookies.getItem("info");
 if (info_check == "false") {
 mdui.dialog({
   title: '广告',
-  content: '买手电，选凯瑞兹',
+  content: '凯瑞兹强光爆闪手电，多国公安装备，质量保证，闪瞎站长的狗眼。',
   buttons: [
     {
       text: '忽略'
@@ -89,9 +89,9 @@ mdui.dialog({
       }
     },
     {
-      text: '前往凯瑞兹',
+      text: '查看更多',
       onClick: function(inst){
-        
+        window.open("http://www.klaruslight.cn/");
       }
     }
   ]
