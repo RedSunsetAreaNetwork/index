@@ -73,7 +73,7 @@ var info_check = docCookies.getItem("info");
 if (info_check == "false") {
 mdui.dialog({
   title: '公告',
-  content: '这是广告',
+  content: '我宣布，我是个傻x',
   buttons: [
     {
       text: '忽略'
@@ -85,6 +85,7 @@ mdui.dialog({
           message: '今后不再显示此信息',
           position: 'right-top',
         });
+        docCookies.setItem("info", "true");
       }
     }
   ]
