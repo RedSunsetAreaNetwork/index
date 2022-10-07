@@ -59,9 +59,9 @@ var docCookies = {
   };
   
   console.log("1");
-  // 每次打开网页时调整到预设的主题
+  // 每次打开网页时
   
-  // 判断是否是初次打开网站，判断储存主题的Cookies是否存在（cookies名为theme_key）
+  // 判断是否是初次打开网站，判断储存的Cookies是否存在
   if (docCookies.hasItem("policy") == false) {
     // 不存在则创建cookies，并将值定义为auto
     document.cookie = "policy=false";
