@@ -31,4 +31,15 @@
 .mdui-toolbar , .mdui-appbar {
     background-color: transparent;
 }
-
+/* 加载界面 */
+:root {
+    --preloader-background :#fff;
+  }
+@media (prefers-color-scheme: dark) {
+    :root {
+      --preloader-background: rgb(30,30,34);
+    }
+  }
+#preloader {
+background-color: var(--preloader-background);
+}
