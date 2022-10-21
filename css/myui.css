@@ -1,6 +1,8 @@
-/* MD2设计 */
+/* MD You设计 */
 .mdui-card {border-radius: 10px !important;}
-.mdui-btn {border-radius: 8px !important;}
+.mdui-btn  {border-radius: 8px !important;}
+.mdui-list-item-avatar , .mdui-card-header-avatar {border-radius: 8px !important;}
+.mdui-list-item-avatar img {border-radius: 10px !important;}
 .mdui-drawer .mdui-list-item {
     padding-left: 20px;
     border-radius: 0 50px 50px 0
